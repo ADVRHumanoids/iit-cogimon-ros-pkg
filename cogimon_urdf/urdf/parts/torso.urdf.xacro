@@ -85,14 +85,10 @@
     <origin xyz="-0.014976503999999998 0 0.15770847" rpy="0 0 0" /> 
 </joint>
 
-<joint name="WaistLat" type="revolute"> 
+<joint name="WaistLat" type="fixed"> 
     <parent link="Waist"/>
     <child link="DWL"/>
-    <origin xyz="0.020281504 0 0.11912053" rpy="0 0 0" />
-    <axis xyz="${cos_20} 0 ${sin_20}" />
-    <limit velocity="4.0" effort="50" lower="-0.5236" upper="0.5235" />
-    <!-- dynamics friction="0" damping="0.3"/ -->
-    <dynamics friction="0" damping="3.0"/> 
+    <origin xyz="0.020281504 0 0.11912053" rpy="0 0 0" /> 
 </joint>
 
   <joint name="WaistSag" type="revolute"> 
