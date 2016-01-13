@@ -39,6 +39,7 @@ The coordinate frame called gaze defines the head position and orientation. The 
 </xacro:unless>
 
   
+<xacro:property name="wcf" value="1.3" />
 
 <!-- ************ COGIMON BASE ************** -->
 <xacro:include filename="$(find cogimon_urdf)/urdf/cogimon_base.urdf.xacro"/>
