@@ -102,7 +102,7 @@
     <implicitSpringDamper>1</implicitSpringDamper>
     <provideFeedback>true</provideFeedback>
    </gazebo>
-<xacro:if value="${GAZEBO_COMAN_USES_FOREARMS}">
+<xacro:if value="${GAZEBO_COGIMON_USES_FOREARMS}">
    <gazebo reference="RForearmPlate">
     <implicitSpringDamper>1</implicitSpringDamper>
     <provideFeedback>true</provideFeedback>
@@ -115,7 +115,7 @@
     <implicitSpringDamper>1</implicitSpringDamper>
     <provideFeedback>true</provideFeedback>
    </gazebo>
-    <xacro:unless value="${GAZEBO_COMAN_USES_SOFTHANDS}">
+    <xacro:unless value="${GAZEBO_COGIMON_USES_SOFTHANDS}">
       <gazebo reference="r_handj">
         <implicitSpringDamper>1</implicitSpringDamper>
         <provideFeedback>true</provideFeedback>
@@ -140,7 +140,7 @@
     <implicitSpringDamper>1</implicitSpringDamper>
     <provideFeedback>true</provideFeedback>
    </gazebo>
-<xacro:if value="${GAZEBO_COMAN_USES_FOREARMS}">
+<xacro:if value="${GAZEBO_COGIMON_USES_FOREARMS}">
    <gazebo reference="LForearmPlate">
     <implicitSpringDamper>1</implicitSpringDamper>
     <provideFeedback>true</provideFeedback>
@@ -153,7 +153,7 @@
     <implicitSpringDamper>1</implicitSpringDamper>
     <provideFeedback>true</provideFeedback>
    </gazebo>
-    <xacro:unless value="${GAZEBO_COMAN_USES_SOFTHANDS}">
+    <xacro:unless value="${GAZEBO_COGIMON_USES_SOFTHANDS}">
       <gazebo reference="l_handj">
         <implicitSpringDamper>1</implicitSpringDamper>
         <provideFeedback>true</provideFeedback>

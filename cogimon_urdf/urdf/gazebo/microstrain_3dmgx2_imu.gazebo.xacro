@@ -3,11 +3,11 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
 <!--
-  ROS urdf definition of the COMAN humanoid robot by Istituto Italiano di Tecnologia
+  ROS urdf definition of the COGIMON humanoid robot by Istituto Italiano di Tecnologia
   
   Author: Alessio Rocchi
   
-  This file groups files to use COMAN in GAZEBO
+  This file groups files to use COGIMON in GAZEBO
   
   -->
 
@@ -36,8 +36,8 @@
           </noise>
           -->
          </imu>
-         <plugin name="coman_yarp_gazebo_plugin_IMU" filename="libgazebo_yarp_imu.so">
-           <yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_inertial.ini</yarpConfigurationFile>
+         <plugin name="cogimon_yarp_gazebo_plugin_IMU" filename="libgazebo_yarp_imu.so">
+           <yarpConfigurationFile>model://cogimon_urdf/conf/cogimon/cogimon_gazebo_inertial.ini</yarpConfigurationFile>
          </plugin>
         </sensor>
        </gazebo>

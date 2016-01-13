@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://ros.org/wiki/xacro" name="COMAN">
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="COGIMON">
 
-<xacro:property name="model_name" value="IIT Coman 2013" />
+<xacro:property name="model_name" value="IIT cogimon 2013" />
 <xacro:property name="model_version" value="1.0" />
 
 <!--
@@ -14,7 +14,7 @@
 ####################################################
 -->
 
-<xacro:property name="GAZEBO_COMAN_USES_ROUND_FEET" value="true" />
+<xacro:property name="GAZEBO_COGIMON_USES_ROUND_FEET" value="true" />
 
 
 <!--
@@ -26,8 +26,8 @@
 ####################################################
 --> 
 
-<xacro:property name="GAZEBO_COMAN_USES_FOREARMS" value="false" />
-<xacro:property name="GAZEBO_COMAN_USES_SOFTHANDS" value="false" />
+<xacro:property name="GAZEBO_COGIMON_USES_FOREARMS" value="false" />
+<xacro:property name="GAZEBO_COGIMON_USES_SOFTHANDS" value="false" />
 
 <!--
 ####################################################
@@ -36,9 +36,9 @@
 ##
 ##
 ## options:
-## 1) COMAN classic without the staff to carry the sensor. 
+## 1) COGIMON classic without the staff to carry the sensor. 
 ##      Torso frame is connected to gaze link through a gaze_joint "fixed"
-## 2) COMAN with staff and xtion sensor. Torso frame is connected to a xtion_staff_link through
+## 2) COGIMON with staff and xtion sensor. Torso frame is connected to a xtion_staff_link through
 ##      a xtion_staff_joint "fixed". Xtion_staff_link is then connected to gaze_link through gaze_joint "fixed". 
 ##
 ####################################################
@@ -46,6 +46,6 @@
 # 1/2 (true/false) 
 #
 -->
-<xacro:property name="GAZEBO_COMAN_USES_XTION" value="false" />
+<xacro:property name="GAZEBO_COGIMON_USES_XTION" value="false" />
 
 </robot>

@@ -1,9 +1,9 @@
 <launch>
      <arg name="gui" default="true" />
 
-     <!-- send the coman robot XML to param server -->
-     <param name="robot_description" command="$(find xacro)/xacro.py '$(find coman_urdf)/urdf/coman.urdf.xacro'" />
-     <param name="robot_description_semantic" textfile="$(find coman_srdf)/srdf/coman.srdf" />   
+     <!-- send the cogimon robot XML to param server -->
+     <param name="robot_description" command="$(find xacro)/xacro.py '$(find cogimon_urdf)/urdf/cogimon.urdf.xacro'" />
+     <param name="robot_description_semantic" textfile="$(find cogimon_srdf)/srdf/cogimon.srdf" />   
      <param name="use_gui" value="$(arg gui)"/>
      <param name="rate" value="50.0"/>
      
