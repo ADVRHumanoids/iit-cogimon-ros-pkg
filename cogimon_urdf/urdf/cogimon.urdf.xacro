@@ -39,7 +39,7 @@ The coordinate frame called gaze defines the head position and orientation. The 
 </xacro:unless>
 
 <!-- WEIGHT COEFFICIENT FACTOR is a factor that multiplies weights and inertias -->  
-<xacro:property name="wcf" value="1.3" />
+<xacro:property name="wcf" value="1.4" />
 
 <!-- ************ COGIMON BASE ************** -->
 <xacro:include filename="$(find cogimon_urdf)/urdf/cogimon_base.urdf.xacro"/>
