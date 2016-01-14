@@ -17,8 +17,8 @@
   <link name ="DWL">
     <inertial>
       <origin xyz="4.2999707E-4 -0.0097650317 0.033011157" rpy="0 0 0"/>
-      <mass value="0.54588774"/>
-      <inertia ixx="9.7126578E-4"  ixy="-7.2101244E-7"  ixz="1.1440119E-6" iyy="7.4686706E-4" iyz="-1.7450917E-4" izz="6.2196235E-4" />
+      <mass value="${wcf*0.54588774}"/>
+      <inertia ixx="${wcf*9.7126578E-4}"  ixy="${wcf*-7.2101244E-7}"  ixz="${wcf*1.1440119E-6}" iyy="${wcf*7.4686706E-4}" iyz="${wcf*-1.7450917E-4}" izz="${wcf*6.2196235E-4}" />
     </inertial>
     <visual>
       <origin xyz="-0.020281504 0 -0.63912053" rpy="0 0 ${PI}"/>
@@ -38,8 +38,8 @@
   <link name ="DWS">
     <inertial>
       <origin xyz="-0.0021273416 0.0033575235 -0.0010076896" rpy="0 0 0"/>
-      <mass value="0.75398402"/>
-      <inertia ixx="3.4093348E-4"  ixy="-6.2120042E-6"  ixz="-1.3863473E-6" iyy="3.9581916E-4" iyz="1.443019E-6" izz="3.7449753E-4" />
+      <mass value="${wcf*0.75398402}"/>
+      <inertia ixx="${wcf*3.4093348E-4}"  ixy="${wcf*-6.2120042E-6}"  ixz="${wcf*-1.3863473E-6}" iyy="${wcf*3.9581916E-4}" iyz="${wcf*1.443019E-6}" izz="${wcf*3.7449753E-4}" />
     </inertial>
     <visual>
       <origin xyz="-0.020281504 0 -0.63912053" rpy="0 0 ${PI}"/>
@@ -59,8 +59,8 @@
   <link name ="DWYTorso">
     <inertial>
       <origin xyz="-0.0358501 1.8286043E-5 0.117557148" rpy="0 0 0"/>
-      <mass value="6.3617175"/>
-      <inertia ixx="0.034089342"  ixy="-9.8308572E-6"  ixz="-7.5649290E-4" iyy="0.030117357" iyz="6.2443771E-6" izz="0.025296582" />
+      <mass value="${wcf*6.3617175}"/>
+      <inertia ixx="${wcf*0.034089342}"  ixy="${wcf*-9.8308572E-6}"  ixz="${wcf*-7.5649290E-4}" iyy="${wcf*0.030117357}" iyz="${wcf*6.2443771E-6}" izz="${wcf*0.025296582}" />
     </inertial>
     <visual>
       <origin xyz="-0.020281504 0.0 -0.68662053" rpy="0 0 ${PI}"/>
