@@ -15,6 +15,43 @@
     <parent link="torso"/>
     <child link="gaze"/>
   </joint>
+  <link name="Head">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <mass value="2.8"/>
+      <inertia ixx="0.00233333333333" ixy="0.0" ixz="0.0" iyy="0.00233333333333" iyz="0.0" izz="0.00233333333333"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 1.57079632679" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://cogimon_urdf/meshes/Head.STL" scale="0.1 0.1 0.1"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="-0.517476905774 -5.86283969573e-07 1.55172464527e-07" xyz="1.4443845e-08 -0.00935319 -0.01606814"/>
+      <geometry>
+        <cylinder length="0.0433614277711" radius="0.0900436"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="-0.517476905774 -5.86283969573e-07 1.55172464527e-07" xyz="0.000000 -0.020078 -0.034910"/>
+      <geometry>
+        <sphere radius="0.0900436"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="-0.517476905774 -5.86283969573e-07 1.55172464527e-07" xyz="0.000000 0.001372 0.002774"/>
+      <geometry>
+        <sphere radius="0.0900436"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="neck_fixed" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.35"/>
+    <parent link="DWYTorso"/>
+    <child link="Head"/>
+  </joint>
   <link name="base_link"/>
   <link name="Waist">
     <inertial>

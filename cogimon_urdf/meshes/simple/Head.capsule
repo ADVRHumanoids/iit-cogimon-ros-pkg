@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<robot name="/home/enrico/robotology-superbuild/robots/iit-cogimon-ros-pkg/cogimon_urdf/meshes/simple/Head.STL">
+  <link name="0.03937_0.03937_0.03937">
+    <collision>
+      <origin xyz="-9.9359e-10 -0.003724144 -0.00620747" rpy="-0.538754812716 1.53952398709e-07 -4.25044052394e-08"/>
+      <geometry>
+        <cylinder radius="0.0354945" length="0.017196354342"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="0.01000_0.01000_0.01000">
+    <collision>
+      <origin xyz="-8.6502e-11 -0.001022115145 -0.0012161935" rpy="-0.503031459545 -4.79966447769e-07 1.23330787558e-07"/>
+      <geometry>
+        <cylinder radius="0.0157844" length="0.00422895393925"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="0.10000_0.10000_0.10000">
+    <collision>
+      <origin xyz="1.4443845e-08 -0.00935319 -0.01606814" rpy="-0.517476905774 -5.86283969573e-07 1.55172464527e-07"/>
+      <geometry>
+        <cylinder radius="0.0900436" length="0.0433614277711"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

@@ -36,6 +36,9 @@ The coordinate frame called gaze defines the head position and orientation. The 
 		<child link="gaze"/>
 		<origin xyz="0 0 0.1" rpy="0 0 0" />
 	</joint>
+
+        <!-- NECK -->
+	<xacro:include filename="$(find cogimon_urdf)/urdf/parts/neck.urdf.xacro" />
 </xacro:unless>
 
 <!-- WEIGHT COEFFICIENT FACTOR is a factor that multiplies weights and inertias -->  
