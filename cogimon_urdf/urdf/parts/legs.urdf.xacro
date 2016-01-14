@@ -12,8 +12,8 @@
 <link name ="RHipMot">
     <inertial>
       <origin xyz="-3.269678E-4 -0.023587321 -2.6496509E-4" rpy="0 0 0"/>
-      <mass value="0.89258227"/>
-      <inertia ixx="4.7672294E-4"  ixy="-3.9936567E-6"  ixz="-2.4802574E-6" iyy="5.458038E-4" iyz="-3.3389575E-6" izz="5.126859E-4" />
+      <mass value="${wcf*0.89258227}"/>
+      <inertia ixx="${wcf*4.7672294E-4}"  ixy="${wcf*-3.9936567E-6}"  ixz="${wcf*-2.4802574E-6}" iyy="${wcf*5.458038E-4}" iyz="${wcf*-3.3389575E-6}" izz="${wcf*5.126859E-4}" />
     </inertial>
     <visual>
       <origin xyz="0.0 0.023 -0.52" rpy="0 0 ${PI}"/>
@@ -33,8 +33,8 @@
   <link name ="RThighUpLeg">
     <inertial>
       <origin xyz="0.0012591632 -0.016896372 -0.058903336" rpy="0 0 0"/>
-      <mass value="1.0246101"/>
-      <inertia ixx="9.165719E-4"  ixy="-1.4449904E-6"  ixz="-1.6685011E-5" iyy="0.00104849584" iyz="2.5492874E-5" izz="6.8637197E-4" />
+      <mass value="${wcf*1.0246101}"/>
+      <inertia ixx="${wcf*9.165719E-4}"  ixy="${wcf*-1.4449904E-6}"  ixz="${wcf*-1.6685011E-5}" iyy="${wcf*0.00104849584}" iyz="${wcf*2.5492874E-5}" izz="${wcf*6.8637197E-4}" />
     </inertial>
     <visual>
       <origin xyz="0.0 0.0726 -0.52" rpy="0 0 ${PI}"/>
@@ -54,8 +54,8 @@
   <link name ="RThighLowLeg">
     <inertial>
       <origin xyz="9.8720058E-4 6.7037262E-4 -0.075716843" rpy="0 0 0"/>
-      <mass value="1.7001134"/>
-      <inertia ixx="0.0038979546"  ixy="1.7802399E-6"  ixz="2.6403262E-5" iyy="0.0039360845" iyz="4.522711E-5" izz="9.0218711E-4" />
+      <mass value="${wcf*1.7001134}"/>
+      <inertia ixx="${wcf*0.0038979546}"  ixy="${wcf*1.7802399E-6}"  ixz="${wcf*2.6403262E-5}" iyy="${wcf*0.0039360845}" iyz="${wcf*4.522711E-5}" izz="${wcf*9.0218711E-4}" />
     </inertial>
     <visual>
       <origin xyz="0.0 0.0726 -0.4176" rpy="0 0 ${PI}"/>
@@ -75,8 +75,8 @@
   <link name ="RLowLeg">
     <inertial>
       <origin xyz="0.0024612666 -0.0053099614 -0.08598948" rpy="0 0 0"/>
-      <mass value="1.4098179"/>
-      <inertia ixx="0.0040604004"  ixy="1.1227206E-5"  ixz="1.2260973E-5" iyy="0.004005652855" iyz="5.1899176E-4" izz="0.0012414054" />
+      <mass value="${wcf*1.4098179}"/>
+      <inertia ixx="${wcf*0.0040604004}"  ixy="${wcf*1.1227206E-5}"  ixz="${wcf*1.2260973E-5}" iyy="${wcf*0.004005652855}" iyz="${wcf*5.1899176E-4}" izz="${wcf*0.0012414054}" />
     </inertial>
     <visual>
       <origin xyz="0.0 0.0726 -0.2942" rpy="0 0 ${PI}"/>
@@ -96,8 +96,8 @@
   <link name ="RFootmot">
     <inertial>
       <origin xyz="8.8067281E-4 -9.2224881E-4 2.3038476E-4" rpy="0 0 0"/>
-      <mass value="0.72992131"/>
-      <inertia ixx="3.2034425E-4"  ixy="7.6346303E-6"  ixz="2.5430158E-7" iyy="3.6584358E-4" iyz="-3.6889276E-6" izz="3.6065156E-4" />
+      <mass value="${wcf*0.72992131}"/>
+      <inertia ixx="${wcf*3.2034425E-4}"  ixy="${wcf*7.6346303E-6}"  ixz="${wcf*2.5430158E-7}" iyy="${wcf*3.6584358E-4}" iyz="${wcf*-3.6889276E-6}" izz="${wcf*3.6065156E-4}" />
     </inertial>
     <visual>
       <origin xyz="0.0 0.0726 -0.0932" rpy="0 0 ${PI}"/>
@@ -118,8 +118,8 @@
     <link name ="RFoot">
       <inertial>
         <origin xyz="0.00969210464 -0.0090460227 -0.043062308" rpy="0 0 0"/>
-        <mass value="0.66646684"/>
-        <inertia ixx="0.0012944808"  ixy="-9.2387693E-5"  ixz="2.0080105E-4" iyy="0.0015851846" iyz="2.7599327E-4" izz="0.0013326766" />
+        <mass value="${wcf*0.66646684}"/>
+        <inertia ixx="${wcf*0.0012944808}"  ixy="${wcf*-9.2387693E-5}"  ixz="${wcf*2.0080105E-4}" iyy="${wcf*0.0015851846}" iyz="${wcf*2.7599327E-4}" izz="${wcf*0.0013326766}" />
       </inertial>
       <visual>
         <origin xyz="0.0 0.0726 -0.0932" rpy="0 0 -3.14159265359"/>
@@ -140,8 +140,8 @@
     <link name ="RFoot">
       <inertial>
         <origin xyz="0.00969210464 -0.0090460227 -0.043062308" rpy="0 0 0"/>
-        <mass value="0.66646684"/>
-        <inertia ixx="0.0012944808"  ixy="-9.2387693E-5"  ixz="2.0080105E-4" iyy="0.0015851846" iyz="2.7599327E-4" izz="0.0013326766" />
+        <mass value="${wcf*0.66646684}"/>
+        <inertia ixx="${wcf*0.0012944808}"  ixy="${wcf*-9.2387693E-5}"  ixz="${wcf*2.0080105E-4}" iyy="${wcf*0.0015851846}" iyz="${wcf*2.7599327E-4}" izz="${wcf*0.0013326766}" />
       </inertial>
     <visual>
      <origin xyz="0.03 0 -0.07" rpy="0 0 0" />
@@ -163,8 +163,8 @@
   <link name ="LHipMot">
     <inertial>
       <origin xyz="-3.269678E-4 0.023587321 -2.6496509E-4" rpy="0 0 0"/>
-      <mass value="0.89258227"/>
-      <inertia ixx="4.7672294E-4"  ixy="3.9936567E-6"  ixz="-2.4802574E-6" iyy="5.458038E-4" iyz="3.3389575E-6" izz="5.126859E-4" />
+      <mass value="${wcf*0.89258227}"/>
+      <inertia ixx="${wcf*4.7672294E-4}"  ixy="${wcf*3.9936567E-6}"  ixz="${wcf*-2.4802574E-6}" iyy="${wcf*5.458038E-4}" iyz="${wcf*3.3389575E-6}" izz="${wcf*5.126859E-4}" />
     </inertial>
     <visual>
       <origin xyz="0.0 -0.023 -0.52" rpy="0 0 ${PI}"/>
@@ -184,8 +184,8 @@
   <link name ="LThighUpLeg">
     <inertial>
       <origin xyz="0.0012591632 0.016896372 -0.058903336" rpy="0 0 0"/>
-      <mass value="1.0246101"/>
-      <inertia ixx="9.165719E-4"  ixy="1.4449904E-6"  ixz="-1.6685011E-5" iyy="0.00104849584" iyz="-2.5492874E-5" izz="6.8637197E-4" />
+      <mass value="${wcf*1.0246101}"/>
+      <inertia ixx="${wcf*9.165719E-4}"  ixy="${wcf*1.4449904E-6}"  ixz="${wcf*-1.6685011E-5}" iyy="${wcf*0.00104849584}" iyz="${wcf*-2.5492874E-5}" izz="${wcf*6.8637197E-4}" />
     </inertial>
     <visual>
       <origin xyz="0.0 -0.0726 -0.52" rpy="0 0 ${PI}"/>
@@ -205,8 +205,8 @@
   <link name ="LThighLowLeg">
     <inertial>
       <origin xyz="9.8720058E-4 -6.7037262E-4 -0.075716843" rpy="0 0 0"/>
-      <mass value="1.7001134"/>
-      <inertia ixx="0.0038979546"  ixy="-1.7802399E-6"  ixz="2.6403262E-5" iyy="0.0039360845" iyz="-4.5227110E-5" izz="9.0218711E-4" />
+      <mass value="${wcf*1.7001134}"/>
+      <inertia ixx="${wcf*0.0038979546}"  ixy="${wcf*-1.7802399E-6}"  ixz="${wcf*2.6403262E-5}" iyy="${wcf*0.0039360845}" iyz="${wcf*-4.5227110E-5}" izz="${wcf*9.0218711E-4}" />
     </inertial>
     <visual>
       <origin xyz="0.0 -0.0726 -0.4176" rpy="0 0 ${PI}"/>
@@ -226,8 +226,8 @@
   <link name ="LLowLeg">
     <inertial>
       <origin xyz="0.0024612666 0.0053099614 -0.085989484" rpy="0 0 0"/>
-      <mass value="1.4098179"/>
-      <inertia ixx="0.0040604004"  ixy="-1.1227206E-5"  ixz="1.2260973E-5" iyy="0.004005652855" iyz="-5.1899176E-4" izz="0.0012414054" />
+      <mass value="${wcf*1.4098179}"/>
+      <inertia ixx="${wcf*0.0040604004}"  ixy="${wcf*-1.1227206E-5}"  ixz="${wcf*1.2260973E-5}" iyy="${wcf*0.004005652855}" iyz="${wcf*-5.1899176E-4}" izz="${wcf*0.0012414054}" />
     </inertial>
     <visual>
       <origin xyz="0.0 -0.0726 -0.2942" rpy="0 0 ${PI}"/>
@@ -247,8 +247,8 @@
   <link name ="LFootmot">
     <inertial>
       <origin xyz="8.8067281E-4 9.2224881E-4 2.3038476E-4" rpy="0 0 0"/>
-      <mass value="0.72992131"/>
-      <inertia ixx="3.2034425E-4"  ixy="-7.6346303E-6"  ixz="2.5430158E-7" iyy="3.6584358E-4" iyz="3.6889276E-6" izz="3.6065156E-4" />
+      <mass value="${wcf*0.72992131}"/>
+      <inertia ixx="${wcf*3.2034425E-4}"  ixy="${wcf*-7.6346303E-6}"  ixz="${wcf*2.5430158E-7}" iyy="${wcf*3.6584358E-4}" iyz="${wcf*3.6889276E-6}" izz="${wcf*3.6065156E-4}" />
     </inertial>
     <visual>
       <origin xyz="0.0 -0.0726 -0.0932" rpy="0 0 ${PI}"/>
@@ -269,8 +269,8 @@
     <link name ="LFoot">
       <inertial>
         <origin xyz="0.0096921046 0.0090460227 -0.043062308" rpy="0 0 0"/>
-        <mass value="0.66646684"/>
-        <inertia ixx="0.0012944808"  ixy="9.2387693E-5"  ixz="2.0080105E-4" iyy="0.0015851846" iyz="-2.7599327E-4" izz="0.0013326766" />
+        <mass value="${wcf*0.66646684}"/>
+        <inertia ixx="${wcf*0.0012944808}"  ixy="${wcf*9.2387693E-5}"  ixz="${wcf*2.0080105E-4}" iyy="${wcf*0.0015851846}" iyz="${wcf*-2.7599327E-4}" izz="${wcf*0.0013326766}" />
       </inertial>
       <visual>
         <origin xyz="0.0 -0.0726 -0.0932" rpy="0 0 -3.14159265359"/>
@@ -291,8 +291,8 @@
     <link name ="LFoot">
       <inertial>
         <origin xyz="0.0096921046 0.0090460227 -0.043062308" rpy="0 0 0"/>
-        <mass value="0.66646684"/>
-        <inertia ixx="0.0012944808"  ixy="9.2387693E-5"  ixz="2.0080105E-4" iyy="0.0015851846" iyz="-2.7599327E-4" izz="0.0013326766" />
+        <mass value="${wcf*0.66646684}"/>
+        <inertia ixx="${wcf*0.0012944808}"  ixy="${wcf*9.2387693E-5}"  ixz="${wcf*2.0080105E-4}" iyy="${wcf*0.0015851846}" iyz="${wcf*-2.7599327E-4}" izz="${wcf*0.0013326766}" />
       </inertial>
       <visual>
        <origin xyz="0.03 0 -0.07" rpy="0 0 0" />
