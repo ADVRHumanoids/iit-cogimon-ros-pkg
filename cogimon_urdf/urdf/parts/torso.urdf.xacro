@@ -96,16 +96,16 @@
     <child link="DWS"/>
     <origin xyz="0 0 0" rpy="0 0 0" />
     <axis xyz="0 1 0" />
-    <limit velocity="4.0" effort="50" lower="-0.3491" upper="0.8727" />
+    <limit velocity="4.0" effort="80" lower="-0.3491" upper="0.8727" />
     <dynamics friction="0" damping="3.0"/>
   </joint>
 
   <joint name="WaistYaw" type="revolute">
     <parent link="DWS"/>
     <child link="DWYTorso"/>
-    <origin xyz="0 0 0.04749999" rpy="0 0 0" />
+    <origin xyz="0 0 ${0.04749999+hco}" rpy="0 0 0" />
     <axis xyz="0 0 1" />
-    <limit velocity="4.0" effort="50" lower="-1.3963" upper="1.3962" />
+    <limit velocity="4.0" effort="40" lower="-1.3963" upper="1.3962" />
     <dynamics friction="0" damping="3.0"/>
   </joint>
 

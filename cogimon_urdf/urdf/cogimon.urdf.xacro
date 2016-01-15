@@ -43,8 +43,10 @@ The coordinate frame called gaze defines the head position and orientation. The 
 
 <!-- WEIGHT COEFFICIENT FACTOR is a factor that multiplies weights and inertias -->  
 <xacro:property name="wcf" value="1.4" />
-
+<!-- HEIGHT COEFFICIENT OFFSET is a factor added to legs and torso links -->  
+<xacro:property name="hco" value="0.1" />
 <!-- ************ COGIMON BASE ************** -->
+
 <xacro:include filename="$(find cogimon_urdf)/urdf/cogimon_base.urdf.xacro"/>
 
 <!-- ************ FOREARMS ************ -->
