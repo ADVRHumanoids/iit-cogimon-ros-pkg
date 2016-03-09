@@ -23,6 +23,6 @@
   <xacro:include filename="$(find cogimon_urdf)/urdf/gazebo/cogimon_materials.gazebo.xacro" />
   <xacro:include filename="$(find cogimon_urdf)/urdf/gazebo/force_torque.gazebo.xacro" />
 
-  <origin xyz="0.0 0.0 ${0.521+2.0*hco}" rpy="0 0 0" />
+  <origin xyz="0.0 0.0 ${0.521+2.0*(hco+0.025)}" rpy="0 0 0" />
 </robot>
 
