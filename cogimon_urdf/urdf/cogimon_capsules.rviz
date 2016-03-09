@@ -206,7 +206,7 @@
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="WaistYaw" type="revolute">
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.14749999"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.09749999"/>
     <axis xyz="0.0 0.0 1.0"/>
     <parent link="DWS"/>
     <child link="DWYTorso"/>
@@ -596,7 +596,7 @@
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="RHipYaw" type="revolute">
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.2024"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.2274"/>
     <axis xyz="0.0 0.0 1.0"/>
     <parent link="RThighUpLeg"/>
     <child link="RThighLowLeg"/>
@@ -612,7 +612,7 @@
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="RAnkLat" type="revolute">
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.301"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.326"/>
     <axis xyz="1.0 0.0 0.0"/>
     <parent link="RLowLeg"/>
     <child link="RFootmot"/>
@@ -644,7 +644,7 @@
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="LHipYaw" type="revolute">
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.2024"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.2274"/>
     <axis xyz="0.0 0.0 1.0"/>
     <parent link="LThighUpLeg"/>
     <child link="LThighLowLeg"/>
@@ -660,7 +660,7 @@
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="LAnkLat" type="revolute">
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.301"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.326"/>
     <axis xyz="1.0 0.0 0.0"/>
     <parent link="LLowLeg"/>
     <child link="LFootmot"/>

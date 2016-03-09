@@ -335,7 +335,7 @@
   <joint name="RHipYaw" type="revolute">
     <parent link="RThighUpLeg"/>
     <child link="RThighLowLeg"/>
-    <origin xyz="0.0 0.0 ${-0.1024-hco}" rpy="0 0 0" />
+    <origin xyz="0.0 0.0 ${-0.1024-hco-0.025}" rpy="0 0 0" />
     <axis xyz="0 0 1" />
     <limit velocity="4.0" effort="80" lower="-0.8727" upper="0.8727" />
     <dynamics friction="0" damping="3.0"/>
@@ -353,7 +353,7 @@
   <joint name="RAnkLat" type="revolute">
     <parent link="RLowLeg"/>
     <child link="RFootmot"/>
-    <origin xyz="0.0 0.0 ${-0.201-hco}" rpy="0 0 0" />
+    <origin xyz="0.0 0.0 ${-0.201-hco-0.025}" rpy="0 0 0" />
     <axis xyz="1 0 0" />
     <limit velocity="4.0" effort="80" lower="-0.6109" upper="0.6109" />
     <dynamics friction="0" damping="3.0"/> 
@@ -391,7 +391,7 @@
   <joint name="LHipYaw" type="revolute">
     <parent link="LThighUpLeg"/>
     <child link="LThighLowLeg"/>
-    <origin xyz="0.0 0.0 ${-0.1024-hco}" rpy="0 0 0" />
+    <origin xyz="0.0 0.0 ${-0.1024-hco-0.025}" rpy="0 0 0" />
     <axis xyz="0 0 1" />
     <limit velocity="4.0" effort="80" lower="-0.8727" upper="0.8727" />
     <dynamics friction="0" damping="3.0"/>
@@ -409,7 +409,7 @@
   <joint name="LAnkLat" type="revolute">
     <parent link="LLowLeg"/>
     <child link="LFootmot"/>
-    <origin xyz="0.0 0.0 ${-0.201-hco}" rpy="0 0 0" />
+    <origin xyz="0.0 0.0 ${-0.201-hco-0.025}" rpy="0 0 0" />
     <axis xyz="1 0 0" />
     <limit velocity="4.0" effort="80" lower="-0.6109" upper="0.6109" />
     <dynamics friction="0" damping="3.0"/>
