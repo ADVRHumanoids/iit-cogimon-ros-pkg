@@ -197,7 +197,7 @@
     <axis xyz="0.93969262078 0.0 0.34202014332"/>
     <parent link="Waist"/>
     <child link="DWL"/>
-    <limit effort="80.0" lower="-0.5236" upper="0.5235" velocity="4.0"/>
+    <limit effort="140.0" lower="-0.5236" upper="0.5235" velocity="4.0"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="WaistSag" type="fixed">
@@ -210,7 +210,7 @@
     <axis xyz="0.0 0.0 1.0"/>
     <parent link="DWS"/>
     <child link="DWYTorso"/>
-    <limit effort="40.0" lower="-1.3963" upper="1.3962" velocity="4.0"/>
+    <limit effort="140.0" lower="-1.3963" upper="1.3962" velocity="4.0"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <link name="l_ankle"/>
@@ -584,7 +584,7 @@
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="Waist"/>
     <child link="RHipMot"/>
-    <limit effort="80.0" lower="-1.9199" upper="0.7854" velocity="4.0"/>
+    <limit effort="140.0" lower="-1.9199" upper="0.7854" velocity="4.0"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="RHipLat" type="revolute">
@@ -592,7 +592,7 @@
     <axis xyz="1.0 0.0 0.0"/>
     <parent link="RHipMot"/>
     <child link="RThighUpLeg"/>
-    <limit effort="80.0" lower="-1.0472" upper="0.4363" velocity="4.0"/>
+    <limit effort="140.0" lower="-1.0472" upper="0.4363" velocity="4.0"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="RHipYaw" type="revolute">
@@ -600,7 +600,7 @@
     <axis xyz="0.0 0.0 1.0"/>
     <parent link="RThighUpLeg"/>
     <child link="RThighLowLeg"/>
-    <limit effort="80.0" lower="-0.8727" upper="0.8727" velocity="4.0"/>
+    <limit effort="140.0" lower="-0.8727" upper="0.8727" velocity="4.0"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="RKneeSag" type="revolute">
@@ -608,7 +608,7 @@
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="RThighLowLeg"/>
     <child link="RLowLeg"/>
-    <limit effort="80.0" lower="-0.1745" upper="1.9199" velocity="4.0"/>
+    <limit effort="140.0" lower="-0.1745" upper="1.9199" velocity="4.0"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="RAnkLat" type="revolute">
@@ -616,7 +616,7 @@
     <axis xyz="1.0 0.0 0.0"/>
     <parent link="RLowLeg"/>
     <child link="RFootmot"/>
-    <limit effort="80.0" lower="-0.6109" upper="0.6109" velocity="4.0"/>
+    <limit effort="140.0" lower="-0.6109" upper="0.6109" velocity="4.0"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="RAnkSag" type="revolute">
@@ -624,7 +624,7 @@
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="RFootmot"/>
     <child link="RFoot"/>
-    <limit effort="80.0" lower="-1.2217" upper="1.2217" velocity="4.0"/>
+    <limit effort="140.0" lower="-1.2217" upper="1.2217" velocity="4.0"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="LHipSag" type="revolute">
@@ -632,7 +632,7 @@
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="Waist"/>
     <child link="LHipMot"/>
-    <limit effort="80.0" lower="-1.9199" upper="0.7854" velocity="4.0"/>
+    <limit effort="140.0" lower="-1.9199" upper="0.7854" velocity="4.0"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="LHipLat" type="revolute">
@@ -640,7 +640,7 @@
     <axis xyz="1.0 0.0 0.0"/>
     <parent link="LHipMot"/>
     <child link="LThighUpLeg"/>
-    <limit effort="80.0" lower="-0.4363" upper="1.0472" velocity="4.0"/>
+    <limit effort="140.0" lower="-0.4363" upper="1.0472" velocity="4.0"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="LHipYaw" type="revolute">
@@ -648,7 +648,7 @@
     <axis xyz="0.0 0.0 1.0"/>
     <parent link="LThighUpLeg"/>
     <child link="LThighLowLeg"/>
-    <limit effort="80.0" lower="-0.8727" upper="0.8727" velocity="4.0"/>
+    <limit effort="140.0" lower="-0.8727" upper="0.8727" velocity="4.0"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="LKneeSag" type="revolute">
@@ -656,7 +656,7 @@
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="LThighLowLeg"/>
     <child link="LLowLeg"/>
-    <limit effort="80.0" lower="-0.1745" upper="1.9199" velocity="4.0"/>
+    <limit effort="140.0" lower="-0.1745" upper="1.9199" velocity="4.0"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="LAnkLat" type="revolute">
@@ -664,7 +664,7 @@
     <axis xyz="1.0 0.0 0.0"/>
     <parent link="LLowLeg"/>
     <child link="LFootmot"/>
-    <limit effort="80.0" lower="-0.6109" upper="0.6109" velocity="4.0"/>
+    <limit effort="140.0" lower="-0.6109" upper="0.6109" velocity="4.0"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="LAnkSag" type="revolute">
@@ -672,7 +672,7 @@
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="LFootmot"/>
     <child link="LFoot"/>
-    <limit effort="80.0" lower="-1.2217" upper="1.2217" velocity="4.0"/>
+    <limit effort="140.0" lower="-1.2217" upper="1.2217" velocity="4.0"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="l_ankle_joint" type="fixed">
@@ -1014,7 +1014,7 @@
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="DWYTorso"/>
     <child link="RShp"/>
-    <limit effort="40.0" lower="-3.4034" upper="1.6581" velocity="4.0"/>
+    <limit effort="120.0" lower="-3.4034" upper="1.6581" velocity="4.0"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="RShLat" type="revolute">
@@ -1022,7 +1022,7 @@
     <axis xyz="1.0 0.0 0.0"/>
     <parent link="RShp"/>
     <child link="RShr"/>
-    <limit effort="40.0" lower="-2.094" upper="0.31415" velocity="4.0"/>
+    <limit effort="120.0" lower="-2.094" upper="0.31415" velocity="4.0"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="RShYaw" type="revolute">
@@ -1030,7 +1030,7 @@
     <axis xyz="0.0 0.0 1.0"/>
     <parent link="RShr"/>
     <child link="RShy"/>
-    <limit effort="40.0" lower="-1.5708" upper="1.5708" velocity="4.0"/>
+    <limit effort="120.0" lower="-1.5708" upper="1.5708" velocity="4.0"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="RElbj" type="revolute">
@@ -1038,7 +1038,7 @@
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="RShy"/>
     <child link="RElb"/>
-    <limit effort="40.0" lower="-2.3562" upper="0.0" velocity="4.0"/>
+    <limit effort="90.0" lower="-2.3562" upper="0.0" velocity="4.0"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="LShSag" type="revolute">
@@ -1046,7 +1046,7 @@
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="DWYTorso"/>
     <child link="LShp"/>
-    <limit effort="40.0" lower="-3.4034" upper="1.6581" velocity="4.0"/>
+    <limit effort="120.0" lower="-3.4034" upper="1.6581" velocity="4.0"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="LShLat" type="revolute">
@@ -1062,7 +1062,7 @@
     <axis xyz="0.0 0.0 1.0"/>
     <parent link="LShr"/>
     <child link="LShy"/>
-    <limit effort="40.0" lower="-1.5708" upper="1.5708" velocity="4.0"/>
+    <limit effort="120.0" lower="-1.5708" upper="1.5708" velocity="4.0"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="LElbj" type="revolute">
@@ -1070,7 +1070,7 @@
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="LShy"/>
     <child link="LElb"/>
-    <limit effort="40.0" lower="-2.3562" upper="0.0" velocity="4.0"/>
+    <limit effort="90.0" lower="-2.3562" upper="0.0" velocity="4.0"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <link name="l_wrist"/>
@@ -1272,7 +1272,7 @@
     <axis xyz="0.0 0.0 1.0"/>
     <parent link="LElb"/>
     <child link="LForearm"/>
-    <limit effort="15.0" lower="-1.5708" upper="1.5708" velocity="4.0"/>
+    <limit effort="40.0" lower="-1.5708" upper="1.5708" velocity="4.0"/>
     <dynamics damping="0.03" friction="0.0"/>
   </joint>
   <joint name="LWrj1" type="revolute">
@@ -1280,7 +1280,7 @@
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="LForearm"/>
     <child link="LWrMot2"/>
-    <limit effort="15.0" lower="-0.524" upper="0.524" velocity="4.0"/>
+    <limit effort="40.0" lower="-0.524" upper="0.524" velocity="4.0"/>
     <dynamics damping="0.03" friction="0.0"/>
   </joint>
   <joint name="LWrj2" type="revolute">
@@ -1288,7 +1288,7 @@
     <axis xyz="1.0 0.0 0.0"/>
     <parent link="LWrMot2"/>
     <child link="LWrMot3"/>
-    <limit effort="15.0" lower="-0.785375" upper="1.395" velocity="4.0"/>
+    <limit effort="40.0" lower="-0.785375" upper="1.395" velocity="4.0"/>
     <dynamics damping="0.03" friction="0.0"/>
   </joint>
   <joint name="l_wrist_joint" type="fixed">
@@ -1301,7 +1301,7 @@
     <axis xyz="0.0 0.0 1.0"/>
     <parent link="RElb"/>
     <child link="RForearm"/>
-    <limit effort="15.0" lower="-1.5708" upper="1.5708" velocity="4.0"/>
+    <limit effort="40.0" lower="-1.5708" upper="1.5708" velocity="4.0"/>
     <dynamics damping="0.03" friction="0.0"/>
   </joint>
   <joint name="RWrj1" type="revolute">
@@ -1309,7 +1309,7 @@
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="RForearm"/>
     <child link="RWrMot2"/>
-    <limit effort="15.0" lower="-0.524" upper="0.524" velocity="4.0"/>
+    <limit effort="40.0" lower="-0.524" upper="0.524" velocity="4.0"/>
     <dynamics damping="0.03" friction="0.0"/>
   </joint>
   <joint name="RWrj2" type="revolute">
@@ -1317,7 +1317,7 @@
     <axis xyz="1.0 0.0 0.0"/>
     <parent link="RWrMot2"/>
     <child link="RWrMot3"/>
-    <limit effort="15.0" lower="-1.395" upper="0.785375" velocity="4.0"/>
+    <limit effort="40.0" lower="-1.395" upper="0.785375" velocity="4.0"/>
     <dynamics damping="0.03" friction="0.0"/>
   </joint>
   <joint name="r_wrist_joint" type="fixed">
