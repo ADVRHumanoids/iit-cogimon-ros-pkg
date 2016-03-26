@@ -3,7 +3,7 @@
 
 <xacro:property name="PI" value="3.14159265359" />
 <xacro:property name="SF" value="0.03937" /> <!-- Scale factor for meshes -->
-
+<xacro:property name="uarm_offset" value="${0.15/2.}" />
 
 <!-- LINKS -->
 
@@ -201,7 +201,7 @@
 <joint name="RShYaw" type="revolute">
     <parent link="RShr"/>
     <child link="RShy"/>
-    <origin xyz="0.0 0.0 -0.04480846999999999" rpy="0 0 0" />
+    <origin xyz="0.0 0.0 ${-0.04480846999999999-uarm_offset}" rpy="0 0 0" />
     <axis xyz="0 0 1" />
     <limit velocity="4.0" effort="120" lower="-1.5708" upper="1.5708" />
     <dynamics friction="0" damping="3.0"/> 
@@ -210,7 +210,7 @@
   <joint name="RElbj" type="revolute">
     <parent link="RShy"/>
     <child link="RElb"/>
-    <origin xyz="0.015 0.0 -0.13519152999999998" rpy="0 0 0" />
+    <origin xyz="0.015 0.0 ${-0.13519152999999998-uarm_offset}" rpy="0 0 0" />
     <axis xyz="0 1 0" />
     <limit velocity="4.0" effort="90" lower="-2.3562" upper="0.0" />
     <dynamics friction="0" damping="3.0"/>
@@ -238,7 +238,7 @@
 <joint name="LShYaw" type="revolute">
     <parent link="LShr"/>
     <child link="LShy"/>
-    <origin xyz="0.0 0.0 -0.04480846999999999" rpy="0 0 0" />
+    <origin xyz="0.0 0.0 ${-0.04480846999999999-uarm_offset}" rpy="0 0 0" />
     <axis xyz="0 0 1" />
     <limit velocity="4.0" effort="120" lower="-1.5708" upper="1.5708" />
     <dynamics friction="0" damping="3.0"/>
@@ -247,7 +247,7 @@
   <joint name="LElbj" type="revolute">
     <parent link="LShy"/>
     <child link="LElb"/>
-    <origin xyz="0.015 0.0 -0.13519152999999998" rpy="0 0 0" />
+    <origin xyz="0.015 0.0 ${-0.13519152999999998-uarm_offset}" rpy="0 0 0" />
     <axis xyz="0 1 0" />
     <limit velocity="4.0" effort="90" lower="-2.3562" upper="0.0" />
     <dynamics friction="0" damping="3.0"/>

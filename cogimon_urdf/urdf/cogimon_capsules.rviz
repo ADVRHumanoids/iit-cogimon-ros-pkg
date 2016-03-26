@@ -1026,7 +1026,7 @@
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="RShYaw" type="revolute">
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.04480847"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.11980847"/>
     <axis xyz="0.0 0.0 1.0"/>
     <parent link="RShr"/>
     <child link="RShy"/>
@@ -1034,7 +1034,7 @@
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="RElbj" type="revolute">
-    <origin rpy="0.0 0.0 0.0" xyz="0.015 0.0 -0.13519153"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.015 0.0 -0.21019153"/>
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="RShy"/>
     <child link="RElb"/>
@@ -1058,7 +1058,7 @@
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="LShYaw" type="revolute">
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.04480847"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.11980847"/>
     <axis xyz="0.0 0.0 1.0"/>
     <parent link="LShr"/>
     <child link="LShy"/>
@@ -1066,7 +1066,7 @@
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="LElbj" type="revolute">
-    <origin rpy="0.0 0.0 0.0" xyz="0.015 0.0 -0.13519153"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.015 0.0 -0.21019153"/>
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="LShy"/>
     <child link="LElb"/>
@@ -1268,7 +1268,7 @@
     </collision>
   </link>
   <joint name="LForearmPlate" type="revolute">
-    <origin rpy="0.0 0.0 0.0" xyz="-0.015 0.0 -0.1078"/>
+    <origin rpy="0.0 0.0 0.0" xyz="-0.015 0.0 -0.1953"/>
     <axis xyz="0.0 0.0 1.0"/>
     <parent link="LElb"/>
     <child link="LForearm"/>
@@ -1276,7 +1276,7 @@
     <dynamics damping="0.03" friction="0.0"/>
   </joint>
   <joint name="LWrj1" type="revolute">
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.08688"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.17438"/>
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="LForearm"/>
     <child link="LWrMot2"/>
@@ -1297,7 +1297,7 @@
     <child link="l_wrist"/>
   </joint>
   <joint name="RForearmPlate" type="revolute">
-    <origin rpy="0.0 0.0 0.0" xyz="-0.015 0.0 -0.1078"/>
+    <origin rpy="0.0 0.0 0.0" xyz="-0.015 0.0 -0.1953"/>
     <axis xyz="0.0 0.0 1.0"/>
     <parent link="RElb"/>
     <child link="RForearm"/>
@@ -1305,7 +1305,7 @@
     <dynamics damping="0.03" friction="0.0"/>
   </joint>
   <joint name="RWrj1" type="revolute">
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.08688"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.17438"/>
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="RForearm"/>
     <child link="RWrMot2"/>
