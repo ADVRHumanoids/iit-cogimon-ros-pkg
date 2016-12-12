@@ -20,35 +20,18 @@
     <group name="imu_sensors">
         <link name="imu_link"/>
     </group>
-    <xacro:if value="${GAZEBO_COGIMON_USES_FOREARMS}">
-        <group name="left_arm">
-            <chain base_link="DWYTorso" tip_link="l_wrist"/>
-        </group>
-        <group name="right_arm">
-            <chain base_link="DWYTorso" tip_link="r_wrist"/>
-        </group>
-        <group name="force_torque_sensors"> 
-            <joint name="l_leg_ft_joint"/>
-    	    <joint name="r_leg_ft_joint"/>
-    	    <joint name="l_arm_ft_joint"/>
-    	    <joint name="r_arm_ft_joint"/>
-        </group>
-    </xacro:if>
-    <xacro:unless value="${GAZEBO_COGIMON_USES_FOREARMS}">
-        <group name="left_arm">
-            <chain base_link="DWYTorso" tip_link="l_wrist"/>
-        </group>
-        <group name="right_arm">
-            <chain base_link="DWYTorso" tip_link="r_wrist"/>
-        </group>
-        <group name="force_torque_sensors">
-        <!-- NEAREST JOINT TO FORCE_TORQUE SENSOR -->
-            <!--<joint name="LAnkSag"/>
-            <joint name="RAnkSag"/>-->
-            <joint name="l_ankle_joint"/>
-            <joint name="r_ankle_joint"/>
-        </group>
-    </xacro:unless>
+    <group name="left_arm">
+     <chain base_link="DWYTorso" tip_link="l_wrist"/>
+    </group>
+    <group name="right_arm">
+     <chain base_link="DWYTorso" tip_link="r_wrist"/>
+    </group>
+    <group name="force_torque_sensors"> 
+      <joint name="l_leg_ft_joint"/>
+      <joint name="r_leg_ft_joint"/>
+      <joint name="l_arm_ft_joint"/>
+      <joint name="r_arm_ft_joint"/>
+    </group>
     <group name="left_leg">
         <chain base_link="Waist" tip_link="l_sole"/>
     </group>

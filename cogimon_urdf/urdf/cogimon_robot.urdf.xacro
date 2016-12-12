@@ -10,19 +10,19 @@
   -->
   <xacro:include filename="$(find cogimon_urdf)/urdf/cogimon.urdf.xacro" />
 
-  <xacro:include filename="$(find cogimon_urdf)/urdf/gazebo/microstrain_3dmgx2_imu.gazebo.xacro" />
+  <!--xacro:include filename="$(find cogimon_urdf)/urdf/gazebo/microstrain_3dmgx2_imu.gazebo.xacro" />
 
   <xacro:include filename="$(find cogimon_urdf)/urdf/gazebo/cogimon.gazebo.xacro" />
 
   <xacro:if value="${GAZEBO_COGIMON_USES_XTION}">
 	<xacro:include filename="$(find cogimon_urdf)/urdf/gazebo/openni_kinect.gazebo.xacro" />
-  </xacro:if>
+  </xacro:if-->
 
 <!-- YARP PLUGINS for GAZEBO SIMULATION -->
-  <xacro:include filename="$(find cogimon_urdf)/urdf/gazebo/yarp_control.gazebo.xacro" />
+  <!--xacro:include filename="$(find cogimon_urdf)/urdf/gazebo/yarp_control.gazebo.xacro" />
   <xacro:include filename="$(find cogimon_urdf)/urdf/gazebo/cogimon_materials.gazebo.xacro" />
-  <xacro:include filename="$(find cogimon_urdf)/urdf/gazebo/force_torque.gazebo.xacro" />
+  <xacro:include filename="$(find cogimon_urdf)/urdf/gazebo/force_torque.gazebo.xacro" /-->
 
-  <origin xyz="0.0 0.0 ${0.521+2.0*(hco+0.025)}" rpy="0 0 0" />
+  <origin xyz="0.0 0.0 0.521" rpy="0 0 0" />
 </robot>
 

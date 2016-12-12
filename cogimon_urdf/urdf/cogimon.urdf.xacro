@@ -6,12 +6,13 @@
   
   DO NOT INCLUDE THIS FILE DIRECTLY! USE cogimon_robot.urdf.xacro INSTEAD!
 
-  Author: Enrico Mingo & Alessio Rocchi
+  Author: Enrico Mingo
 
   Inertial matrix has to be in CoM frame (URDF specs)
-
-  Velocity and effort limits are fake!
 -->
+
+<!-- ************ SOME DEFS ********************** -->
+<xacro:include filename="$(find cogimon_urdf)/urdf/conversions.urdf.xacro" />
 
 
 <!-- ************ MODEL CONFIGURATION ************ -->
@@ -24,27 +25,17 @@
 <!-- This links are defined in order to be compliant with http://www.ros.org/reps/rep-0120.html#coordinate-frames
 and to define the end effectors of the robot.
 The coordinate frame called gaze defines the head position and orientation. The orientation indicates in which direction the head appears to be looking regardless of any sensors (camera for instance). -->
-<link name="gaze"/>
+<!--link name="gaze"/>
 
-<xacro:if value="${GAZEBO_COGIMON_USES_XTION}">
-	<xacro:include filename="$(find cogimon_urdf)/urdf/sensors/xtion.urdf.xacro" />
-</xacro:if>
-
-<xacro:unless value="${GAZEBO_COGIMON_USES_XTION}">
 	<joint name="gaze_joint" type="fixed">
 		<parent link="torso"/>
 		<child link="gaze"/>
 		<origin xyz="0 0 0.1" rpy="0 0 0" />
-	</joint>
+	</joint-->
 
         <!-- NECK -->
-	<xacro:include filename="$(find cogimon_urdf)/urdf/parts/neck.urdf.xacro" />
-</xacro:unless>
+	<!--xacro:include filename="$(find cogimon_urdf)/urdf/parts/neck.urdf.xacro" />
 
-<!-- WEIGHT COEFFICIENT FACTOR is a factor that multiplies weights and inertias -->  
-<xacro:property name="wcf" value="2.1" />
-<!-- HEIGHT COEFFICIENT OFFSET is a factor added to legs and torso links -->  
-<xacro:property name="hco" value="0.1" />
 <!-- ************ COGIMON BASE ************** -->
 
 <xacro:include filename="$(find cogimon_urdf)/urdf/cogimon_base.urdf.xacro"/>
@@ -54,7 +45,7 @@ The coordinate frame called gaze defines the head position and orientation. The 
 and to define the end effectors of the robot -->
 
 <!-- position and orientation of the arm regardless of the tool (grasping device for instance) attached to it -->
-<link name="l_wrist"/>
+<!--link name="l_wrist"/>
 <link name="r_wrist"/>
 
 
@@ -94,19 +85,19 @@ and to define the end effectors of the robot -->
       <parent link="RFoot"/>
       <child link="r_leg_ft"/>
       <origin xyz="0 0 -0.065" rpy="0 0 0" /> 
-    </joint>
+    </joint-->
 
 
 <!-- ************ HANDS ************ -->
 
-<xacro:if value="${GAZEBO_COGIMON_USES_FOREARMS}">
-    <xacro:include filename="$(find cogimon_urdf)/urdf/parts/soft_hand.urdf.xacro" />
+<!--xacro:if value="${GAZEBO_COGIMON_USES_FOREARMS}">
+    <xacro:include filename="$(find cogimon_urdf)/urdf/parts/soft_hand.urdf.xacro" /-->
     <!-- Reference frames in hands -->
-    <xacro:include filename="$(find cogimon_urdf)/urdf/parts/hand_reference_frame.urdf.xacro" />	
-</xacro:if>
+    <!--xacro:include filename="$(find cogimon_urdf)/urdf/parts/hand_reference_frame.urdf.xacro" />	
+</xacro:if-->
 
 <!-- IMU -->
-<xacro:include filename="$(find cogimon_urdf)/urdf/sensors/imu.urdf.xacro"/>
+<!--xacro:include filename="$(find cogimon_urdf)/urdf/sensors/imu.urdf.xacro"/-->
   
 </robot>
 
