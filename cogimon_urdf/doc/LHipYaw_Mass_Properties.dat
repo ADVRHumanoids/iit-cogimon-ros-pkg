@@ -1,0 +1,65 @@
+﻿VOLUME =  7.6218531e+05  MM^3
+SURFACE AREA =  5.5492388e+05  MM^2
+AVERAGE DENSITY =  3.0877142e-06 KILOGRAM / MM^3
+MASS =  2.3534104e+00 KILOGRAM 
+
+CENTER OF GRAVITY with respect to L_HIP_YAW coordinate frame:
+X   Y   Z    -2.4777694e+01  5.3514533e+00 -5.1363939e+01  MM
+
+INERTIA with respect to L_HIP_YAW coordinate frame:  (KILOGRAM * MM^2)
+
+INERTIA TENSOR:
+Ixx Ixy Ixz  1.6714131e+04  1.9061656e+02 -5.1411322e+03
+Iyx Iyy Iyz  1.9061656e+02  1.9430559e+04  9.4901193e+02
+Izx Izy Izz -5.1411322e+03  9.4901193e+02  8.9372740e+03
+
+INERTIA at CENTER OF GRAVITY with respect to L_HIP_YAW coordinate frame:  (KILOGRAM * MM^2)
+
+INERTIA TENSOR:
+Ixx Ixy Ixz  1.0437839e+04 -1.2143782e+02 -2.1459939e+03
+Iyx Iyy Iyz -1.2143782e+02  1.1776825e+04  3.0212597e+02
+Izx Izy Izz -2.1459939e+03  3.0212597e+02  7.4250380e+03
+
+PRINCIPAL MOMENTS OF INERTIA:  (KILOGRAM * MM^2)
+I1  I2  I3   6.3012753e+03  1.1396484e+04  1.1941943e+04
+
+ROTATION MATRIX from L_HIP_YAW orientation to PRINCIPAL AXES:
+       0.45926        0.75917       -0.46123
+      -0.03878        0.53587        0.84341
+       0.88745       -0.36946        0.27555
+
+ROTATION ANGLES from L_HIP_YAW orientation to PRINCIPAL AXES (degrees):
+angles about x  y  z -71.907        -27.467        -58.828 
+
+RADII OF GYRATION with respect to PRINCIPAL AXES:
+R1  R2  R3 5.1744643e+01  6.9588363e+01  7.1234219e+01  MM
+
+---------------------------------------------
+
+MASS PROPERTIES OF COMPONENTS OF THE ASSEMBLY
+(in assembly units and the L_HIP_YAW coordinate frame)
+
+   DENSITY             MASS          C.G.:  X        Y         Z
+
+                        CG3301A0            MATERIAL:                              ERGAL70
+         2.81000e-06  7.55397e-01 -1.12494e+01  1.77926e+01 -3.89596e+01
+                        CE0100A0            MATERIAL:                              UNKNOWN
+         3.47450e-06  9.88872e-01 -5.21086e+01 -1.88569e+00 -8.94021e+01
+                        CE0132A1            MATERIAL:                                  ABS
+         1.25000e-06  6.38588e-03  2.72026e+01  8.05865e+00 -8.43510e+01
+                        CE0133A1            MATERIAL:                                  ABS
+         1.25000e-06  5.07718e-03  2.56311e+01  1.19314e+01 -8.36998e+01
+       CENTAURO_BOARD_2016-04-06            MATERIAL:                              UNKNOWN
+         1.00000e+00  0.00000e+00      ***          ***          ***    
+                 FAN_RS_60X60X15            MATERIAL:                              UNKNOWN
+         2.71000e-06  3.64687e-02  1.60000e+01  6.75000e+01 -8.28529e+01
+                        CG3302A0            MATERIAL:                                  ABS
+         9.00000e-07  5.01755e-02 -1.67470e+01  8.36299e+01 -7.72194e+01
+                        CG3304A0            MATERIAL:                              ERGAL70
+         2.81000e-06  5.46840e-03 -3.72904e+01  2.15296e+01 -6.66418e+00
+                        CG3304A0            MATERIAL:                              ERGAL70
+         2.81000e-06  5.46840e-03  4.15920e+01 -1.11445e+01 -6.66418e+00
+                        CG3303A0            MATERIAL:                              ERGAL70
+         2.81000e-06  1.33637e-01  1.22796e+01 -4.34725e+01 -4.94908e+01
+              ROTOR_SMALL_MEDIUM            MATERIAL:                              UNKNOWN
+         4.64316e-06  3.66460e-01  7.73275e-03  3.41246e-03  3.13898e+01

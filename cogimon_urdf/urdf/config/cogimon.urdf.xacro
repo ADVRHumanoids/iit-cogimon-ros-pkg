@@ -12,4 +12,7 @@
 <xacro:property name="COGIMON_LEFT_LEG" value="true" />
 <xacro:property name="COGIMON_RIGHT_LEG" value="true" />
 
+<!-- ************SELECT FIXED BASE*************-->
+<!-- ******************************************-->
+<xacro:property name="COGIMON_FIXED_BASE" value="true" />
 </robot>

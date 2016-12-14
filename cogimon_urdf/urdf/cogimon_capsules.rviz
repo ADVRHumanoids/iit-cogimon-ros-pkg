@@ -111,8 +111,40 @@
       </geometry>
     </collision>
   </link>
+  <link name="RThighLowLeg">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="-0.024777694 -0.0053514533 -0.051363939"/>
+      <mass value="2.3534104"/>
+      <inertia ixx="0.010437839" ixy="0.00012143782" ixz="-0.0021459939" iyy="0.011776825" iyz="-0.00030212597" izz="0.007425038"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://cogimon_urdf/meshes/Leg2.STL" scale="0.001 -0.001 0.001"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="-0.324013871392 0.069365512193 -0.0113414794624" xyz="-0.0151965 -0.0273595 -0.041388485"/>
+      <geometry>
+        <cylinder length="0.0953456874344" radius="0.115957"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="-0.324013871392 0.069365512193 -0.0113414794624" xyz="-0.018501 -0.042501 -0.086472"/>
+      <geometry>
+        <sphere radius="0.115957"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="-0.324013871392 0.069365512193 -0.0113414794624" xyz="-0.011892 -0.012218 0.003695"/>
+      <geometry>
+        <sphere radius="0.115957"/>
+      </geometry>
+    </collision>
+  </link>
   <joint name="RHipLat" type="revolute">
-    <origin rpy="0.0 0.0 -0.0262" xyz="0.01258 -0.110954508 -0.052922586"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.01258 -0.110954508 -0.052922586"/>
     <axis xyz="1.0 0.0 0.0"/>
     <parent link="Waist"/>
     <child link="RHipMot"/>
@@ -125,6 +157,14 @@
     <parent link="RHipMot"/>
     <child link="RThighUpLeg"/>
     <limit effort="176.0" lower="-1.67551608191" upper="1.57079632679" velocity="3.67"/>
+    <dynamics damping="3.0" friction="0.0"/>
+  </joint>
+  <joint name="RHipYaw" type="revolute">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0924945 -0.239"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <parent link="RThighUpLeg"/>
+    <child link="RThighLowLeg"/>
+    <limit effort="56.0" lower="-1.30899693899" upper="0.523598775597" velocity="13.6"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <link name="LHipMot">
@@ -191,8 +231,40 @@
       </geometry>
     </collision>
   </link>
+  <link name="LThighLowLeg">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="-0.024777694 0.0053514533 -0.051363939"/>
+      <mass value="2.3534104"/>
+      <inertia ixx="0.010437839" ixy="-0.00012143782" ixz="-0.0021459939" iyy="0.011776825" iyz="0.00030212597" izz="0.007425038"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://cogimon_urdf/meshes/Leg2.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="0.324013871392 0.069365512193 0.0113414794624" xyz="-0.0151965 0.0273595 -0.041388485"/>
+      <geometry>
+        <cylinder length="0.0953456874344" radius="0.115957"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="0.324013871392 0.069365512193 0.0113414794624" xyz="-0.018501 0.042501 -0.086472"/>
+      <geometry>
+        <sphere radius="0.115957"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="0.324013871392 0.069365512193 0.0113414794624" xyz="-0.011892 0.012218 0.003695"/>
+      <geometry>
+        <sphere radius="0.115957"/>
+      </geometry>
+    </collision>
+  </link>
   <joint name="LHipLat" type="revolute">
-    <origin rpy="0.0 0.0 0.0262" xyz="0.01258 0.110954508 -0.052922586"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.01258 0.110954508 -0.052922586"/>
     <axis xyz="1.0 0.0 0.0"/>
     <parent link="Waist"/>
     <child link="LHipMot"/>
@@ -205,6 +277,14 @@
     <parent link="LHipMot"/>
     <child link="LThighUpLeg"/>
     <limit effort="176.0" lower="-1.67551608191" upper="1.57079632679" velocity="3.67"/>
+    <dynamics damping="3.0" friction="0.0"/>
+  </joint>
+  <joint name="LHipYaw" type="revolute">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 -0.0924945 -0.239"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <parent link="LThighUpLeg"/>
+    <child link="LThighLowLeg"/>
+    <limit effort="56.0" lower="-0.523598775597" upper="1.30899693899" velocity="13.6"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
 </robot>
