@@ -23,6 +23,13 @@
   <xacro:include filename="$(find cogimon_urdf)/urdf/gazebo/cogimon_materials.gazebo.xacro" />
   <xacro:include filename="$(find cogimon_urdf)/urdf/gazebo/force_torque.gazebo.xacro" /-->
 
+  <link name="world"/>
+  
+   <joint name="fixed" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+  </joint>
+
   <origin xyz="0.0 0.0 0.521" rpy="0 0 0" />
 </robot>
 

@@ -6,10 +6,10 @@
 
 <!-- ************SELECT PARTS*************-->
 <!-- *************************************-->
-<xacro:property name="COGIMON_TORSO" value="TRUE" />
-<xacro:property name="COGIMON_LEFT_ARM" value="TRUE" />
-<xacro:property name="COGIMON_RIGH_ARM" value="TRUE" />
-<xacro:property name="COGIMON_LEFT_LEG" value="TRUE" />
-<xacro:property name="COGIMON_RIGH_LEG" value="TRUE" />
+<xacro:property name="COGIMON_TORSO" value="false" />
+<xacro:property name="COGIMON_LEFT_ARM" value="false" />
+<xacro:property name="COGIMON_RIGHT_ARM" value="false" />
+<xacro:property name="COGIMON_LEFT_LEG" value="true" />
+<xacro:property name="COGIMON_RIGHT_LEG" value="true" />
 
 </robot>
