@@ -79,12 +79,52 @@
       </geometry>
     </collision>
   </link>
+  <link name="RThighUpLeg">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0002989812 0.065748642 -0.088443666"/>
+      <mass value="1.9691802"/>
+      <inertia ixx="0.016200713" ixy="1.9336329e-05" ixz="-3.8620029e-05" iyy="0.014426424" iyz="0.003598535" izz="0.0048264937"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://cogimon_urdf/meshes/Leg1.STL" scale="0.001 -0.001 0.001"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="-2.72727243908 -1.07730489569e-13 5.12574394679e-13" xyz="1.24705e-16 0.063299 -0.068292475"/>
+      <geometry>
+        <cylinder length="0.138586857441" radius="0.0950553"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="-2.72727243908 -1.07730489569e-13 5.12574394679e-13" xyz="0.000000 0.035404 -0.004862"/>
+      <geometry>
+        <sphere radius="0.0950553"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="-2.72727243908 -1.07730489569e-13 5.12574394679e-13" xyz="-0.000000 0.091194 -0.131723"/>
+      <geometry>
+        <sphere radius="0.0950553"/>
+      </geometry>
+    </collision>
+  </link>
   <joint name="RHipLat" type="revolute">
     <origin rpy="0.0 0.0 -0.0262" xyz="0.01258 -0.110954508 -0.052922586"/>
     <axis xyz="1.0 0.0 0.0"/>
     <parent link="Waist"/>
     <child link="RHipMot"/>
     <limit effort="176.0" lower="-1.48352986419" upper="0.436332312998" velocity="3.67"/>
+    <dynamics damping="3.0" friction="0.0"/>
+  </joint>
+  <joint name="RHipSag" type="revolute">
+    <origin rpy="0.0 0.0 0.0" xyz="-0.0085 -0.0739855 -0.1125"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <parent link="RHipMot"/>
+    <child link="RThighUpLeg"/>
+    <limit effort="176.0" lower="-1.67551608191" upper="1.57079632679" velocity="3.67"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <link name="LHipMot">
@@ -119,12 +159,52 @@
       </geometry>
     </collision>
   </link>
+  <link name="LThighUpLeg">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0002989812 -0.065748642 -0.088443666"/>
+      <mass value="1.9691802"/>
+      <inertia ixx="0.016200713" ixy="-1.9336329e-05" ixz="-3.8620029e-05" iyy="0.014426424" iyz="-0.003598535" izz="0.0048264937"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://cogimon_urdf/meshes/Leg1.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="2.72727243908 -1.07730489569e-13 -5.12574394679e-13" xyz="1.24705e-16 -0.063299 -0.068292475"/>
+      <geometry>
+        <cylinder length="0.138586857441" radius="0.0950553"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="2.72727243908 -1.07730489569e-13 -5.12574394679e-13" xyz="0.000000 -0.035404 -0.004862"/>
+      <geometry>
+        <sphere radius="0.0950553"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="2.72727243908 -1.07730489569e-13 -5.12574394679e-13" xyz="-0.000000 -0.091194 -0.131723"/>
+      <geometry>
+        <sphere radius="0.0950553"/>
+      </geometry>
+    </collision>
+  </link>
   <joint name="LHipLat" type="revolute">
     <origin rpy="0.0 0.0 0.0262" xyz="0.01258 0.110954508 -0.052922586"/>
     <axis xyz="1.0 0.0 0.0"/>
     <parent link="Waist"/>
     <child link="LHipMot"/>
     <limit effort="176.0" lower="-0.436332312998" upper="1.48352986419" velocity="3.67"/>
+    <dynamics damping="3.0" friction="0.0"/>
+  </joint>
+  <joint name="LHipSag" type="revolute">
+    <origin rpy="0.0 0.0 0.0" xyz="-0.0085 0.0739855 -0.1125"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <parent link="LHipMot"/>
+    <child link="LThighUpLeg"/>
+    <limit effort="176.0" lower="-1.67551608191" upper="1.57079632679" velocity="3.67"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
 </robot>
