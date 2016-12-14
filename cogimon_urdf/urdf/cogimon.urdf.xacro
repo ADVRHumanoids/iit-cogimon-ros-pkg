@@ -34,7 +34,7 @@ The coordinate frame called gaze defines the head position and orientation. The 
 	</joint-->
 
         <!-- NECK -->
-	<!--xacro:include filename="$(find cogimon_urdf)/urdf/parts/neck.urdf.xacro" />
+	<!--xacro:include filename="$(find cogimon_urdf)/urdf/parts/neck.urdf.xacro" /-->
 
 <!-- ************ COGIMON BASE ************** -->
 

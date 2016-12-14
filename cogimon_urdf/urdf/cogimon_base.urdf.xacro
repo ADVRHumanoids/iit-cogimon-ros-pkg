@@ -22,9 +22,9 @@ The coordinate frame called base_link is rigidly attached to the robot root body
 
 <link name="Waist">
     <inertial>
-      <origin xyz="${-2.9198594E+01*mmTom} ${-1.1793030E-01*mmTom} ${-3.7516729E+01*mmTom}" rpy="0.0 0.0 0.0"/>
+      <origin xyz="${-2.0579946e+01*mmTom} ${-1.0999634e+00*mmTom} ${-3.7500786e+01*mmTom}" rpy="0.0 0.0 0.0"/>
       <mass value="4.2357548"/>
-      <inertia ixx="${4.6492739E+04*mm2Tom2}"  ixy="${3.3912005E+01*mm2Tom2}"  ixz="${3.0361216E+01*mm2Tom2}" iyy="${1.4628117E+04*mm2Tom2}" iyz="${9.6064394E+00*mm2Tom2}" izz="${5.0051187E+04*mm2Tom2}" />
+      <inertia ixx="${4.6492739e+04*mm2Tom2}"  ixy="${3.4766548e+01*mm2Tom2}"  ixz="${3.2487180e+01*mm2Tom2}" iyy="${1.4654103e+04*mm2Tom2}" iyz="${9.3654340e+02*mm2Tom2}" izz="${5.0027621e+04*mm2Tom2}" />
     </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
