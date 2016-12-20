@@ -14,5 +14,5 @@
 
 <!-- ************SELECT FIXED BASE*************-->
 <!-- ******************************************-->
-<xacro:property name="COGIMON_FIXED_BASE" value="true" />
+<xacro:property name="COGIMON_FIXED_BASE" value="false" />
 </robot>

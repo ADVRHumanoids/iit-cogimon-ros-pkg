@@ -6,80 +6,11 @@ MASS =  1.6995409e+00 KILOGRAM
 CENTER OF GRAVITY with respect to L_HIP_ROLL coordinate frame:
 X   Y   Z     4.7902756e+00 -1.5595700e+01 -6.0925801e+01  MM
 
-INERTIA with respect to L_HIP_ROLL coordinate frame:  (KILOGRAM * MM^2)
-
-INERTIA TENSOR:
-Ixx Ixy Ixz  1.4493353e+04 -1.2718099e+02 -6.6422862e+02
-Iyx Iyy Iyz -1.2718099e+02  1.4538255e+04 -2.8199166e+03
-Izx Izy Izz -6.6422862e+02 -2.8199166e+03  4.1607180e+03
-
 INERTIA at CENTER OF GRAVITY with respect to L_HIP_ROLL coordinate frame:  (KILOGRAM * MM^2)
 
 INERTIA TENSOR:
-Ixx Ixy Ixz  7.7713640e+03 -2.5414978e+02 -1.1602420e+03
-Iyx Iyy Iyz -2.5414978e+02  8.1906401e+03 -1.2050460e+03
-Izx Izy Izz -1.1602420e+03 -1.2050460e+03  3.7083468e+03
+Ixx Ixy Ixz  2.2053e+06    0.0066e+06    0.0015e+06
+Iyx Iyy Iyz  0.0066e+06    2.7733e+06   -0.0125e+06
+Izx Izy Izz  0.0015e+06   -0.0125e+06    2.7756e+06
 
-PRINCIPAL MOMENTS OF INERTIA:  (KILOGRAM * MM^2)
-I1  I2  I3   3.1029964e+03  8.0702591e+03  8.4970953e+03
 
-ROTATION MATRIX from L_HIP_ROLL orientation to PRINCIPAL AXES:
-       0.24647        0.96569        0.08179
-       0.23501       -0.14143        0.96165
-       0.94022       -0.21780       -0.26181
-
-ROTATION ANGLES from L_HIP_ROLL orientation to PRINCIPAL AXES (degrees):
-angles about x  y  z-105.230          4.691        -75.682 
-
-RADII OF GYRATION with respect to PRINCIPAL AXES:
-R1  R2  R3 4.2729207e+01  6.8909315e+01  7.0708144e+01  MM
-
----------------------------------------------
-
-MASS PROPERTIES OF COMPONENTS OF THE ASSEMBLY
-(in assembly units and the L_HIP_ROLL coordinate frame)
-
-   DENSITY             MASS          C.G.:  X        Y         Z
-
-                        CG3101A0            MATERIAL:                              ERGAL70
-         2.81000e-06  5.62304e-01  2.15200e+01 -1.08335e+01 -5.34781e+01
-                        CE0100A0            MATERIAL:                              UNKNOWN
-         3.13028e-06  5.36406e-01 -8.60621e+00 -1.79639e+01 -1.12450e+02
-       CENTAURO_BOARD_2016-04-06            MATERIAL:                              UNKNOWN
-         1.00000e+00  0.00000e+00      ***          ***          ***    
-              FAN_RS_40X40X10_13            MATERIAL:                              UNKNOWN
-         2.71000e-06  1.09783e-02 -5.50000e+01 -7.40000e+01 -1.12500e+02
-              V4-16--_-_U5931_GC            MATERIAL:                              UNKNOWN
-         7.85000e-06  2.21116e-03 -5.84856e+01 -5.80000e+01 -9.65000e+01
-              V4-16--_-_U5931_GC            MATERIAL:                              UNKNOWN
-         7.85000e-06  2.21116e-03 -5.84856e+01 -5.80000e+01 -1.28500e+02
-                             NUT            MATERIAL:                              AISI304
-         7.78000e-06  1.05191e-03 -4.80000e+01 -5.80000e+01 -9.65000e+01
-                             NUT            MATERIAL:                              AISI304
-         7.78000e-06  1.05191e-03 -4.80000e+01 -5.80000e+01 -1.28500e+02
-                        CG3103A0            MATERIAL:                                  ABS
-         9.00000e-07  9.46191e-03  7.14665e+01 -1.47215e+00 -3.37811e-01
-             V2_5-8--_-_U5931_GC            MATERIAL:                              UNKNOWN
-         7.85000e-06  5.02592e-04  6.64716e+01 -1.42384e+01 -2.23499e+01
-             V2_5-8--_-_U5931_GC            MATERIAL:                              UNKNOWN
-         7.85000e-06  5.02592e-04  6.64716e+01  2.23499e+01 -1.42384e+01
-             V2_5-8--_-_U5931_GC            MATERIAL:                              UNKNOWN
-         7.85000e-06  5.02592e-04  6.64716e+01  1.42384e+01  2.23499e+01
-                        CG3203A0            MATERIAL:                              ERGAL70
-         2.81000e-06  2.73845e-03  5.31051e+01  2.46273e+01  3.51714e+01
-                        CG3203A0            MATERIAL:                              ERGAL70
-         2.81000e-06  2.73845e-03  5.31051e+01 -2.46273e+01 -3.51714e+01
-                        CG3102A0            MATERIAL:                              ERGAL70
-         2.81000e-06  1.05372e-01 -4.90383e-01 -8.98629e+01 -1.04608e+02
-             V2_5-8--_-_U5931_GC            MATERIAL:                              UNKNOWN
-         7.85000e-06  5.02592e-04  5.15000e+01 -6.49716e+01 -6.50000e+01
-             V2_5-8--_-_U5931_GC            MATERIAL:                              UNKNOWN
-         7.85000e-06  5.02592e-04 -4.30993e+01 -6.49716e+01 -7.78029e+01
-             V2_5-8--_-_U5931_GC            MATERIAL:                              UNKNOWN
-         7.85000e-06  5.02592e-04  4.11528e+00 -6.49716e+01 -1.59848e+02
-              V3-10--_-_U5931_GC            MATERIAL:                              UNKNOWN
-         7.85000e-06  9.07836e-04  5.33807e+01  2.48072e+01  3.54283e+01
-              V3-10--_-_U5931_GC            MATERIAL:                              UNKNOWN
-         7.85000e-06  9.07836e-04  5.33807e+01 -2.48072e+01 -3.54283e+01
-       ROTOR_MOVABLE_PART_CE0100            MATERIAL:                              UNKNOWN
-         4.67834e-06  4.58184e-01  1.09461e+00 -3.77714e-02 -3.28564e-03
