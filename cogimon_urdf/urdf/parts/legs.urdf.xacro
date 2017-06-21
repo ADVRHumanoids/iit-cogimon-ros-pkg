@@ -23,7 +23,7 @@
       </geometry>             
     </collision>
 </link>
-
+<!--
 <link name ="RThighUpLeg">
     <inertial>
       <origin xyz="${2.9898120e-01*mmTom} ${6.5748642e+01*mmTom} ${-8.8443666e+01*mmTom}" rpy="0 0 0"/>
@@ -65,7 +65,7 @@
       </geometry>             
     </collision>
   </link>
-
+-->
 <!-- JOINTS -->
 <joint name="RHipLat" type="revolute">
     <parent link="Waist"/>
@@ -75,7 +75,7 @@
     <limit velocity="3.67" effort="176" lower="${-85.*toRad}" upper="${25.*toRad}" />
     <dynamics friction="0" damping="3.0"/>
   </joint>
-
+<!--
 <joint name="RHipSag" type="revolute">
     <parent link="RHipMot"/>
     <child link="RThighUpLeg"/>
@@ -93,7 +93,9 @@
     <limit velocity="13.6" effort="56" lower="${-75*toRad}" upper="${30*toRad}" />
     <dynamics friction="0" damping="3.0"/>
   </joint>
+-->
 </xacro:if>
+
 
 <xacro:if value="${COGIMON_LEFT_LEG}" >
 <!-- LINKS -->
@@ -508,4 +510,5 @@
       <dynamics friction="0" damping="3.0"/>
   </joint>
 -->
+
 </robot>
