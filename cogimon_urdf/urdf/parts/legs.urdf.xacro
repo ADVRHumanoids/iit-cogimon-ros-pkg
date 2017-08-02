@@ -67,6 +67,27 @@
     </collision>
 </link>
 
+<link name ="LLowLeg">
+    <inertial>         
+      <origin xyz="${2.7363015e+01*mmTom} ${-5.7802070e+01*mmTom} ${-1.9306454e+02*mmTom}" rpy="0 0 0"/>
+      <mass value="3.7014912"/>         
+      <inertia ixx="${6.4669769e+04*mm2Tom2}"  ixy="${3.6914631e+02*mm2Tom2}"  ixz="${5.3710941e+03 *mm2Tom2}" iyy="${6.3323486e+04*mm2Tom2}" iyz="${-2.7319883e+03*mm2Tom2}" izz="${8.1842652e+03*mm2Tom2}" />
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0 0 0."/>
+      <material name="dark_grey"/>
+      <geometry name="LLowLeg_visual">
+        <mesh filename="package://cogimon_urdf/meshes/KneePitch.stl" scale="${mmTom} ${mmTom} ${mmTom}" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0. 0" rpy="0 0 0."/>
+      <geometry name="LLowLeg_collision">
+        <mesh filename="package://cogimon_urdf/meshes/simple/KneePitch.stl" scale="${mmTom} ${mmTom} ${mmTom}" />
+      </geometry>             
+    </collision>
+</link>
+
 
 <!-- JOINTS -->
 <joint name="LHipLat" type="revolute">
@@ -92,6 +113,15 @@
     <child link="LThighLowLeg"/>
     <origin xyz="${0.*mmTom} ${-90.*mmTom} ${-256.45*mmTom}" rpy="0 0 0" />
     <axis xyz="0 0 1" />
+    <limit velocity="3.67" effort="176" lower="${-90.*toRad}" upper="${90.*toRad}" />
+    <dynamics friction="0" damping="3.0"/>
+</joint>
+
+<joint name="LKneePitch" type="revolute">
+    <parent link="LThighLowLeg"/>
+    <child link="LLowLeg"/>
+    <origin xyz="${-39.*mmTom} ${64.1*mmTom} ${-60.7*mmTom}" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
     <limit velocity="3.67" effort="176" lower="${-90.*toRad}" upper="${90.*toRad}" />
     <dynamics friction="0" damping="3.0"/>
 </joint>
@@ -164,6 +194,27 @@
     </collision>
 </link>
 
+<link name ="RLowLeg">
+    <inertial>         
+      <origin xyz="${2.7363015e+01*mmTom} ${5.7802070e+01*mmTom} ${-1.9306454e+02*mmTom}" rpy="0 0 0"/>
+      <mass value="3.7014912"/>         
+      <inertia ixx="${6.4669769e+04*mm2Tom2}"  ixy="${-3.6914631e+02*mm2Tom2}"  ixz="${5.3710941e+03 *mm2Tom2}" iyy="${6.3323486e+04*mm2Tom2}" iyz="${2.7319883e+03*mm2Tom2}" izz="${8.1842652e+03*mm2Tom2}" />
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0 0 0."/>
+      <material name="dark_grey"/>
+      <geometry name="RLowLeg_visual">
+        <mesh filename="package://cogimon_urdf/meshes/KneePitch.stl" scale="${mmTom} ${-mmTom} ${mmTom}" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0. 0" rpy="0 0 0."/>
+      <geometry name="RLowLeg_collision">
+        <mesh filename="package://cogimon_urdf/meshes/simple/KneePitch.stl" scale="${mmTom} ${-mmTom} ${mmTom}" />
+      </geometry>             
+    </collision>
+</link>
+
 <!-- JOINTS -->
 <joint name="RHipLat" type="revolute">
     <parent link="Waist"/>
@@ -188,6 +239,15 @@
     <child link="RThighLowLeg"/>
     <origin xyz="${0.*mmTom} ${90.*mmTom} ${-256.45*mmTom}" rpy="0 0 0" />
     <axis xyz="0 0 1" />
+    <limit velocity="3.67" effort="176" lower="${-90.*toRad}" upper="${90.*toRad}" />
+    <dynamics friction="0" damping="3.0"/>
+</joint>
+
+<joint name="RKneePitch" type="revolute">
+    <parent link="RThighLowLeg"/>
+    <child link="RLowLeg"/>
+    <origin xyz="${-39.*mmTom} ${-64.1*mmTom} ${-60.7*mmTom}" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
     <limit velocity="3.67" effort="176" lower="${-90.*toRad}" upper="${90.*toRad}" />
     <dynamics friction="0" damping="3.0"/>
 </joint>

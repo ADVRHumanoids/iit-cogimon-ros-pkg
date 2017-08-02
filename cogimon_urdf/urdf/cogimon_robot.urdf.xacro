@@ -29,6 +29,6 @@
     <child link="base_link"/>
   </joint>
 
-<origin xyz="0.0 0.0 0.8" rpy="0 0 0" />
+<origin xyz="0.0 0.0 1.0" rpy="0 0 0" />
 </robot>
 

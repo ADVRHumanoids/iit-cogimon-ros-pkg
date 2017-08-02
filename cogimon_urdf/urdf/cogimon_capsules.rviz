@@ -146,6 +146,38 @@
       </geometry>
     </collision>
   </link>
+  <link name="LLowLeg">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.027363015 -0.05780207 -0.19306454"/>
+      <mass value="3.7014912"/>
+      <inertia ixx="0.064669769" ixy="0.00036914631" ixz="0.0053710941" iyy="0.063323486" iyz="-0.0027319883" izz="0.0081842652"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://cogimon_urdf/meshes/KneePitch.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="3.06079524122 0.166903270631 2.24129950508" xyz="0.03800144 -0.0602178 -0.1930794005"/>
+      <geometry>
+        <cylinder length="0.390900702153" radius="0.0751242"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="3.06079524122 0.166903270631 2.24129950508" xyz="0.005531 -0.044662 -0.000974"/>
+      <geometry>
+        <sphere radius="0.0751242"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="3.06079524122 0.166903270631 2.24129950508" xyz="0.070472 -0.075773 -0.385185"/>
+      <geometry>
+        <sphere radius="0.0751242"/>
+      </geometry>
+    </collision>
+  </link>
   <joint name="LHipLat" type="revolute">
     <origin rpy="0.0 0.0 0.0" xyz="0.01545 0.112 -0.05"/>
     <axis xyz="1.0 0.0 0.0"/>
@@ -167,6 +199,14 @@
     <axis xyz="0.0 0.0 1.0"/>
     <parent link="LThighUpLeg"/>
     <child link="LThighLowLeg"/>
+    <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
+    <dynamics damping="3.0" friction="0.0"/>
+  </joint>
+  <joint name="LKneePitch" type="revolute">
+    <origin rpy="0.0 0.0 0.0" xyz="-0.039 0.0641 -0.0607"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <parent link="LThighLowLeg"/>
+    <child link="LLowLeg"/>
     <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
@@ -266,6 +306,38 @@
       </geometry>
     </collision>
   </link>
+  <link name="RLowLeg">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.027363015 0.05780207 -0.19306454"/>
+      <mass value="3.7014912"/>
+      <inertia ixx="0.064669769" ixy="-0.00036914631" ixz="0.0053710941" iyy="0.063323486" iyz="0.0027319883" izz="0.0081842652"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://cogimon_urdf/meshes/KneePitch.stl" scale="0.001 -0.001 0.001"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="-3.06079524122 0.166903270631 -2.24129950508" xyz="0.03800144 0.0602178 -0.1930794005"/>
+      <geometry>
+        <cylinder length="0.390900702153" radius="0.0751242"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="-3.06079524122 0.166903270631 -2.24129950508" xyz="0.005531 0.044662 -0.000974"/>
+      <geometry>
+        <sphere radius="0.0751242"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="-3.06079524122 0.166903270631 -2.24129950508" xyz="0.070472 0.075773 -0.385185"/>
+      <geometry>
+        <sphere radius="0.0751242"/>
+      </geometry>
+    </collision>
+  </link>
   <joint name="RHipLat" type="revolute">
     <origin rpy="0.0 0.0 0.0" xyz="0.01545 -0.112 -0.05"/>
     <axis xyz="1.0 0.0 0.0"/>
@@ -287,6 +359,14 @@
     <axis xyz="0.0 0.0 1.0"/>
     <parent link="RThighUpLeg"/>
     <child link="RThighLowLeg"/>
+    <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
+    <dynamics damping="3.0" friction="0.0"/>
+  </joint>
+  <joint name="RKneePitch" type="revolute">
+    <origin rpy="0.0 0.0 0.0" xyz="-0.039 -0.0641 -0.0607"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <parent link="RThighLowLeg"/>
+    <child link="RLowLeg"/>
     <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
