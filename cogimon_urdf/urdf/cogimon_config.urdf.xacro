@@ -20,7 +20,11 @@
 <!-- ******************************************-->
 <xacro:property name="COGIMON_FIXED_BASE" value="false" />
 
-<!-- ************XBOT FRAMEWORK*************-->
+<!-- ************XBOT-GAZEBO FRAMEWORK*************-->
 <!-- *************************************-->
-<xacro:property name="COGIMON_XBOT" value="false" />
+<xacro:property name="COGIMON_XBOT_GAZEBO" value="false" />
+
+<!-- ************OROCOS-GAZEBO FRAMEWORK*************-->
+<!-- *************************************-->
+<xacro:property name="COGIMON_OROCOS_GAZEBO" value="true" />
 </robot>

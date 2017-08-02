@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+<xacro:if value="${COGIMON_RIGHT_LEG}"> 
+<rtt-gazebo reference="right_leg">
+       <controller type="JointPositionCtrl">
+              <gains reference="RHipSag" P="1000." D="1.0" I="0."/>
+              <gains reference="RHipLat" P="1000." D="1.0" I="0."/>
+              <gains reference="RHipYaw" P="1000." D="1.0" I="0."/>
+              <gains reference="RKneePitch" P="1000." D="1.0" I="0."/>
+              <gains reference="RAnklePitch" P="1000." D="1.0" I="0."/>
+              <gains reference="RAnkleRoll" P="1000." D="1.0" I="0."/> 
+       </controller>
+       <controller type="JointImpedanceCtrl">
+              <gains reference="RHipSag" stiffness="300." damping="30."/>
+              <gains reference="RHipLat" stiffness="300." damping="30."/>
+              <gains reference="RHipYaw" stiffness="300." damping="30."/>
+              <gains reference="RKneePitch" stiffness="300." damping="30."/>
+              <gains reference="RAnklePitch" stiffness="300." damping="30."/>
+              <gains reference="RAnkleRoll" stiffness="300." damping="30."/> 
+       </controller>
+       <controller type="JointTorqueCtrl"/>
+</rtt-gazebo>
+</xacro:if>
+
+<xacro:if value="${COGIMON_LEFT_LEG}"> 
+<rtt-gazebo reference="left_leg">
+       <controller type="JointPositionCtrl">
+              <gains reference="LHipSag" P="1000." D="1.0" I="0."/>
+              <gains reference="LHipLat" P="1000." D="1.0" I="0."/>
+              <gains reference="LHipYaw" P="1000." D="1.0" I="0."/>
+              <gains reference="LKneePitch" P="1000." D="1.0" I="0."/>
+              <gains reference="LAnklePitch" P="1000." D="1.0" I="0."/>
+              <gains reference="LAnkleRoll" P="1000." D="1.0" I="0."/> 
+       </controller>
+       <controller type="JointImpedanceCtrl">
+              <gains reference="LHipSag" stiffness="300." damping="30."/>
+              <gains reference="LHipLat" stiffness="300." damping="30."/>
+              <gains reference="LHipYaw" stiffness="300." damping="30."/>
+              <gains reference="LKneePitch" stiffness="300." damping="30."/>
+              <gains reference="LAnklePitch" stiffness="300." damping="30."/>
+              <gains reference="LAnkleRoll" stiffness="300." damping="30."/> 
+       </controller>
+       <controller type="JointTorqueCtrl"/>
+</rtt-gazebo>
+</xacro:if>
+
+</robot>

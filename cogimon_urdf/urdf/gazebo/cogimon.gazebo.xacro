@@ -1,7 +1,9 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
+
 <!-- contact model for foot surface -->
+<xacro:if value="${COGIMON_LEFT_LEG}">
    <gazebo reference="LFoot">
      <kp>1000000.0</kp>
      <kd>100.0</kd>
@@ -11,7 +13,9 @@
      <maxVel>1.0</maxVel>
      <minDepth>0.0</minDepth>
    </gazebo>
+</xacro:if>
 
+<xacro:if value="${COGIMON_RIGHT_LEG}">
    <gazebo reference="RFoot">
      <kp>1000000.0</kp>
      <kd>100.0</kd>
@@ -21,17 +25,10 @@
      <maxVel>1.0</maxVel>
      <minDepth>0.00</minDepth>
    </gazebo>
+</xacro:if>
 
 <!-- Other parameters... -->
-   <gazebo reference="WaistSag">
-    <implicitSpringDamper>1</implicitSpringDamper>
-    <provideFeedback>true</provideFeedback>
-   </gazebo>
-   <gazebo reference="WaistYaw">
-    <implicitSpringDamper>1</implicitSpringDamper>
-    <provideFeedback>true</provideFeedback>
-   </gazebo>
-
+<xacro:if value="${COGIMON_RIGHT_LEG}">   
    <gazebo reference="RHipSag">
     <implicitSpringDamper>1</implicitSpringDamper>
     <provideFeedback>true</provideFeedback>
@@ -44,19 +41,21 @@
     <implicitSpringDamper>1</implicitSpringDamper>
     <provideFeedback>true</provideFeedback>
    </gazebo>
-   <gazebo reference="RKneeSag">
+   <gazebo reference="RKneePitch">
     <implicitSpringDamper>1</implicitSpringDamper>
     <provideFeedback>true</provideFeedback>
    </gazebo>
-   <gazebo reference="RAnkLat">
+   <gazebo reference="RAnkleRoll">
     <implicitSpringDamper>1</implicitSpringDamper>
     <provideFeedback>true</provideFeedback>
    </gazebo>
-   <gazebo reference="RAnkSag">
+   <gazebo reference="RAnklePitch">
     <implicitSpringDamper>1</implicitSpringDamper>
     <provideFeedback>true</provideFeedback>
   </gazebo>
+</xacro:if>
 
+<xacro:if value="${COGIMON_LEFT_LEG}">   
    <gazebo reference="LHipSag">
     <implicitSpringDamper>1</implicitSpringDamper>
     <provideFeedback>true</provideFeedback>
@@ -69,92 +68,18 @@
     <implicitSpringDamper>1</implicitSpringDamper>
     <provideFeedback>true</provideFeedback>
    </gazebo>
-   <gazebo reference="LKneeSag">
+   <gazebo reference="LKneePitch">
     <implicitSpringDamper>1</implicitSpringDamper>
     <provideFeedback>true</provideFeedback>
    </gazebo>
-   <gazebo reference="LAnkLat">
+   <gazebo reference="LAnkleRoll">
     <implicitSpringDamper>1</implicitSpringDamper>
     <provideFeedback>true</provideFeedback>
    </gazebo>
-   <gazebo reference="LAnkSag">
+   <gazebo reference="LAnklePitch">
     <implicitSpringDamper>1</implicitSpringDamper>
     <provideFeedback>true</provideFeedback>
-   </gazebo>
-
-   <gazebo reference="RShSag">
-    <implicitSpringDamper>1</implicitSpringDamper>
-    <provideFeedback>true</provideFeedback>
-   </gazebo>
-   <gazebo reference="RShLat">
-    <implicitSpringDamper>1</implicitSpringDamper>
-    <provideFeedback>true</provideFeedback>
-   </gazebo>
-   <gazebo reference="RShYaw">
-    <implicitSpringDamper>1</implicitSpringDamper>
-    <provideFeedback>true</provideFeedback>
-   </gazebo>
-   <gazebo reference="RElbj">
-    <implicitSpringDamper>1</implicitSpringDamper>
-    <provideFeedback>true</provideFeedback>
-   </gazebo>
-<xacro:if value="${GAZEBO_COGIMON_USES_FOREARMS}">
-   <gazebo reference="RForearmPlate">
-    <implicitSpringDamper>1</implicitSpringDamper>
-    <provideFeedback>true</provideFeedback>
-   </gazebo>
-   <gazebo reference="RWrj1">
-    <implicitSpringDamper>1</implicitSpringDamper>
-    <provideFeedback>true</provideFeedback>
-   </gazebo>
-   <gazebo reference="RWrj2">
-    <implicitSpringDamper>1</implicitSpringDamper>
-    <provideFeedback>true</provideFeedback>
-   </gazebo>
-    <xacro:unless value="${GAZEBO_COGIMON_USES_SOFTHANDS}">
-      <gazebo reference="r_handj">
-        <implicitSpringDamper>1</implicitSpringDamper>
-        <provideFeedback>true</provideFeedback>
-      </gazebo>
-    </xacro:unless>
-</xacro:if>
-
-
-   <gazebo reference="LShSag">
-    <implicitSpringDamper>1</implicitSpringDamper>
-    <provideFeedback>true</provideFeedback>
-   </gazebo>
-   <gazebo reference="LShLat">
-    <implicitSpringDamper>1</implicitSpringDamper>
-    <provideFeedback>true</provideFeedback>
-   </gazebo>
-   <gazebo reference="LShYaw">
-    <implicitSpringDamper>1</implicitSpringDamper>
-    <provideFeedback>true</provideFeedback>
-   </gazebo>
-   <gazebo reference="LElbj">
-    <implicitSpringDamper>1</implicitSpringDamper>
-    <provideFeedback>true</provideFeedback>
-   </gazebo>
-<xacro:if value="${GAZEBO_COGIMON_USES_FOREARMS}">
-   <gazebo reference="LForearmPlate">
-    <implicitSpringDamper>1</implicitSpringDamper>
-    <provideFeedback>true</provideFeedback>
-   </gazebo>
-   <gazebo reference="LWrj1">
-    <implicitSpringDamper>1</implicitSpringDamper>
-    <provideFeedback>true</provideFeedback>
-   </gazebo>
-   <gazebo reference="LWrj2">
-    <implicitSpringDamper>1</implicitSpringDamper>
-    <provideFeedback>true</provideFeedback>
-   </gazebo>
-    <xacro:unless value="${GAZEBO_COGIMON_USES_SOFTHANDS}">
-      <gazebo reference="l_handj">
-        <implicitSpringDamper>1</implicitSpringDamper>
-        <provideFeedback>true</provideFeedback>
-      </gazebo>
-    </xacro:unless>
+  </gazebo>
 </xacro:if>
 
 

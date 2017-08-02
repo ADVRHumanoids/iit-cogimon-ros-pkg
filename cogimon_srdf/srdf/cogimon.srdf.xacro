@@ -7,45 +7,40 @@
     
     <xacro:include filename="$(find cogimon_urdf)/urdf/cogimon_config.urdf.xacro" />
     
-    <virtual_joint name="virtual_joint" parent_frame="world" child_link="base_link" type="floating" /> 
-    <!--GROUPS: Representation of a set of joints and links. This can be useful for specifying DOF to plan for, defining arms, end effectors, etc-->
-    <!--LINKS: When a link is specified, the parent joint of that link (if it exists) is automatically included-->
-    <!--JOINTS: When a joint is specified, the child link of that joint (which will always exist) is automatically included-->
-    <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
-    <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
- 
     <group name="base">
         <link name="Waist"/>
     </group>
-    <group name="imu_sensors">
-        <link name="imu_link"/>
-    </group>
-    <group name="left_arm">
-     <chain base_link="DWYTorso" tip_link="l_wrist"/>
-    </group>
-    <group name="right_arm">
-     <chain base_link="DWYTorso" tip_link="r_wrist"/>
-    </group>
-    <group name="force_torque_sensors"> 
-      <joint name="l_leg_ft_joint"/>
-      <joint name="r_leg_ft_joint"/>
-      <joint name="l_arm_ft_joint"/>
-      <joint name="r_arm_ft_joint"/>
-    </group>
+
+<xacro:if value="${COGIMON_LEFT_LEG}">    
     <group name="left_leg">
-        <chain base_link="Waist" tip_link="l_sole"/>
+        <chain base_link="Waist" tip_link="LFoot"/>
     </group>
+</xacro:if>
+<xacro:if value="${COGIMON_RIGHT_LEG}">
     <group name="right_leg">
-        <chain base_link="Waist" tip_link="r_sole"/>
+        <chain base_link="Waist" tip_link="RFoot"/>
     </group>
-    <group name="torso">
-        <chain base_link="Waist" tip_link="DWYTorso"/>
-    </group>
+</xacro:if>
+
+  <group name="legs">
+<xacro:if value="${COGIMON_LEFT_LEG}">
+    <group name="left_leg"/>
+</xacro:if>
+<xacro:if value="${COGIMON_RIGHT_LEG}">
+    <group name="right_leg"/>
+</xacro:if>
+  </group>
+
     <group name="chains"> <!--THIS HAS TO BE THE LAST GROUP IN THE FILE -->
-        <group name="left_arm"/>
-        <group name="right_arm"/>
+<xacro:if value="${COGIMON_LEFT_LEG}">
         <group name="left_leg"/>
+</xacro:if>
+<xacro:if value="${COGIMON_RIGHT_LEG}">
         <group name="right_leg"/>
-        <group name="torso"/>
+</xacro:if>
     </group>
+
+<xacro:if value="${COGIMON_OROCOS_GAZEBO}">
+   <xacro:include filename="$(find cogimon_urdf)/urdf/gazebo/rtt_gazebo.gazebo.xacro" /> 
+</xacro:if> 
 </robot>

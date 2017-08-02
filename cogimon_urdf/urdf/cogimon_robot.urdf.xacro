@@ -10,15 +10,8 @@
   -->
   <xacro:include filename="$(find cogimon_urdf)/urdf/cogimon.urdf.xacro" />
 
-  <!--xacro:include filename="$(find cogimon_urdf)/urdf/gazebo/microstrain_3dmgx2_imu.gazebo.xacro" />
-
   <xacro:include filename="$(find cogimon_urdf)/urdf/gazebo/cogimon.gazebo.xacro" />
-
-  <xacro:if value="${GAZEBO_COGIMON_USES_XTION}">
-	<xacro:include filename="$(find cogimon_urdf)/urdf/gazebo/openni_kinect.gazebo.xacro" />
-  </xacro:if-->
-
-  
+ 
   <xacro:include filename="$(find cogimon_urdf)/urdf/gazebo/cogimon_materials.gazebo.xacro" />
   <!--xacro:include filename="$(find cogimon_urdf)/urdf/gazebo/force_torque.gazebo.xacro" /-->
 
