@@ -67,7 +67,7 @@ and to define the end effectors of the robot -->
   <!--link name="l_toe"/>
   <link name="r_toe"/-->
 
-<!--xacro:include filename="$(find cogimon_urdf)/urdf/parts/legs.urdf.xacro" /-->
+<xacro:include filename="$(find cogimon_urdf)/urdf/parts/legs.urdf.xacro" />
 <!--
   <joint name="l_ankle_joint" type="fixed">
      <parent link="LFoot"/>

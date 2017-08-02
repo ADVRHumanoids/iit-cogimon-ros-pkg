@@ -9,6 +9,9 @@
   <material name="red">
     <color rgba="1.0 0.0 0.0 1.0"/>
   </material>
+  <material name="green">
+    <color rgba="0.0 1.0 0.0 1.0"/>
+  </material>
   <link name="base_link"/>
   <link name="Waist">
     <inertial>
@@ -46,5 +49,85 @@
     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
     <parent link="base_link"/>
     <child link="Waist"/>
+  </joint>
+  <link name="LHipMot">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="-0.041435899 -0.00024099021 -0.067437774"/>
+      <mass value="2.0936467"/>
+      <inertia ixx="0.020328644" ixy="1.2836757e-05" ixz="-0.0071832791" iyy="0.024404941" iyz="2.2892687e-05" izz="0.008986454"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://cogimon_urdf/meshes/HipRoll.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="green"/>
+    </visual>
+    <collision>
+      <origin rpy="-0.348113811608 0.346017263503 -0.0614374307758" xyz="-0.0421235 -0.02434298 -0.0664201"/>
+      <geometry>
+        <cylinder length="0.117816746253" radius="0.0789238"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="-0.348113811608 0.346017263503 -0.0614374307758" xyz="-0.062103 -0.043247 -0.118513"/>
+      <geometry>
+        <sphere radius="0.0789238"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="-0.348113811608 0.346017263503 -0.0614374307758" xyz="-0.022144 -0.005439 -0.014327"/>
+      <geometry>
+        <sphere radius="0.0789238"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="LHipLat" type="revolute">
+    <origin rpy="0.0 0.0 0.0" xyz="0.01545 0.112 -0.05"/>
+    <axis xyz="1.0 0.0 0.0"/>
+    <parent link="Waist"/>
+    <child link="LHipMot"/>
+    <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
+    <dynamics damping="3.0" friction="0.0"/>
+  </joint>
+  <link name="RHipMot">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="-0.041435899 0.00024099021 -0.067437774"/>
+      <mass value="2.0936467"/>
+      <inertia ixx="0.020328644" ixy="-1.2836757e-05" ixz="-0.0071832791" iyy="0.024404941" iyz="-2.2892687e-05" izz="0.008986454"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://cogimon_urdf/meshes/HipRoll.stl" scale="0.001 -0.001 0.001"/>
+      </geometry>
+      <material name="green"/>
+    </visual>
+    <collision>
+      <origin rpy="0.348113811608 0.346017263503 0.0614374307758" xyz="-0.0421235 0.02434298 -0.0664201"/>
+      <geometry>
+        <cylinder length="0.117816746253" radius="0.0789238"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="0.348113811608 0.346017263503 0.0614374307758" xyz="-0.062103 0.043247 -0.118513"/>
+      <geometry>
+        <sphere radius="0.0789238"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="0.348113811608 0.346017263503 0.0614374307758" xyz="-0.022144 0.005439 -0.014327"/>
+      <geometry>
+        <sphere radius="0.0789238"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="RHipLat" type="revolute">
+    <origin rpy="0.0 0.0 0.0" xyz="0.01545 -0.112 -0.05"/>
+    <axis xyz="1.0 0.0 0.0"/>
+    <parent link="Waist"/>
+    <child link="RHipMot"/>
+    <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
+    <dynamics damping="3.0" friction="0.0"/>
   </joint>
 </robot>
