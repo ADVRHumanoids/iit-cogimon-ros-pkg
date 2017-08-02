@@ -114,6 +114,38 @@
       </geometry>
     </collision>
   </link>
+  <link name="LThighLowLeg">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="-0.02113641 -0.0042862386 -0.038232267"/>
+      <mass value="1.7454681"/>
+      <inertia ixx="0.0085691728" ixy="-0.00019828734" ixz="-0.0022121863" iyy="0.0099794948" iyz="-0.00040039407" izz="0.0052783547"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://cogimon_urdf/meshes/HipYaw.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="green"/>
+    </visual>
+    <collision>
+      <origin rpy="2.67220248899 -0.09478204323 -0.391623341871" xyz="-0.004103405 -0.01108644 -0.034134805"/>
+      <geometry>
+        <cylinder length="0.0560156299915" radius="0.0944457"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="2.67220248899 -0.09478204323 -0.391623341871" xyz="-0.001453 0.001526 -0.009268"/>
+      <geometry>
+        <sphere radius="0.0944457"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="2.67220248899 -0.09478204323 -0.391623341871" xyz="-0.006754 -0.023699 -0.059001"/>
+      <geometry>
+        <sphere radius="0.0944457"/>
+      </geometry>
+    </collision>
+  </link>
   <joint name="LHipLat" type="revolute">
     <origin rpy="0.0 0.0 0.0" xyz="0.01545 0.112 -0.05"/>
     <axis xyz="1.0 0.0 0.0"/>
@@ -127,6 +159,14 @@
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="LHipMot"/>
     <child link="LThighUpLeg"/>
+    <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
+    <dynamics damping="3.0" friction="0.0"/>
+  </joint>
+  <joint name="LHipYaw" type="revolute">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 -0.09 -0.25645"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <parent link="LThighUpLeg"/>
+    <child link="LThighLowLeg"/>
     <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
@@ -194,6 +234,38 @@
       </geometry>
     </collision>
   </link>
+  <link name="RThighLowLeg">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="-0.02113641 0.0042862386 -0.038232267"/>
+      <mass value="1.7454681"/>
+      <inertia ixx="0.0085691728" ixy="0.00019828734" ixz="-0.0022121863" iyy="0.0099794948" iyz="0.00040039407" izz="0.0052783547"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://cogimon_urdf/meshes/HipYaw.stl" scale="0.001 -0.001 0.001"/>
+      </geometry>
+      <material name="green"/>
+    </visual>
+    <collision>
+      <origin rpy="-2.67220248899 -0.09478204323 0.391623341871" xyz="-0.004103405 0.01108644 -0.034134805"/>
+      <geometry>
+        <cylinder length="0.0560156299915" radius="0.0944457"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="-2.67220248899 -0.09478204323 0.391623341871" xyz="-0.001453 -0.001526 -0.009268"/>
+      <geometry>
+        <sphere radius="0.0944457"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="-2.67220248899 -0.09478204323 0.391623341871" xyz="-0.006754 0.023699 -0.059001"/>
+      <geometry>
+        <sphere radius="0.0944457"/>
+      </geometry>
+    </collision>
+  </link>
   <joint name="RHipLat" type="revolute">
     <origin rpy="0.0 0.0 0.0" xyz="0.01545 -0.112 -0.05"/>
     <axis xyz="1.0 0.0 0.0"/>
@@ -207,6 +279,14 @@
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="RHipMot"/>
     <child link="RThighUpLeg"/>
+    <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
+    <dynamics damping="3.0" friction="0.0"/>
+  </joint>
+  <joint name="RHipYaw" type="revolute">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.09 -0.25645"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <parent link="RThighUpLeg"/>
+    <child link="RThighLowLeg"/>
     <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
