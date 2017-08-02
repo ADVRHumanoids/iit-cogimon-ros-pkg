@@ -82,11 +82,51 @@
       </geometry>
     </collision>
   </link>
+  <link name="LThighUpLeg">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.00058688639 -0.062440385 -0.085057072"/>
+      <mass value="1.6115687"/>
+      <inertia ixx="0.016169151" ixy="-2.1886129e-05" ixz="6.0058109e-05" iyy="0.0144378" iyz="-0.0027173225" izz="0.0039254506"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://cogimon_urdf/meshes/HipPitch.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="-0.369195214407 0.00179971542806 -0.000336049048057" xyz="-0.00159782 -0.0661959 -0.0759693"/>
+      <geometry>
+        <cylinder length="0.144978554267" radius="0.0731555"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="-0.369195214407 0.00179971542806 -0.000336049048057" xyz="-0.001728 -0.092355 -0.143574"/>
+      <geometry>
+        <sphere radius="0.0731555"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="-0.369195214407 0.00179971542806 -0.000336049048057" xyz="-0.001467 -0.040037 -0.008365"/>
+      <geometry>
+        <sphere radius="0.0731555"/>
+      </geometry>
+    </collision>
+  </link>
   <joint name="LHipLat" type="revolute">
     <origin rpy="0.0 0.0 0.0" xyz="0.01545 0.112 -0.05"/>
     <axis xyz="1.0 0.0 0.0"/>
     <parent link="Waist"/>
     <child link="LHipMot"/>
+    <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
+    <dynamics damping="3.0" friction="0.0"/>
+  </joint>
+  <joint name="LHipSag" type="revolute">
+    <origin rpy="0.0 0.0 0.0" xyz="-0.059 0.07865 -0.1185"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <parent link="LHipMot"/>
+    <child link="LThighUpLeg"/>
     <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
@@ -122,11 +162,51 @@
       </geometry>
     </collision>
   </link>
+  <link name="RThighUpLeg">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.00058688639 0.062440385 -0.085057072"/>
+      <mass value="1.6115687"/>
+      <inertia ixx="0.016169151" ixy="2.1886129e-05" ixz="6.0058109e-05" iyy="0.0144378" iyz="0.0027173225" izz="0.0039254506"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://cogimon_urdf/meshes/HipPitch.stl" scale="0.001 -0.001 0.001"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="0.369195214407 0.00179971542806 0.000336049048057" xyz="-0.00159782 0.0661959 -0.0759693"/>
+      <geometry>
+        <cylinder length="0.144978554267" radius="0.0731555"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="0.369195214407 0.00179971542806 0.000336049048057" xyz="-0.001728 0.092355 -0.143574"/>
+      <geometry>
+        <sphere radius="0.0731555"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="0.369195214407 0.00179971542806 0.000336049048057" xyz="-0.001467 0.040037 -0.008365"/>
+      <geometry>
+        <sphere radius="0.0731555"/>
+      </geometry>
+    </collision>
+  </link>
   <joint name="RHipLat" type="revolute">
     <origin rpy="0.0 0.0 0.0" xyz="0.01545 -0.112 -0.05"/>
     <axis xyz="1.0 0.0 0.0"/>
     <parent link="Waist"/>
     <child link="RHipMot"/>
+    <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
+    <dynamics damping="3.0" friction="0.0"/>
+  </joint>
+  <joint name="RHipSag" type="revolute">
+    <origin rpy="0.0 0.0 0.0" xyz="-0.059 -0.07865 -0.1185"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <parent link="RHipMot"/>
+    <child link="RThighUpLeg"/>
     <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>

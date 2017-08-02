@@ -9,11 +9,17 @@
 <gazebo reference="RHipMot">
   <material>Gazebo/Green</material>
 </gazebo> 
+<gazebo reference="RThighUpLeg">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
 </xacro:if> 
 
 <xacro:if value="${COGIMON_LEFT_LEG}" >
 <gazebo reference="LHipMot">
   <material>Gazebo/Green</material>
+</gazebo>
+<gazebo reference="LThighUpLeg">
+  <material>Gazebo/DarkGrey</material>
 </gazebo>
 </xacro:if> 
 

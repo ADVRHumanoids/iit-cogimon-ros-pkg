@@ -25,6 +25,27 @@
     </collision>
   </link>
 
+<link name ="LThighUpLeg">
+    <inertial>   
+      <origin xyz="${5.8688639e-01*mmTom} ${-6.2440385e+01*mmTom} ${-8.5057072e+01*mmTom}" rpy="0 0 0"/>
+      <mass value="1.6115687"/>     
+      <inertia ixx="${1.6169151e+04*mm2Tom2}"  ixy="${-2.1886129e+01*mm2Tom2}"  ixz="${6.0058109e+01*mm2Tom2}" iyy="${1.4437800e+04*mm2Tom2}" iyz="${-2.7173225e+03*mm2Tom2}" izz="${3.9254506e+03*mm2Tom2}" />
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0 0 0."/>
+      <material name="dark_grey"/>
+      <geometry name="LThighUpLeg_visual">
+        <mesh filename="package://cogimon_urdf/meshes/HipPitch.stl" scale="${mmTom} ${mmTom} ${mmTom}" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0. 0" rpy="0 0 0."/>
+      <geometry name="LThighUpLeg_collision">
+        <mesh filename="package://cogimon_urdf/meshes/simple/HipPitch.stl" scale="${mmTom} ${mmTom} ${mmTom}" />
+      </geometry>             
+    </collision>
+  </link>
+
 
 <!-- JOINTS -->
 <joint name="LHipLat" type="revolute">
@@ -32,6 +53,15 @@
     <child link="LHipMot"/>
     <origin xyz="${15.45*mmTom} ${112.0*mmTom} ${-50.0*mmTom}" rpy="0 0 0" />
     <axis xyz="1 0 0" />
+    <limit velocity="3.67" effort="176" lower="${-90.*toRad}" upper="${90.*toRad}" />
+    <dynamics friction="0" damping="3.0"/>
+</joint>
+
+<joint name="LHipSag" type="revolute">
+    <parent link="LHipMot"/>
+    <child link="LThighUpLeg"/>
+    <origin xyz="${-59.*mmTom} ${78.65*mmTom} ${-118.5*mmTom}" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
     <limit velocity="3.67" effort="176" lower="${-90.*toRad}" upper="${90.*toRad}" />
     <dynamics friction="0" damping="3.0"/>
 </joint>
@@ -63,12 +93,42 @@
     </collision>
 </link>
 
+<link name ="RThighUpLeg">
+    <inertial>
+      <origin xyz="${5.8688639e-01*mmTom} ${6.2440385e+01*mmTom} ${-8.5057072e+01*mmTom}" rpy="0 0 0"/>
+      <mass value="1.6115687"/>
+      <inertia ixx="${1.6169151e+04*mm2Tom2}"  ixy="${2.1886129e+01*mm2Tom2}"  ixz="${6.0058109e+01*mm2Tom2}" iyy="${1.4437800e+04*mm2Tom2}" iyz="${2.7173225e+03*mm2Tom2}" izz="${3.9254506e+03*mm2Tom2}" />
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0 0 0."/>
+      <material name="dark_grey"/>
+      <geometry name="RThighUpLeg_visual">
+        <mesh filename="package://cogimon_urdf/meshes/HipPitch.stl" scale="${mmTom} ${-mmTom} ${mmTom}" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0. 0" rpy="0 0 0."/>
+      <geometry name="RThighUpLeg_collision">
+        <mesh filename="package://cogimon_urdf/meshes/simple/HipPitch.stl" scale="${mmTom} ${-mmTom} ${mmTom}" />
+      </geometry>             
+    </collision>
+  </link>
+
 <!-- JOINTS -->
 <joint name="RHipLat" type="revolute">
     <parent link="Waist"/>
     <child link="RHipMot"/>
     <origin xyz="${15.45*mmTom} ${-112.0*mmTom} ${-50.0*mmTom}" rpy="0 0 0" />
     <axis xyz="1 0 0" />
+    <limit velocity="3.67" effort="176" lower="${-90.*toRad}" upper="${90.*toRad}" />
+    <dynamics friction="0" damping="3.0"/>
+</joint>
+
+<joint name="RHipSag" type="revolute">
+    <parent link="RHipMot"/>
+    <child link="RThighUpLeg"/>
+    <origin xyz="${-59.*mmTom} ${-78.65*mmTom} ${-118.5*mmTom}" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
     <limit velocity="3.67" effort="176" lower="${-90.*toRad}" upper="${90.*toRad}" />
     <dynamics friction="0" damping="3.0"/>
 </joint>
