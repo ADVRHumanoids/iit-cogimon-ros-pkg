@@ -54,7 +54,7 @@
     <inertial>
       <origin rpy="0.0 0.0 0.0" xyz="-0.041435899 -0.00024099021 -0.067437774"/>
       <mass value="2.0936467"/>
-      <inertia ixx="0.020328644" ixy="1.2836757e-05" ixz="-0.0071832791" iyy="0.024404941" iyz="2.2892687e-05" izz="0.008986454"/>
+      <inertia ixx="0.010806924" ixy="3.3743172e-05" ixz="-0.0013329083" iyy="0.011288691" iyz="5.6918305e-05" izz="0.0053916798"/>
     </inertial>
     <visual>
       <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
@@ -118,7 +118,7 @@
     <inertial>
       <origin rpy="0.0 0.0 0.0" xyz="-0.02113641 -0.0042862386 -0.038232267"/>
       <mass value="1.7454681"/>
-      <inertia ixx="0.0085691728" ixy="-0.00019828734" ixz="-0.0022121863" iyy="0.0099794948" iyz="-0.00040039407" izz="0.0052783547"/>
+      <inertia ixx="0.0059857438" ixy="-4.0155441e-05" ixz="-0.00080168603" iyy="0.0066483492" iyz="-0.00011435964" izz="0.0044665032"/>
     </inertial>
     <visual>
       <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
@@ -178,6 +178,38 @@
       </geometry>
     </collision>
   </link>
+  <link name="LFootmot">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0011213007 0.00046152281 -1.144967e-06"/>
+      <mass value="0.17723821"/>
+      <inertia ixx="2.8142035e-05" ixy="9.1715528e-08" ixz="-2.1701012e-10" iyy="9.7378402e-05" iyz="3.7303915e-10" izz="0.00011570584"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://cogimon_urdf/meshes/AnklePitch.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="-0.586565164791 1.57079632676 -0.58656516477" xyz="0.0 -1.183805e-13 2.64057e-13"/>
+      <geometry>
+        <cylinder length="0.033835" radius="0.0195224"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="-0.586565164791 1.57079632676 -0.58656516477" xyz="-0.016917 -0.000000 -0.000000"/>
+      <geometry>
+        <sphere radius="0.0195224"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="-0.586565164791 1.57079632676 -0.58656516477" xyz="0.016917 0.000000 0.000000"/>
+      <geometry>
+        <sphere radius="0.0195224"/>
+      </geometry>
+    </collision>
+  </link>
   <joint name="LHipLat" type="revolute">
     <origin rpy="0.0 0.0 0.0" xyz="0.01545 0.112 -0.05"/>
     <axis xyz="1.0 0.0 0.0"/>
@@ -210,11 +242,19 @@
     <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
+  <joint name="LAnklePitch" type="revolute">
+    <origin rpy="0.0 0.0 0.0" xyz="0.039 -0.0616 -0.425294"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <parent link="LLowLeg"/>
+    <child link="LFootmot"/>
+    <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
+    <dynamics damping="0.1" friction="0.0"/>
+  </joint>
   <link name="RHipMot">
     <inertial>
       <origin rpy="0.0 0.0 0.0" xyz="-0.041435899 0.00024099021 -0.067437774"/>
       <mass value="2.0936467"/>
-      <inertia ixx="0.020328644" ixy="-1.2836757e-05" ixz="-0.0071832791" iyy="0.024404941" iyz="-2.2892687e-05" izz="0.008986454"/>
+      <inertia ixx="0.010806924" ixy="-3.3743172e-05" ixz="-0.0013329083" iyy="0.011288691" iyz="-5.6918305e-05" izz="0.0053916798"/>
     </inertial>
     <visual>
       <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
@@ -278,7 +318,7 @@
     <inertial>
       <origin rpy="0.0 0.0 0.0" xyz="-0.02113641 0.0042862386 -0.038232267"/>
       <mass value="1.7454681"/>
-      <inertia ixx="0.0085691728" ixy="0.00019828734" ixz="-0.0022121863" iyy="0.0099794948" iyz="0.00040039407" izz="0.0052783547"/>
+      <inertia ixx="0.0059857438" ixy="4.0155441e-05" ixz="-0.00080168603" iyy="0.0066483492" iyz="0.00011435964" izz="0.0044665032"/>
     </inertial>
     <visual>
       <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
@@ -338,6 +378,38 @@
       </geometry>
     </collision>
   </link>
+  <link name="RFootmot">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0011213007 0.00046152281 -1.144967e-06"/>
+      <mass value="0.17723821"/>
+      <inertia ixx="2.8142035e-05" ixy="9.1715528e-08" ixz="-2.1701012e-10" iyy="9.7378402e-05" iyz="3.7303915e-10" izz="0.00011570584"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://cogimon_urdf/meshes/AnklePitch.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="-0.586565164791 1.57079632676 -0.58656516477" xyz="0.0 -1.183805e-13 2.64057e-13"/>
+      <geometry>
+        <cylinder length="0.033835" radius="0.0195224"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="-0.586565164791 1.57079632676 -0.58656516477" xyz="-0.016917 -0.000000 -0.000000"/>
+      <geometry>
+        <sphere radius="0.0195224"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="-0.586565164791 1.57079632676 -0.58656516477" xyz="0.016917 0.000000 0.000000"/>
+      <geometry>
+        <sphere radius="0.0195224"/>
+      </geometry>
+    </collision>
+  </link>
   <joint name="RHipLat" type="revolute">
     <origin rpy="0.0 0.0 0.0" xyz="0.01545 -0.112 -0.05"/>
     <axis xyz="1.0 0.0 0.0"/>
@@ -369,5 +441,13 @@
     <child link="RLowLeg"/>
     <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
     <dynamics damping="3.0" friction="0.0"/>
+  </joint>
+  <joint name="RAnklePitch" type="revolute">
+    <origin rpy="0.0 0.0 0.0" xyz="0.039 0.0616 -0.425294"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <parent link="RLowLeg"/>
+    <child link="RFootmot"/>
+    <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
+    <dynamics damping="0.1" friction="0.0"/>
   </joint>
 </robot>

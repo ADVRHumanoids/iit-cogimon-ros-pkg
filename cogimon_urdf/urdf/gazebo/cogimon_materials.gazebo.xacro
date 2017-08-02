@@ -18,6 +18,9 @@
 <gazebo reference="RLowLeg">
   <material>Gazebo/DarkGrey</material>
 </gazebo>
+<gazebo reference="RFootmot">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
 </xacro:if> 
 
 <xacro:if value="${COGIMON_LEFT_LEG}" >
@@ -31,6 +34,9 @@
   <material>Gazebo/Green</material>
 </gazebo>
 <gazebo reference="LLowLeg">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
+<gazebo reference="LFootmot">
   <material>Gazebo/DarkGrey</material>
 </gazebo>
 </xacro:if> 

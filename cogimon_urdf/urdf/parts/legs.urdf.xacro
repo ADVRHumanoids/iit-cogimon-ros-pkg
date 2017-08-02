@@ -7,8 +7,8 @@
 <link name ="LHipMot">
     <inertial>
       <origin xyz="${-4.1435899e+01*mmTom} ${-2.4099021e-01*mmTom} ${-6.7437774e+01*mmTom}" rpy="0 0 0"/>
-      <mass value="2.0936467"/>
-      <inertia ixx="${2.0328644e+04*mm2Tom2}"  ixy="${1.2836757e+01*mm2Tom2}"  ixz="${-7.1832791e+03*mm2Tom2}" iyy="${2.4404941e+04*mm2Tom2}" iyz="${2.2892687e+01*mm2Tom2}" izz="${8.9864540e+03*mm2Tom2}" />
+      <mass value="2.0936467"/>      
+      <inertia ixx="${1.0806924e+04*mm2Tom2}"  ixy="${3.3743172e+01*mm2Tom2}"  ixz="${-1.3329083e+03*mm2Tom2}" iyy="${1.1288691e+04*mm2Tom2}" iyz="${5.6918305e+01*mm2Tom2}" izz="${5.3916798e+03*mm2Tom2}" />
     </inertial>
     <visual>
       <origin xyz="0. 0. 0." rpy="0 0 0."/>
@@ -49,8 +49,8 @@
 <link name ="LThighLowLeg">
     <inertial>       
       <origin xyz="${-2.1136410e+01*mmTom} ${-4.2862386e+00*mmTom} ${-3.8232267e+01*mmTom}" rpy="0 0 0"/>
-      <mass value="1.7454681"/>     
-      <inertia ixx="${8.5691728e+03*mm2Tom2}"  ixy="${-1.9828734e+02*mm2Tom2}"  ixz="${-2.2121863e+03*mm2Tom2}" iyy="${9.9794948e+03*mm2Tom2}" iyz="${-4.0039407e+02*mm2Tom2}" izz="${5.2783547e+03*mm2Tom2}" />
+      <mass value="1.7454681"/>       
+      <inertia ixx="${5.9857438e+03*mm2Tom2}"  ixy="${-4.0155441e+01*mm2Tom2}"  ixz="${-8.0168603e+02*mm2Tom2}" iyy="${6.6483492e+03*mm2Tom2}" iyz="${-1.1435964e+02*mm2Tom2}" izz="${4.4665032e+03*mm2Tom2}" />
     </inertial>
     <visual>
       <origin xyz="0. 0. 0." rpy="0 0 0."/>
@@ -88,6 +88,26 @@
     </collision>
 </link>
 
+<link name ="LFootmot">
+    <inertial>    
+      <origin xyz="${1.1213007e+00*mmTom} ${4.6152281e-01*mmTom} ${-1.1449670e-03*mmTom}" rpy="0 0 0"/>
+      <mass value="1.7723821e-01"/>      
+      <inertia ixx="${2.8142035e+01*mm2Tom2}"  ixy="${9.1715528e-02*mm2Tom2}"  ixz="${-2.1701012e-04*mm2Tom2}" iyy="${9.7378402e+01*mm2Tom2}" iyz="${3.7303915e-04*mm2Tom2}" izz="${1.1570584e+02*mm2Tom2}" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry name="LFootmot_visual">
+        <mesh filename="package://cogimon_urdf/meshes/AnklePitch.stl" scale="${mmTom} ${mmTom} ${mmTom}" />
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry name="LFootmot_collision">
+        <mesh filename="package://cogimon_urdf/meshes/simple/AnklePitch.stl" scale="${mmTom} ${mmTom} ${mmTom}" />
+      </geometry>             
+    </collision>
+</link>
 
 <!-- JOINTS -->
 <joint name="LHipLat" type="revolute">
@@ -125,6 +145,15 @@
     <limit velocity="3.67" effort="176" lower="${-90.*toRad}" upper="${90.*toRad}" />
     <dynamics friction="0" damping="3.0"/>
 </joint>
+
+<joint name="LAnklePitch" type="revolute">
+    <parent link="LLowLeg"/>
+    <child link="LFootmot"/>
+    <origin xyz="${39.*mmTom} ${-61.6*mmTom} ${-425.294*mmTom}" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit velocity="3.67" effort="176" lower="${-90.*toRad}" upper="${90.*toRad}" />
+    <dynamics friction="0" damping="0.1"/>
+</joint> 
 </xacro:if>
 
 
@@ -135,7 +164,7 @@
     <inertial>
       <origin xyz="${-4.1435899e+01*mmTom} ${2.4099021e-01*mmTom} ${-6.7437774e+01*mmTom}" rpy="0 0 0"/>
       <mass value="2.0936467"/>
-      <inertia ixx="${2.0328644e+04*mm2Tom2}"  ixy="${-1.2836757e+01*mm2Tom2}"  ixz="${-7.1832791e+03*mm2Tom2}" iyy="${2.4404941e+04*mm2Tom2}" iyz="${-2.2892687e+01*mm2Tom2}" izz="${8.9864540e+03*mm2Tom2}" />
+      <inertia ixx="${1.0806924e+04*mm2Tom2}"  ixy="${-3.3743172e+01*mm2Tom2}"  ixz="${-1.3329083e+03*mm2Tom2}" iyy="${1.1288691e+04*mm2Tom2}" iyz="${-5.6918305e+01*mm2Tom2}" izz="${5.3916798e+03*mm2Tom2}" />
     </inertial>
     <visual>
       <origin xyz="0.0 0 0" rpy="0 0 0"/>
@@ -177,7 +206,7 @@
     <inertial>   
       <origin xyz="${-2.1136410e+01*mmTom} ${4.2862386e+00*mmTom} ${-3.8232267e+01*mmTom}" rpy="0 0 0"/>
       <mass value="1.7454681"/>     
-      <inertia ixx="${8.5691728e+03*mm2Tom2}"  ixy="${1.9828734e+02*mm2Tom2}"  ixz="${-2.2121863e+03*mm2Tom2}" iyy="${9.9794948e+03*mm2Tom2}" iyz="${4.0039407e+02*mm2Tom2}" izz="${5.2783547e+03*mm2Tom2}" />
+      <inertia ixx="${5.9857438e+03*mm2Tom2}"  ixy="${4.0155441e+01*mm2Tom2}"  ixz="${-8.0168603e+02*mm2Tom2}" iyy="${6.6483492e+03*mm2Tom2}" iyz="${1.1435964e+02*mm2Tom2}" izz="${4.4665032e+03*mm2Tom2}" />
     </inertial>
     <visual>
       <origin xyz="0. 0. 0." rpy="0 0 0."/>
@@ -211,6 +240,27 @@
       <origin xyz="0.0 0. 0" rpy="0 0 0."/>
       <geometry name="RLowLeg_collision">
         <mesh filename="package://cogimon_urdf/meshes/simple/KneePitch.stl" scale="${mmTom} ${-mmTom} ${mmTom}" />
+      </geometry>             
+    </collision>
+</link>
+
+<link name ="RFootmot">
+    <inertial>    
+      <origin xyz="${1.1213007e+00*mmTom} ${4.6152281e-01*mmTom} ${-1.1449670e-03*mmTom}" rpy="0 0 0"/>
+      <mass value="1.7723821e-01"/>      
+      <inertia ixx="${2.8142035e+01*mm2Tom2}"  ixy="${9.1715528e-02*mm2Tom2}"  ixz="${-2.1701012e-04*mm2Tom2}" iyy="${9.7378402e+01*mm2Tom2}" iyz="${3.7303915e-04*mm2Tom2}" izz="${1.1570584e+02*mm2Tom2}" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry name="RFootmot_visual">
+        <mesh filename="package://cogimon_urdf/meshes/AnklePitch.stl" scale="${mmTom} ${mmTom} ${mmTom}" />
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry name="RFootmot_collision">
+        <mesh filename="package://cogimon_urdf/meshes/simple/AnklePitch.stl" scale="${mmTom} ${mmTom} ${mmTom}" />
       </geometry>             
     </collision>
 </link>
@@ -251,6 +301,15 @@
     <limit velocity="3.67" effort="176" lower="${-90.*toRad}" upper="${90.*toRad}" />
     <dynamics friction="0" damping="3.0"/>
 </joint>
+
+<joint name="RAnklePitch" type="revolute">
+    <parent link="RLowLeg"/>
+    <child link="RFootmot"/>
+    <origin xyz="${39.*mmTom} ${61.6*mmTom} ${-425.294*mmTom}" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit velocity="3.67" effort="176" lower="${-90.*toRad}" upper="${90.*toRad}" />
+    <dynamics friction="0" damping="0.1"/>
+</joint> 
 </xacro:if>
 
 
