@@ -16,8 +16,11 @@
 <!-- ******************************************-->
 <xacro:property name="COGIMON_FLOATING_BASE" value="true" />
 
+<!-- ************FIXED BASE*************-->
+<!-- ******************************************-->
+<xacro:property name="COGIMON_FIXED_BASE" value="false" />
+
 <!-- ************XBOT FRAMEWORK*************-->
 <!-- *************************************-->
---> 
 <xacro:property name="COGIMON_XBOT" value="false" />
 </robot>

@@ -210,6 +210,26 @@
       </geometry>
     </collision>
   </link>
+  <link name="LFoot">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="-0.0086960323 -6.6741928e-05 -0.041675435"/>
+      <mass value="1.7819594"/>
+      <inertia ixx="0.0019182691" ixy="5.7926583e-06" ixz="0.00032836542" iyy="0.0053518735" iyz="-3.0518008e-06" izz="0.0064063918"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://cogimon_urdf/meshes/Foot.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.046"/>
+      <geometry>
+        <box size="0.21 0.11 0.015"/>
+      </geometry>
+    </collision>
+  </link>
   <joint name="LHipLat" type="revolute">
     <origin rpy="0.0 0.0 0.0" xyz="0.01545 0.112 -0.05"/>
     <axis xyz="1.0 0.0 0.0"/>
@@ -249,6 +269,14 @@
     <child link="LFootmot"/>
     <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
     <dynamics damping="0.1" friction="0.0"/>
+  </joint>
+  <joint name="LAnkleRoll" type="revolute">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    <axis xyz="1.0 0.0 0.0"/>
+    <parent link="LFootmot"/>
+    <child link="LFoot"/>
+    <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
+    <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <link name="RHipMot">
     <inertial>
@@ -410,6 +438,26 @@
       </geometry>
     </collision>
   </link>
+  <link name="RFoot">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="-0.0086960323 -6.6741928e-05 -0.041675435"/>
+      <mass value="1.7819594"/>
+      <inertia ixx="0.0019182691" ixy="5.7926583e-06" ixz="0.00032836542" iyy="0.0053518735" iyz="-3.0518008e-06" izz="0.0064063918"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://cogimon_urdf/meshes/Foot.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.046"/>
+      <geometry>
+        <box size="0.21 0.11 0.015"/>
+      </geometry>
+    </collision>
+  </link>
   <joint name="RHipLat" type="revolute">
     <origin rpy="0.0 0.0 0.0" xyz="0.01545 -0.112 -0.05"/>
     <axis xyz="1.0 0.0 0.0"/>
@@ -449,5 +497,13 @@
     <child link="RFootmot"/>
     <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
     <dynamics damping="0.1" friction="0.0"/>
+  </joint>
+  <joint name="RAnkleRoll" type="revolute">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    <axis xyz="1.0 0.0 0.0"/>
+    <parent link="RFootmot"/>
+    <child link="RFoot"/>
+    <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
+    <dynamics damping="3.0" friction="0.0"/>
   </joint>
 </robot>

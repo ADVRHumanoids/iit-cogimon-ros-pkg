@@ -109,6 +109,27 @@
     </collision>
 </link>
 
+<link name ="LFoot">
+    <inertial>       
+      <origin xyz="${-8.6960323e+00*mmTom} ${-6.6741928e-02*mmTom} ${-4.1675435e+01*mmTom}" rpy="0 0 0"/>
+      <mass value="1.7819594e+00"/>           
+      <inertia ixx="${1.9182691e+03*mm2Tom2}"  ixy="${5.7926583e+00*mm2Tom2}"  ixz="${3.2836542e+02*mm2Tom2}" iyy="${5.3518735e+03*mm2Tom2}" iyz="${-3.0518008e+00*mm2Tom2}" izz="${ 6.4063918e+03*mm2Tom2}" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry name="LFoot_visual">
+        <mesh filename="package://cogimon_urdf/meshes/Foot.stl" scale="${mmTom} ${mmTom} ${mmTom}" />
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 -0.046" rpy="0 0 0"/>
+       <geometry>
+        <box size="0.21 0.11 0.015" />
+       </geometry>             
+    </collision>
+</link>
+
 <!-- JOINTS -->
 <joint name="LHipLat" type="revolute">
     <parent link="Waist"/>
@@ -153,6 +174,15 @@
     <axis xyz="0 1 0" />
     <limit velocity="3.67" effort="176" lower="${-90.*toRad}" upper="${90.*toRad}" />
     <dynamics friction="0" damping="0.1"/>
+</joint>
+ 
+<joint name="LAnkleRoll" type="revolute">
+    <parent link="LFootmot"/>
+    <child link="LFoot"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit velocity="3.67" effort="176" lower="${-90.*toRad}" upper="${90.*toRad}" />
+    <dynamics friction="0" damping="3.0"/>
 </joint> 
 </xacro:if>
 
@@ -265,6 +295,27 @@
     </collision>
 </link>
 
+<link name ="RFoot">
+    <inertial>       
+      <origin xyz="${-8.6960323e+00*mmTom} ${-6.6741928e-02*mmTom} ${-4.1675435e+01*mmTom}" rpy="0 0 0"/>
+      <mass value="1.7819594e+00"/>           
+      <inertia ixx="${1.9182691e+03*mm2Tom2}"  ixy="${5.7926583e+00*mm2Tom2}"  ixz="${3.2836542e+02*mm2Tom2}" iyy="${5.3518735e+03*mm2Tom2}" iyz="${-3.0518008e+00*mm2Tom2}" izz="${ 6.4063918e+03*mm2Tom2}" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry name="RFoot_visual">
+        <mesh filename="package://cogimon_urdf/meshes/Foot.stl" scale="${mmTom} ${mmTom} ${mmTom}" />
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 -0.046" rpy="0 0 0"/>
+       <geometry>
+        <box size="0.21 0.11 0.015" />
+       </geometry>             
+    </collision>
+</link>
+
 <!-- JOINTS -->
 <joint name="RHipLat" type="revolute">
     <parent link="Waist"/>
@@ -309,6 +360,15 @@
     <axis xyz="0 1 0" />
     <limit velocity="3.67" effort="176" lower="${-90.*toRad}" upper="${90.*toRad}" />
     <dynamics friction="0" damping="0.1"/>
+</joint> 
+
+<joint name="RAnkleRoll" type="revolute">
+    <parent link="RFootmot"/>
+    <child link="RFoot"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit velocity="3.67" effort="176" lower="${-90.*toRad}" upper="${90.*toRad}" />
+    <dynamics friction="0" damping="3.0"/>
 </joint> 
 </xacro:if>
 
