@@ -1,10 +1,10 @@
 <package>
   <description brief="cogimon_gazebo">
 
-     cogimon_gazebo contains files needed to simulate COMAN in Gazebo.
+     cogimon_gazebo 
 
   </description>
-  <author>Enrico Mingo</author>
+  <author>Enrico Mingo Hoffman</author>
   <license>BSD</license>
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/cogimon_gazebo</url>
