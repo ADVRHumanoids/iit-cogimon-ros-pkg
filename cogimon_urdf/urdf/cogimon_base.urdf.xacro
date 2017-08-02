@@ -6,13 +6,11 @@
   
   DO NOT INCLUDE THIS FILE DIRECTLY! USE cogimon_robot.urdf.xacro INSTEAD!
 
-  Author: Enrico Mingo & Alessio Rocchi
+  Author: Enrico Mingo Hoffman
 
   Inertial matrix has to be in CoM frame (URDF specs)
 
-  Velocity and effort limits are fake!
 -->
-
 
 <!-- This links are defined in order to be compliant with http://www.ros.org/reps/rep-0120.html#coordinate-frames
 and to define the end effectors of the robot
@@ -22,21 +20,21 @@ The coordinate frame called base_link is rigidly attached to the robot root body
 
 <link name="Waist">
     <inertial>
-      <origin xyz="${-2.0579946e+01*mmTom} ${-1.0999634e+00*mmTom} ${-3.7500786e+01*mmTom}" rpy="0.0 0.0 0.0"/>
-      <mass value="4.2357548"/>
-      <inertia ixx="${4.6492739e+04*mm2Tom2}"  ixy="${3.4766548e+01*mm2Tom2}"  ixz="${3.2487180e+01*mm2Tom2}" iyy="${1.4654103e+04*mm2Tom2}" iyz="${9.3654340e+02*mm2Tom2}" izz="${5.0027621e+04*mm2Tom2}" />
+      <origin xyz="${-5.6796324e+01*mmTom} ${4.5196345e-01*mmTom} ${-3.8136153e+01*mmTom}" rpy="0.0 0.0 0.0"/>
+      <mass value="3.4599462"/>
+      <inertia ixx="${3.8130318e+04*mm2Tom2}"  ixy="${9.5451056e+01*mm2Tom2}"  ixz="${-8.2481481e+01*mm2Tom2}" iyy="${8.9760596e+03*mm2Tom2}" iyz="${9.1637353e+00*mm2Tom2}" izz="${3.9650845e+04*mm2Tom2}" />
     </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <material name="dark_grey"/>
       <geometry name="Waist_visual">
-        <mesh filename="package://cogimon_urdf/meshes/Waist.STL" scale="${mmTom} ${mmTom} ${mmTom}"/>
+        <mesh filename="package://cogimon_urdf/meshes/Waist.stl" scale="${mmTom} ${mmTom} ${mmTom}"/>
       </geometry>
     </visual> 
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry name="Waist_collision">
-        <mesh filename="package://cogimon_urdf/meshes/simple/Waist.STL" scale="${mmTom} ${mmTom} ${mmTom}"/>
+        <mesh filename="package://cogimon_urdf/meshes/simple/Waist.stl" scale="${mmTom} ${mmTom} ${mmTom}"/>
       </geometry>             
     </collision>   
 </link>
@@ -69,7 +67,7 @@ and to define the end effectors of the robot -->
   <!--link name="l_toe"/>
   <link name="r_toe"/-->
 
-<xacro:include filename="$(find cogimon_urdf)/urdf/parts/legs.urdf.xacro" />
+<!--xacro:include filename="$(find cogimon_urdf)/urdf/parts/legs.urdf.xacro" /-->
 <!--
   <joint name="l_ankle_joint" type="fixed">
      <parent link="LFoot"/>

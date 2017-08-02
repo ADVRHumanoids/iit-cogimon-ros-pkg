@@ -12,33 +12,33 @@
   <link name="base_link"/>
   <link name="Waist">
     <inertial>
-      <origin rpy="0.0 0.0 0.0" xyz="-0.020579946 -0.0010999634 -0.037500786"/>
-      <mass value="4.2357548"/>
-      <inertia ixx="0.046492739" ixy="3.4766548e-05" ixz="3.248718e-05" iyy="0.014654103" iyz="0.0009365434" izz="0.050027621"/>
+      <origin rpy="0.0 0.0 0.0" xyz="-0.056796324 0.00045196345 -0.038136153"/>
+      <mass value="3.4599462"/>
+      <inertia ixx="0.038130318" ixy="9.5451056e-05" ixz="-8.2481481e-05" iyy="0.0089760596" iyz="9.1637353e-06" izz="0.039650845"/>
     </inertial>
     <visual>
       <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="package://cogimon_urdf/meshes/Waist.STL" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://cogimon_urdf/meshes/Waist.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="dark_grey"/>
     </visual>
     <collision>
-      <origin rpy="-1.59688722375 7.22814851761e-06 -7.41924112491e-06" xyz="-0.0483234 -0.00081845 -0.03176855"/>
+      <origin rpy="-1.57035042433 8.58849054656e-05 -8.58466177105e-05" xyz="-0.0598389 9.5e-05 -0.02992445"/>
       <geometry>
-        <cylinder length="0.193687221091" radius="0.0976281"/>
+        <cylinder length="0.200268020648" radius="0.0955748"/>
       </geometry>
     </collision>
     <collision>
-      <origin rpy="-1.59688722375 7.22814851761e-06 -7.41924112491e-06" xyz="-0.048324 -0.097629 -0.029242"/>
+      <origin rpy="-1.57035042433 8.58849054656e-05 -8.58466177105e-05" xyz="-0.059848 -0.100039 -0.029969"/>
       <geometry>
-        <sphere radius="0.0976281"/>
+        <sphere radius="0.0955748"/>
       </geometry>
     </collision>
     <collision>
-      <origin rpy="-1.59688722375 7.22814851761e-06 -7.41924112491e-06" xyz="-0.048323 0.095992 -0.034295"/>
+      <origin rpy="-1.57035042433 8.58849054656e-05 -8.58466177105e-05" xyz="-0.059830 0.100229 -0.029880"/>
       <geometry>
-        <sphere radius="0.0976281"/>
+        <sphere radius="0.0955748"/>
       </geometry>
     </collision>
   </link>
@@ -46,45 +46,5 @@
     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
     <parent link="base_link"/>
     <child link="Waist"/>
-  </joint>
-  <link name="RHipMot">
-    <inertial>
-      <origin rpy="0.0 0.0 0.0" xyz="0.0047902756 0.0155957 -0.060925801"/>
-      <mass value="1.6995409"/>
-      <inertia ixx="2.2053" ixy="-0.0066" ixz="0.0015" iyy="2.7733" iyz="0.0125" izz="2.7756"/>
-    </inertial>
-    <visual>
-      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-      <geometry>
-        <mesh filename="package://cogimon_urdf/meshes/Leg0.STL" scale="0.001 -0.001 0.001"/>
-      </geometry>
-      <material name="dark_grey"/>
-    </visual>
-    <collision>
-      <origin rpy="0.47504243893 0.412498775083 0.10121629137" xyz="0.018737835 0.023513017 -0.064002"/>
-      <geometry>
-        <cylinder length="0.111007624498" radius="0.103031"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin rpy="0.47504243893 0.412498775083 0.10121629137" xyz="-0.003514 0.046770 -0.109220"/>
-      <geometry>
-        <sphere radius="0.103031"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin rpy="0.47504243893 0.412498775083 0.10121629137" xyz="0.040989 0.000256 -0.018784"/>
-      <geometry>
-        <sphere radius="0.103031"/>
-      </geometry>
-    </collision>
-  </link>
-  <joint name="RHipLat" type="revolute">
-    <origin rpy="0.0 0.0 0.0" xyz="0.01258 -0.110954508 -0.052922586"/>
-    <axis xyz="1.0 0.0 0.0"/>
-    <parent link="Waist"/>
-    <child link="RHipMot"/>
-    <limit effort="176.0" lower="-1.48352986419" upper="0.436332312998" velocity="3.67"/>
-    <dynamics damping="3.0" friction="0.0"/>
   </joint>
 </robot>

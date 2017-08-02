@@ -6,13 +6,18 @@
 
 <!-- ************SELECT PARTS*************-->
 <!-- *************************************-->
-<xacro:property name="COGIMON_TORSO" value="false" />
-<xacro:property name="COGIMON_LEFT_ARM" value="false" />
-<xacro:property name="COGIMON_RIGHT_ARM" value="false" />
-<xacro:property name="COGIMON_LEFT_LEG" value="false" />
+<xacro:property name="COGIMON_TORSO" value="true" />
+<xacro:property name="COGIMON_LEFT_ARM" value="true" />
+<xacro:property name="COGIMON_RIGHT_ARM" value="true" />
+<xacro:property name="COGIMON_LEFT_LEG" value="true" />
 <xacro:property name="COGIMON_RIGHT_LEG" value="true" />
 
-<!-- ************SELECT FIXED BASE*************-->
+<!-- ************FLOATING BASE*************-->
 <!-- ******************************************-->
-<xacro:property name="COGIMON_FIXED_BASE" value="false" />
+<xacro:property name="COGIMON_FLOATING_BASE" value="true" />
+
+<!-- ************XBOT FRAMEWORK*************-->
+<!-- *************************************-->
+--> 
+<xacro:property name="COGIMON_XBOT" value="false" />
 </robot>
