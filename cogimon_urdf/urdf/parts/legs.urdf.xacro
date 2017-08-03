@@ -167,12 +167,13 @@
     <dynamics friction="0" damping="3.0"/>
 </joint>
 
+<!-- Here we do an assumption: Ankle Pitch can go -50/+40 while Ankle Roll -15/+15-->
 <joint name="LAnklePitch" type="revolute">
     <parent link="LLowLeg"/>
     <child link="LFootmot"/>
     <origin xyz="${39.*mmTom} ${-61.6*mmTom} ${-425.294*mmTom}" rpy="0 0 0" />
     <axis xyz="0 1 0" />
-    <limit velocity="3.67" effort="176" lower="${-90.*toRad}" upper="${90.*toRad}" />
+    <limit velocity="3.67" effort="176" lower="${-50.*toRad}" upper="${40.*toRad}" />
     <dynamics friction="0" damping="0.1"/>
 </joint>
  
@@ -181,7 +182,7 @@
     <child link="LFoot"/>
     <origin xyz="0 0 0" rpy="0 0 0" />
     <axis xyz="1 0 0" />
-    <limit velocity="3.67" effort="176" lower="${-90.*toRad}" upper="${90.*toRad}" />
+    <limit velocity="3.67" effort="176" lower="${-15.*toRad}" upper="${15.*toRad}" />
     <dynamics friction="0" damping="3.0"/>
 </joint> 
 </xacro:if>
@@ -353,12 +354,13 @@
     <dynamics friction="0" damping="3.0"/>
 </joint>
 
+<!-- Here we do an assumption: Ankle Pitch can go -50/+40 while Ankle Roll -15/+15-->
 <joint name="RAnklePitch" type="revolute">
     <parent link="RLowLeg"/>
     <child link="RFootmot"/>
     <origin xyz="${39.*mmTom} ${61.6*mmTom} ${-425.294*mmTom}" rpy="0 0 0" />
     <axis xyz="0 1 0" />
-    <limit velocity="3.67" effort="176" lower="${-90.*toRad}" upper="${90.*toRad}" />
+    <limit velocity="3.67" effort="176" lower="${-50.*toRad}" upper="${40.*toRad}" />
     <dynamics friction="0" damping="0.1"/>
 </joint> 
 
@@ -367,7 +369,7 @@
     <child link="RFoot"/>
     <origin xyz="0 0 0" rpy="0 0 0" />
     <axis xyz="1 0 0" />
-    <limit velocity="3.67" effort="176" lower="${-90.*toRad}" upper="${90.*toRad}" />
+    <limit velocity="3.67" effort="176" lower="${-15.*toRad}" upper="${15.*toRad}" />
     <dynamics friction="0" damping="3.0"/>
 </joint> 
 </xacro:if>

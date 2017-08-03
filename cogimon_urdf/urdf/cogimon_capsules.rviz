@@ -267,7 +267,7 @@
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="LLowLeg"/>
     <child link="LFootmot"/>
-    <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
+    <limit effort="176.0" lower="-0.872664625995" upper="0.698131700796" velocity="3.67"/>
     <dynamics damping="0.1" friction="0.0"/>
   </joint>
   <joint name="LAnkleRoll" type="revolute">
@@ -275,7 +275,7 @@
     <axis xyz="1.0 0.0 0.0"/>
     <parent link="LFootmot"/>
     <child link="LFoot"/>
-    <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
+    <limit effort="176.0" lower="-0.261799387798" upper="0.261799387798" velocity="3.67"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <link name="RHipMot">
@@ -495,7 +495,7 @@
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="RLowLeg"/>
     <child link="RFootmot"/>
-    <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
+    <limit effort="176.0" lower="-0.872664625995" upper="0.698131700796" velocity="3.67"/>
     <dynamics damping="0.1" friction="0.0"/>
   </joint>
   <joint name="RAnkleRoll" type="revolute">
@@ -503,7 +503,7 @@
     <axis xyz="1.0 0.0 0.0"/>
     <parent link="RFootmot"/>
     <child link="RFoot"/>
-    <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
+    <limit effort="176.0" lower="-0.261799387798" upper="0.261799387798" velocity="3.67"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
 </robot>
