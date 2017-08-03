@@ -235,7 +235,7 @@
     <axis xyz="1.0 0.0 0.0"/>
     <parent link="Waist"/>
     <child link="LHipMot"/>
-    <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
+    <limit effort="176.0" lower="-0.523598775597" upper="1.65806278939" velocity="3.67"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="LHipSag" type="revolute">
@@ -243,7 +243,7 @@
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="LHipMot"/>
     <child link="LThighUpLeg"/>
-    <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
+    <limit effort="176.0" lower="-1.91986217719" upper="1.55334303427" velocity="3.67"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="LHipYaw" type="revolute">
@@ -251,7 +251,7 @@
     <axis xyz="0.0 0.0 1.0"/>
     <parent link="LThighUpLeg"/>
     <child link="LThighLowLeg"/>
-    <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
+    <limit effort="176.0" lower="-0.558505360637" upper="1.57079632679" velocity="3.67"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="LKneePitch" type="revolute">
@@ -259,7 +259,7 @@
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="LThighLowLeg"/>
     <child link="LLowLeg"/>
-    <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
+    <limit effort="176.0" lower="0.0" upper="2.44346095279" velocity="3.67"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="LAnklePitch" type="revolute">
@@ -463,7 +463,7 @@
     <axis xyz="1.0 0.0 0.0"/>
     <parent link="Waist"/>
     <child link="RHipMot"/>
-    <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
+    <limit effort="176.0" lower="-1.65806278939" upper="0.523598775597" velocity="3.67"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="RHipSag" type="revolute">
@@ -471,7 +471,7 @@
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="RHipMot"/>
     <child link="RThighUpLeg"/>
-    <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
+    <limit effort="176.0" lower="-1.91986217719" upper="1.55334303427" velocity="3.67"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="RHipYaw" type="revolute">
@@ -479,7 +479,7 @@
     <axis xyz="0.0 0.0 1.0"/>
     <parent link="RThighUpLeg"/>
     <child link="RThighLowLeg"/>
-    <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
+    <limit effort="176.0" lower="-1.57079632679" upper="0.558505360637" velocity="3.67"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="RKneePitch" type="revolute">
@@ -487,7 +487,7 @@
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="RThighLowLeg"/>
     <child link="RLowLeg"/>
-    <limit effort="176.0" lower="-1.57079632679" upper="1.57079632679" velocity="3.67"/>
+    <limit effort="176.0" lower="0.0" upper="2.44346095279" velocity="3.67"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="RAnklePitch" type="revolute">
