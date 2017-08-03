@@ -506,4 +506,100 @@
     <limit effort="176.0" lower="-0.261799387798" upper="0.261799387798" velocity="3.67"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
+  <link name="l_ankle"/>
+  <link name="l_sole"/>
+  <link name="l_toe"/>
+  <link name="l_heel"/>
+  <joint name="l_ankle_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    <parent link="LFoot"/>
+    <child link="l_ankle"/>
+  </joint>
+  <joint name="l_sole_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.054"/>
+    <parent link="l_ankle"/>
+    <child link="l_sole"/>
+  </joint>
+  <joint name="l_toe_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.107 0.0 0.0"/>
+    <parent link="l_sole"/>
+    <child link="l_toe"/>
+  </joint>
+  <joint name="l_heel_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="-0.1035 0.0 0.0"/>
+    <parent link="l_sole"/>
+    <child link="l_heel"/>
+  </joint>
+  <link name="l_foot_upper_right_link"/>
+  <joint name="l_foot_upper_right_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.107 -0.055 0.0"/>
+    <parent link="l_sole"/>
+    <child link="l_foot_upper_right_link"/>
+  </joint>
+  <link name="l_foot_upper_left_link"/>
+  <joint name="l_foot_upper_left_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.107 0.055 0.0"/>
+    <parent link="l_sole"/>
+    <child link="l_foot_upper_left_link"/>
+  </joint>
+  <link name="l_foot_lower_right_link"/>
+  <joint name="l_foot_lower_right_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="-0.1035 -0.055 0.0"/>
+    <parent link="l_sole"/>
+    <child link="l_foot_lower_right_link"/>
+  </joint>
+  <link name="l_foot_lower_left_link"/>
+  <joint name="l_foot_lower_left_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="-0.1035 0.055 0.0"/>
+    <parent link="l_sole"/>
+    <child link="l_foot_lower_left_link"/>
+  </joint>
+  <link name="r_ankle"/>
+  <link name="r_sole"/>
+  <link name="r_toe"/>
+  <link name="r_heel"/>
+  <joint name="r_ankle_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    <parent link="RFoot"/>
+    <child link="r_ankle"/>
+  </joint>
+  <joint name="r_sole_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.054"/>
+    <parent link="r_ankle"/>
+    <child link="r_sole"/>
+  </joint>
+  <joint name="r_toe_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.107 0.0 0.0"/>
+    <parent link="r_sole"/>
+    <child link="r_toe"/>
+  </joint>
+  <joint name="r_heel_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="-0.1035 0.0 0.0"/>
+    <parent link="r_sole"/>
+    <child link="r_heel"/>
+  </joint>
+  <link name="r_foot_upper_right_link"/>
+  <joint name="r_foot_upper_right_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.107 -0.055 0.0"/>
+    <parent link="r_sole"/>
+    <child link="r_foot_upper_right_link"/>
+  </joint>
+  <link name="r_foot_upper_left_link"/>
+  <joint name="r_foot_upper_left_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.107 0.055 0.0"/>
+    <parent link="r_sole"/>
+    <child link="r_foot_upper_left_link"/>
+  </joint>
+  <link name="r_foot_lower_right_link"/>
+  <joint name="r_foot_lower_right_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="-0.1035 -0.055 0.0"/>
+    <parent link="r_sole"/>
+    <child link="r_foot_lower_right_link"/>
+  </joint>
+  <link name="r_foot_lower_left_link"/>
+  <joint name="r_foot_lower_left_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="-0.1035 0.055 0.0"/>
+    <parent link="r_sole"/>
+    <child link="r_foot_lower_left_link"/>
+  </joint>
 </robot>
