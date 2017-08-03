@@ -4,7 +4,8 @@
 
 <gazebo>
     <plugin name="xbot_plugin_handler" filename="libGazeboXBotPlugin.so">
-    <path_to_config_file>configs/ADVR_shared/cogimon/configs/config_cogimon.yaml</path_to_config_file>
+       <path_to_config_file>configs/ADVR_shared/cogimon/configs/config_cogimon.yaml</path_to_config_file>
+    </plugin>
 </gazebo>
 
 </robot>

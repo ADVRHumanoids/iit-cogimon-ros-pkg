@@ -41,6 +41,24 @@ The coordinate frame called gaze defines the head position and orientation. The 
 
 <!-- ************ REF FRAMES **************** -->
 <xacro:include filename="$(find cogimon_urdf)/urdf/parts/feet_reference_frames.urdf.xacro"/>
+
+<xacro:if value="${COGIMON_FLOATING_BASE}" >
+<link name="world"/>
+
+  <joint name="reference" type="floating">
+    <parent link="world"/>
+    <child link="base_link"/>
+</joint>
+</xacro:if>
+
+<xacro:if value="${COGIMON_FIXED_BASE}" >
+  <link name="world"/>
+  
+   <joint name="fixed" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+  </joint>
+</xacro:if>
   
 </robot>
 

@@ -20,14 +20,7 @@
   <xacro:include filename="$(find cogimon_urdf)/urdf/gazebo/xbot_control.gazebo.xacro" />
 </xacro:if>
 
-<xacro:if value="${COGIMON_FIXED_BASE}" >
-  <link name="world"/>
-  
-   <joint name="fixed" type="fixed">
-    <parent link="world"/>
-    <child link="base_link"/>
-  </joint>
-</xacro:if>
+
 
 <origin xyz="0.0 0.0 0.97" rpy="0 0 0" />
 </robot>

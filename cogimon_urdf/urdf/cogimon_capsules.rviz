@@ -602,4 +602,9 @@
     <parent link="r_sole"/>
     <child link="r_foot_lower_left_link"/>
   </joint>
+  <link name="world"/>
+  <joint name="reference" type="floating">
+    <parent link="world"/>
+    <child link="base_link"/>
+  </joint>
 </robot>
