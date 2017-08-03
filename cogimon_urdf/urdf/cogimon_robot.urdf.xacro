@@ -16,7 +16,9 @@
   <!--xacro:include filename="$(find cogimon_urdf)/urdf/gazebo/force_torque.gazebo.xacro" /-->
 
 
-
+<xacro:if value="${COGIMON_XBOT_GAZEBO}" >
+  <xacro:include filename="$(find cogimon_urdf)/urdf/gazebo/xbot_control.gazebo.xacro" />
+</xacro:if>
 
 <xacro:if value="${COGIMON_FIXED_BASE}" >
   <link name="world"/>
