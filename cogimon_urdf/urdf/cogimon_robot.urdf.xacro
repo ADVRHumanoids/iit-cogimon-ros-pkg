@@ -13,7 +13,7 @@
   <xacro:include filename="$(find cogimon_urdf)/urdf/gazebo/cogimon.gazebo.xacro" />
  
   <xacro:include filename="$(find cogimon_urdf)/urdf/gazebo/cogimon_materials.gazebo.xacro" />
-  <!--xacro:include filename="$(find cogimon_urdf)/urdf/gazebo/force_torque.gazebo.xacro" /-->
+  <xacro:include filename="$(find cogimon_urdf)/urdf/gazebo/force_torque.gazebo.xacro" />
 
 
 <xacro:if value="${COGIMON_XBOT_GAZEBO}" >

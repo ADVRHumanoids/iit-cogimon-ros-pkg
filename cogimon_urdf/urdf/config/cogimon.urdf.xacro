@@ -22,9 +22,9 @@
 
 <!-- ************XBOT-GAZEBO FRAMEWORK*************-->
 <!-- *************************************-->
-<xacro:property name="COGIMON_XBOT_GAZEBO" value="true" />
+<xacro:property name="COGIMON_XBOT_GAZEBO" value="false" />
 
 <!-- ************OROCOS-GAZEBO FRAMEWORK*************-->
 <!-- *************************************-->
-<xacro:property name="COGIMON_OROCOS_GAZEBO" value="false" />
+<xacro:property name="COGIMON_OROCOS_GAZEBO" value="true" />
 </robot>

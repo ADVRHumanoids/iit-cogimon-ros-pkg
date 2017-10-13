@@ -4,12 +4,12 @@
 <xacro:if value="${COGIMON_RIGHT_LEG}"> 
 <rtt-gazebo reference="right_leg">
        <controller type="JointPositionCtrl">
-              <gains reference="RHipSag" P="1000." D="1.0" I="0."/>
-              <gains reference="RHipLat" P="1000." D="1.0" I="0."/>
-              <gains reference="RHipYaw" P="1000." D="1.0" I="0."/>
-              <gains reference="RKneePitch" P="1000." D="1.0" I="0."/>
-              <gains reference="RAnklePitch" P="1000." D="1.0" I="0."/>
-              <gains reference="RAnkleRoll" P="1000." D="1.0" I="0."/> 
+              <gains D="12.0" I="2." P="7500." reference="RHipSag"/>
+              <gains D="10.0" I="0." P="4500." reference="RHipLat"/>
+              <gains D="10." I="0." P="4000." reference="RHipYaw"/>
+              <gains D="5.0" I="0." P="3500." reference="RKneePitch"/>
+              <gains D="7.0" I="0." P="5500." reference="RAnklePitch"/>
+              <gains D="5.0" I="0." P="2500." reference="RAnkleRoll"/>
        </controller>
        <controller type="JointImpedanceCtrl">
               <gains reference="RHipSag" stiffness="300." damping="30."/>
@@ -26,12 +26,12 @@
 <xacro:if value="${COGIMON_LEFT_LEG}"> 
 <rtt-gazebo reference="left_leg">
        <controller type="JointPositionCtrl">
-              <gains reference="LHipSag" P="1000." D="1.0" I="0."/>
-              <gains reference="LHipLat" P="1000." D="1.0" I="0."/>
-              <gains reference="LHipYaw" P="1000." D="1.0" I="0."/>
-              <gains reference="LKneePitch" P="1000." D="1.0" I="0."/>
-              <gains reference="LAnklePitch" P="1000." D="1.0" I="0."/>
-              <gains reference="LAnkleRoll" P="1000." D="1.0" I="0."/> 
+              <gains D="12.0" I="2." P="7500." reference="LHipSag"/>
+              <gains D="10.0" I="0." P="4500." reference="LHipLat"/>
+              <gains D="10." I="0." P="4000." reference="LHipYaw"/>
+              <gains D="5.0" I="0." P="3500." reference="LKneePitch"/>
+              <gains D="7.0" I="0." P="5500." reference="LAnklePitch"/>
+              <gains D="5.0" I="0." P="2500." reference="LAnkleRoll"/>
        </controller>
        <controller type="JointImpedanceCtrl">
               <gains reference="LHipSag" stiffness="300." damping="30."/>

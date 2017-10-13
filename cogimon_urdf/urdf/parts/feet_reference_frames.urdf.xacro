@@ -23,6 +23,13 @@
 <link name="l_sole"/>
 <link name="l_toe"/>
 <link name="l_heel"/>
+<link name="l_leg_ft"/>
+
+<joint name="l_leg_ft_joint" type="fixed">
+       <origin xyz="0 0 -0.035" rpy="0 0 0" />
+	<parent link="LFoot"/>
+	<child link="l_leg_ft"/>
+</joint>
 
 <joint name="l_ankle_joint" type="fixed">
        <origin xyz="0 0 0" rpy="0 0 0" />
@@ -56,6 +63,13 @@
 <link name="r_sole"/>
 <link name="r_toe"/>
 <link name="r_heel"/>
+<link name="r_leg_ft"/>
+
+<joint name="r_leg_ft_joint" type="fixed">
+       <origin xyz="0 0 -0.035" rpy="0 0 0" />
+	<parent link="RFoot"/>
+	<child link="r_leg_ft"/>
+</joint>
 
 <joint name="r_ankle_joint" type="fixed">
        <origin xyz="0 0 0" rpy="0 0 0" />
