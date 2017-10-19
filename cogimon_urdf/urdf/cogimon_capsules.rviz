@@ -506,6 +506,46 @@
     <limit effort="230.0" lower="-0.261799387798" upper="0.261799387798" velocity="3.2"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
+  <link name="DWL">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.039412845 0.00031221526 0.0056331027"/>
+      <mass value="0.74182685"/>
+      <inertia ixx="0.00094437073" ixy="4.8511769e-06" ixz="0.00010757639" iyy="0.0015988107" iyz="-1.104754e-05" izz="0.0015042997"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://cogimon_urdf/meshes/TorsoRoll.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="-3.1415458624 0.621364131422 -3.14144692285" xyz="-0.0429697 -1.10305e-07 0.028763955"/>
+      <geometry>
+        <cylinder length="0.0658650498323" radius="0.0603821"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="-3.1415458624 0.621364131422 -3.14144692285" xyz="-0.062141 -0.000001 0.055541"/>
+      <geometry>
+        <sphere radius="0.0603821"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="-3.1415458624 0.621364131422 -3.14144692285" xyz="-0.023798 0.000001 0.001987"/>
+      <geometry>
+        <sphere radius="0.0603821"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="WaistLat" type="revolute">
+    <origin rpy="0.0 0.0 0.0" xyz="0.012 0.0 0.0"/>
+    <axis xyz="1.0 0.0 0.0"/>
+    <parent link="Waist"/>
+    <child link="DWL"/>
+    <limit effort="150.0" lower="-0.523598775597" upper="0.523598775597" velocity="7.4"/>
+    <dynamics damping="3.0" friction="0.0"/>
+  </joint>
   <link name="l_ankle"/>
   <link name="l_sole"/>
   <link name="l_toe"/>

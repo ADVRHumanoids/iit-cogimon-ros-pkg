@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+<xacro:if value="${COGIMON_TORSO}" >
+
+<!-- LINKS -->
+<link name ="DWL">
+    <inertial>
+      <origin xyz="${3.9412845e+01*mmTom} ${3.1221526e-01*mmTom} ${5.6331027*mmTom} " rpy="0 0 0"/>
+      <mass value="7.4182685e-01"/>
+      <inertia ixx="${9.4437073e+02*mm2Tom2}"  ixy="${4.8511769*mm2Tom2}"  ixz="${1.0757639e+02*mm2Tom2}" iyy="${1.5988107e+03*mm2Tom2}" iyz="${-1.1047540e+01*mm2Tom2}" izz="${1.5042997e+03*mm2Tom2}" />
+    </inertial>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+      <geometry name="DWL_visual">
+        <mesh filename="package://cogimon_urdf/meshes/TorsoRoll.stl" scale="${mmTom} ${mmTom} ${mmTom}" />
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+      <geometry name="DWL_collision">
+        <mesh filename="package://cogimon_urdf/meshes/simple/TorsoRoll.stl" scale="${mmTom} ${mmTom} ${mmTom}" />
+      </geometry>             
+    </collision>
+</link>
+
+<!-- JOINTS -->
+<joint name="WaistLat" type="revolute">
+    <parent link="Waist"/>
+    <child link="DWL"/>
+    <origin xyz="${12.00*mmTom} 0.0 0.0" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit velocity="7.4" effort="150" lower="${-30.*toRad}" upper="${30.*toRad}" />
+    <dynamics friction="0" damping="3.0"/>
+</joint>
+
+</xacro:if>
+</robot>

@@ -47,5 +47,10 @@
 </gazebo>
 </xacro:if> 
 
+<xacro:if value="${COGIMON_TORSO}">
+<gazebo reference="DWL">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
+</xacro:if>
 
 </robot>

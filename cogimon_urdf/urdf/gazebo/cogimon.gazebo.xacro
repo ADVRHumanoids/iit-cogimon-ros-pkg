@@ -82,5 +82,11 @@
   </gazebo>
 </xacro:if>
 
+<xacro:if value="${COGIMON_TORSO}">   
+   <gazebo reference="DWL">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <provideFeedback>true</provideFeedback>
+   </gazebo>
+</xacro:if>
 
 </robot>

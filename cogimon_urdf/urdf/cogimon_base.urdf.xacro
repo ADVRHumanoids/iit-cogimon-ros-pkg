@@ -48,7 +48,7 @@ The coordinate frame called base_link is rigidly attached to the robot root body
 
 
 <xacro:include filename="$(find cogimon_urdf)/urdf/parts/legs.urdf.xacro" />
-
+<xacro:include filename="$(find cogimon_urdf)/urdf/parts/torso.urdf.xacro" />
 
 </robot>
 
