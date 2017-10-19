@@ -538,6 +538,38 @@
       </geometry>
     </collision>
   </link>
+  <link name="pennacchio">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="-3.4081174e-06 -3.4081174e-06 0.17247336"/>
+      <mass value="2.1651618"/>
+      <inertia ixx="0.045713534" ixy="1.9747985e-08" ixz="5.9794097e-07" iyy="0.045712755" iyz="-2.6722676e-07" izz="0.00060311791"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://cogimon_urdf/meshes/Pennacchio.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="6.44304458641e-05 0.000241841076017 7.79096422325e-09" xyz="4.940327e-05 -1.3088909e-05 0.199037465"/>
+      <geometry>
+        <cylinder length="0.396095082405" radius="0.0576073"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="6.44304458641e-05 0.000241841076017 7.79096422325e-09" xyz="0.000002 -0.000000 0.000990"/>
+      <geometry>
+        <sphere radius="0.0576073"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="6.44304458641e-05 0.000241841076017 7.79096422325e-09" xyz="0.000097 -0.000026 0.397085"/>
+      <geometry>
+        <sphere radius="0.0576073"/>
+      </geometry>
+    </collision>
+  </link>
   <joint name="WaistLat" type="revolute">
     <origin rpy="0.0 0.0 0.0" xyz="0.012 0.0 0.0"/>
     <axis xyz="1.0 0.0 0.0"/>
@@ -545,6 +577,11 @@
     <child link="DWL"/>
     <limit effort="150.0" lower="-0.523598775597" upper="0.523598775597" velocity="7.4"/>
     <dynamics damping="3.0" friction="0.0"/>
+  </joint>
+  <joint name="pennacchio_frame" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="-0.0540957 0.0 0.0665"/>
+    <parent link="DWL"/>
+    <child link="pennacchio"/>
   </joint>
   <link name="l_ankle"/>
   <link name="l_sole"/>

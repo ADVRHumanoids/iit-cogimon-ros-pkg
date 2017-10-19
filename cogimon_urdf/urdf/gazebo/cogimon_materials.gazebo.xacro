@@ -51,6 +51,12 @@
 <gazebo reference="DWL">
   <material>Gazebo/DarkGrey</material>
 </gazebo>
+
+<xacro:if value="${COGIMON_TORSO}">
+<gazebo reference="pennacchio">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
 </xacro:if>
 
+</xacro:if>
 </robot>

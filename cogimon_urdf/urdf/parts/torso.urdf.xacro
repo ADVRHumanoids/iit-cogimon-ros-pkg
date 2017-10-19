@@ -25,6 +25,31 @@
     </collision>
 </link>
 
+<xacro:if value="${COGIMON_PENNACCHIO}" >
+
+<link name ="pennacchio">
+    <inertial>
+      <origin xyz="${-3.4081174e-03*mmTom} ${-3.4081174e-03*mmTom} ${1.7247336e+02*mmTom} " rpy="0 0 0"/>
+      <mass value="2.1651618"/>
+      <inertia ixx="${4.5713534e+04*mm2Tom2}"  ixy="${1.9747985e-02*mm2Tom2}"  ixz="${5.9794097e-01*mm2Tom2}" iyy="${4.5712755e+04*mm2Tom2}" iyz="${-2.6722676e-01*mm2Tom2}" izz="${6.0311791e+02*mm2Tom2}" />
+    </inertial>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+      <geometry name="pennacchio_visual">
+        <mesh filename="package://cogimon_urdf/meshes/Pennacchio.stl" scale="${mmTom} ${mmTom} ${mmTom}" />
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+      <geometry name="pennacchio_collision">
+        <mesh filename="package://cogimon_urdf/meshes/simple/Pennacchio.stl" scale="${mmTom} ${mmTom} ${mmTom}" />
+      </geometry>             
+    </collision>
+</link>
+
+</xacro:if>
+
 <!-- JOINTS -->
 <joint name="WaistLat" type="revolute">
     <parent link="Waist"/>
@@ -34,6 +59,17 @@
     <limit velocity="7.4" effort="150" lower="${-30.*toRad}" upper="${30.*toRad}" />
     <dynamics friction="0" damping="3.0"/>
 </joint>
+
+<xacro:if value="${COGIMON_PENNACCHIO}" >
+
+<joint name="pennacchio_frame" type="fixed">
+    <parent link="DWL"/>
+    <child link="pennacchio"/>
+    <origin xyz="${-54.0957*mmTom} 0.0 ${66.5*mmTom}" rpy="0 0 0" />
+</joint>
+
+</xacro:if>
+
 
 </xacro:if>
 </robot>

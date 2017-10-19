@@ -12,6 +12,15 @@
 <xacro:property name="COGIMON_LEFT_LEG" value="true" />
 <xacro:property name="COGIMON_RIGHT_LEG" value="true" />
 
+<!-- ************COGIMON_PENNACCHIO*******-->
+<!--
+     This will add a fake torso link after the first
+     torso joint (roll). If this is true, arms has
+     to be false and torso has to be true.
+-->
+<!-- *************************************-->
+<xacro:property name="COGIMON_PENNACCHIO" value="true" />
+
 <!-- ************FLOATING BASE*************-->
 <!-- ******************************************-->
 <xacro:property name="COGIMON_FLOATING_BASE" value="true" />

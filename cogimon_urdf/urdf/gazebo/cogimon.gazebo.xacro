@@ -83,7 +83,7 @@
 </xacro:if>
 
 <xacro:if value="${COGIMON_TORSO}">   
-   <gazebo reference="DWL">
+   <gazebo reference="WaistLat">
     <implicitSpringDamper>1</implicitSpringDamper>
     <provideFeedback>true</provideFeedback>
    </gazebo>
