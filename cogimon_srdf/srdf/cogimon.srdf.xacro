@@ -30,6 +30,11 @@
         <chain base_link="Waist" tip_link="RFoot"/>
     </group>
 </xacro:if>
+<xacro:if value="${COGIMON_TORSO}">
+    <group name="torso">
+        <chain base_link="Waist" tip_link="DWL"/>
+    </group>
+</xacro:if>
 
   <group name="legs">
 <xacro:if value="${COGIMON_LEFT_LEG}">
@@ -37,6 +42,9 @@
 </xacro:if>
 <xacro:if value="${COGIMON_RIGHT_LEG}">
     <group name="right_leg"/>
+</xacro:if>
+<xacro:if value="${COGIMON_TORSO}">
+    <group name="torso"/>
 </xacro:if>
   </group>
 
@@ -46,6 +54,9 @@
 </xacro:if>
 <xacro:if value="${COGIMON_RIGHT_LEG}">
         <group name="right_leg"/>
+</xacro:if>
+<xacro:if value="${COGIMON_TORSO}">
+        <group name="torso"/>
 </xacro:if>
     </group>
 
@@ -69,6 +80,6 @@
         <joint name="RAnklePitch" value="0.0"/>
         <joint name="RAnkleRoll" value="0.0"/>
         
-        
+        <joint name="WaistLat" value="0.0"/>
 </group_state>
 </robot>

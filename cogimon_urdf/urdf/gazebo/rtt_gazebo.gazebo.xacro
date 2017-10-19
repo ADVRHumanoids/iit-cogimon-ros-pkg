@@ -45,4 +45,16 @@
 </rtt-gazebo>
 </xacro:if>
 
+<xacro:if value="${COGIMON_TORSO}"> 
+<rtt-gazebo reference="torso">
+       <controller type="JointPositionCtrl">
+              <gains D="12.0" I="2." P="7500." reference="WaistLat"/>
+       </controller>
+       <controller type="JointImpedanceCtrl">
+              <gains reference="WaistLat" stiffness="300." damping="30."/>
+       </controller>
+       <controller type="JointTorqueCtrl"/>
+</rtt-gazebo>
+</xacro:if>
+
 </robot>
