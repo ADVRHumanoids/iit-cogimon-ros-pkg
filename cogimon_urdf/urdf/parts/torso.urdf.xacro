@@ -3,6 +3,12 @@
 
 <xacro:if value="${COGIMON_TORSO}" >
 
+<xacro:property name="d" value="0.11" /> <!-- weight diameter -->
+<xacro:property name="r" value="${d/2.}" /> <!-- weight radius -->
+<xacro:property name="h" value="${3.0*0.02}" /> <!-- weight height, here we consider three discs -->
+<xacro:property name="m" value="30.0" /> <!-- weight mass -->
+<xacro:property name="z" value="0.2" /><!-- weight position -->
+
 <!-- LINKS -->
 <link name ="DWL">
     <inertial>
@@ -26,6 +32,26 @@
 </link>
 
 <xacro:if value="${COGIMON_PENNACCHIO}" >
+
+<link name ="weight">
+     <inertial>
+      <origin xyz="0 0 0 " rpy="0 0 0"/>
+      <mass value="${m}"/>
+      <inertia ixx="${(1./12.)*m*(3.*r*r+h*h)}"  ixy="0"  ixz="0" iyy="${(1./12.)*m*(3.*r*r+h*h)}" iyz="0" izz="${(m*r*r)/2.}" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+       <cylinder length="${h}" radius="${r}"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+       <cylinder length="${h}" radius="${r}"/>
+      </geometry>             
+    </collision>
+</link>
 
 <link name ="pennacchio">
     <inertial>
@@ -66,6 +92,12 @@
     <parent link="DWL"/>
     <child link="pennacchio"/>
     <origin xyz="${-54.0957*mmTom} 0.0 ${66.5*mmTom}" rpy="0 0 0" />
+</joint>
+
+<joint name="weight_frame" type="fixed">
+    <parent link="pennacchio"/>
+    <child link="weight"/>
+    <origin xyz="0. 0. ${z}" rpy="0 0 0" />
 </joint>
 
 </xacro:if>
