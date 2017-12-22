@@ -50,6 +50,18 @@
     <parent link="base_link"/>
     <child link="Waist"/>
   </joint>
+  <joint name="imu_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    <parent link="Waist"/>
+    <child link="imu_link"/>
+  </joint>
+  <link name="imu_link">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+  </link>
   <link name="LHipMot">
     <inertial>
       <origin rpy="0.0 0.0 0.0" xyz="-0.041435899 -0.00024099021 -0.067437774"/>
