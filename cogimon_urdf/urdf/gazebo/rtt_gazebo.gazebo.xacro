@@ -63,4 +63,53 @@
 </rtt-gazebo>
 </xacro:if>
 
+<xacro:if value="${COGIMON_LEFT_ARM}">
+<rtt-gazebo reference="left_arm">
+       <controller type="JointPositionCtrl">
+              <gains D="10.0" I="2." P="7500." reference="LShSag"/>
+	      <gains D="10.0" I="0." P="4500." reference="LShLat"/>
+	      <gains D="10." I="0." P="4000." reference="LShYaw"/>
+	      <gains D="5.0" I="0." P="3500." reference="LElbj"/>
+	      <gains D="2.0" I="0." P="2000." reference="LForearmPlate"/>
+	      <gains D="2.0" I="0." P="2000." reference="LWrj1"/>
+              <gains D="2.0" I="0." P="2000." reference="LWrj2"/>
+       </controller>
+       <controller type="JointImpedanceCtrl">
+              <gains reference="LShSag" stiffness="300." damping="30."/>
+              <gains reference="LShLat" stiffness="300." damping="30."/>
+              <gains reference="LShYaw" stiffness="300." damping="30."/>
+              <gains reference="LElbj" stiffness="300." damping="30."/>
+              <gains reference="LForearmPlate" stiffness="300." damping="30."/>
+              <gains reference="LWrj1" stiffness="300." damping="30."/>
+              <gains reference="LWrj2" stiffness="300." damping="30."/> 
+       </controller>
+       <controller type="JointTorqueCtrl"/>
+</rtt-gazebo>
+</xacro:if>
+
+<xacro:if value="${COGIMON_RIGHT_ARM}">
+<rtt-gazebo reference="right_arm">
+       <controller type="JointPositionCtrl">
+              <gains D="10.0" I="2." P="7500." reference="RShSag"/>
+	      <gains D="10.0" I="0." P="4500." reference="RShLat"/>
+	      <gains D="10." I="0." P="4000." reference="RShYaw"/>
+	      <gains D="5.0" I="0." P="3500." reference="RElbj"/>
+	      <gains D="2.0" I="0." P="2000." reference="RForearmPlate"/>
+	      <gains D="2.0" I="0." P="2000." reference="RWrj1"/>
+              <gains D="2.0" I="0." P="2000." reference="RWrj2"/>
+       </controller>
+       <controller type="JointImpedanceCtrl">
+              <gains reference="RShSag" stiffness="300." damping="30."/>
+              <gains reference="RShLat" stiffness="300." damping="30."/>
+              <gains reference="RShYaw" stiffness="300." damping="30."/>
+              <gains reference="RElbj" stiffness="300." damping="30."/>
+              <gains reference="RForearmPlate" stiffness="300." damping="30."/>
+              <gains reference="RWrj1" stiffness="300." damping="30."/>
+              <gains reference="RWrj2" stiffness="300." damping="30."/> 
+       </controller>
+       <controller type="JointTorqueCtrl"/>
+</rtt-gazebo>
+</xacro:if>
+
+
 </robot>

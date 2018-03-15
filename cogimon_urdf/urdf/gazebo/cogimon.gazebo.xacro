@@ -87,6 +87,75 @@
     <implicitSpringDamper>1</implicitSpringDamper>
     <provideFeedback>true</provideFeedback>
    </gazebo>
+   <xacro:unless value="${COGIMON_PENNACCHIO}">
+     <gazebo reference="WaistYaw">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <provideFeedback>true</provideFeedback>
+   </gazebo>
+   </xacro:unless>
+</xacro:if>
+
+<xacro:if value="${COGIMON_LEFT_ARM}"> 
+<gazebo reference="LShSag">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <provideFeedback>true</provideFeedback>
+   </gazebo>
+   <gazebo reference="LShLat">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <provideFeedback>true</provideFeedback>
+   </gazebo>
+   <gazebo reference="LShYaw">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <provideFeedback>true</provideFeedback>
+   </gazebo>
+   <gazebo reference="LElbj">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <provideFeedback>true</provideFeedback>
+   </gazebo>
+   <gazebo reference="LForearmPlate">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <provideFeedback>true</provideFeedback>
+   </gazebo>
+   <gazebo reference="LWrj1">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <provideFeedback>true</provideFeedback>
+  </gazebo>
+   <gazebo reference="LWrj2">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <provideFeedback>true</provideFeedback>
+  </gazebo>
+</xacro:if>
+
+
+<xacro:if value="${COGIMON_RIGHT_ARM}"> 
+<gazebo reference="RShSag">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <provideFeedback>true</provideFeedback>
+   </gazebo>
+   <gazebo reference="RShLat">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <provideFeedback>true</provideFeedback>
+   </gazebo>
+   <gazebo reference="RShYaw">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <provideFeedback>true</provideFeedback>
+   </gazebo>
+   <gazebo reference="RElbj">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <provideFeedback>true</provideFeedback>
+   </gazebo>
+   <gazebo reference="RForearmPlate">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <provideFeedback>true</provideFeedback>
+   </gazebo>
+   <gazebo reference="RWrj1">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <provideFeedback>true</provideFeedback>
+  </gazebo>
+   <gazebo reference="RWrj2">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <provideFeedback>true</provideFeedback>
+  </gazebo>
 </xacro:if>
 
 </robot>

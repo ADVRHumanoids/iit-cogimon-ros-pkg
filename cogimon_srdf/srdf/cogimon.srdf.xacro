@@ -40,20 +40,21 @@
 	</xacro:unless>
     </group>
 </xacro:if>
+<xacro:if value="${COGIMON_LEFT_ARM}">    
+    <group name="left_arm">
+        <chain base_link="DWYTorso" tip_link="LWrMot3"/>
+    </group>
+</xacro:if>
+<xacro:if value="${COGIMON_RIGHT_ARM}">
+    <group name="right_arm">
+        <chain base_link="DWYTorso" tip_link="RWrMot3"/>
+    </group>
+</xacro:if>
 
-  <group name="legs">
-<xacro:if value="${COGIMON_LEFT_LEG}">
-    <group name="left_leg"/>
-</xacro:if>
-<xacro:if value="${COGIMON_RIGHT_LEG}">
-    <group name="right_leg"/>
-</xacro:if>
-<xacro:if value="${COGIMON_TORSO}">
-    <group name="torso"/>
-</xacro:if>
-  </group>
 
-    <group name="chains"> <!--THIS HAS TO BE THE LAST GROUP IN THE FILE -->
+
+
+<group name="chains"> <!--THIS HAS TO BE THE LAST GROUP IN THE FILE -->
 <xacro:if value="${COGIMON_LEFT_LEG}">
         <group name="left_leg"/>
 </xacro:if>
@@ -63,12 +64,19 @@
 <xacro:if value="${COGIMON_TORSO}">
         <group name="torso"/>
 </xacro:if>
-    </group>
+<xacro:if value="${COGIMON_LEFT_ARM}">
+        <group name="left_arm"/>
+</xacro:if>
+<xacro:if value="${COGIMON_RIGHT_ARM}">
+        <group name="right_arm"/>
+</xacro:if>
+</group>
 
 <xacro:if value="${COGIMON_OROCOS_GAZEBO}">
    <xacro:include filename="$(find cogimon_urdf)/urdf/gazebo/rtt_gazebo.gazebo.xacro" /> 
 </xacro:if> 
 
+<xacro:if value="${COGIMON_XBOT_GAZEBO}">
 <group_state name="home" group="chains">
 
         <joint name="LHipLat" value="0.0"/>
@@ -86,5 +94,23 @@
         <joint name="RAnkleRoll" value="0.0"/>
         
         <joint name="WaistLat" value="0.0"/>
+	<joint name="Waistyaw" value="0.0"/>
+
+        <joint name="RShSag" value="0.0"/>
+        <joint name="RShLat" value="0.0"/>
+        <joint name="RShYaw" value="0.0"/>
+        <joint name="RElbj" value="0.0"/>
+        <joint name="RForearmPlate" value="0.0"/>
+        <joint name="RWrj1" value="0.0"/>
+        <joint name="RWrj2" value="0.0"/>
+
+        <joint name="LShSag" value="0.0"/>
+        <joint name="LShLat" value="0.0"/>
+        <joint name="LShYaw" value="0.0"/>
+        <joint name="LElbj" value="0.0"/>
+        <joint name="LForearmPlate" value="0.0"/>
+        <joint name="LWrj1" value="0.0"/>
+        <joint name="LWrj2" value="0.0"/>
 </group_state>
+</xacro:if>
 </robot>
