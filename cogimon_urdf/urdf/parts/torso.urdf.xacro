@@ -33,7 +33,7 @@
 
 <xacro:if value="${COGIMON_PENNACCHIO}" >
 
-<link name ="weight">
+<!--link name ="weight">
      <inertial>
       <origin xyz="0 0 0 " rpy="0 0 0"/>
       <mass value="${m}"/>
@@ -72,7 +72,7 @@
         <mesh filename="package://cogimon_urdf/meshes/simple/Pennacchio.stl" scale="${mmTom} ${mmTom} ${mmTom}" />
       </geometry>             
     </collision>
-</link>
+</link-->
 
 </xacro:if>
 
@@ -88,7 +88,7 @@
 
 <xacro:if value="${COGIMON_PENNACCHIO}" >
 
-<joint name="pennacchio_frame" type="fixed">
+<!--joint name="pennacchio_frame" type="fixed">
     <parent link="DWL"/>
     <child link="pennacchio"/>
     <origin xyz="${-54.0957*mmTom} 0.0 ${66.5*mmTom}" rpy="0 0 0" />
@@ -98,7 +98,9 @@
     <parent link="pennacchio"/>
     <child link="weight"/>
     <origin xyz="0. 0. ${z}" rpy="0 0 0" />
-</joint>
+</joint-->
+
+<xacro:include filename="$(find cogimon_urdf)/urdf/parts/whole_upper_body.urdf.xacro" />
 
 </xacro:if>
 
