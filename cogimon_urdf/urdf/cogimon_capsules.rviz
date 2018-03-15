@@ -550,66 +550,67 @@
       </geometry>
     </collision>
   </link>
-  <link name="weight">
+  <link name="DWLExt">
     <inertial>
-      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-      <mass value="30.0"/>
-      <inertia ixx="0.0316875" ixy="0.0" ixz="0.0" iyy="0.0316875" iyz="0.0" izz="0.045375"/>
+      <origin rpy="0.0 0.0 0.0" xyz="1.5386429e-06 5.166843e-05 0.095210134"/>
+      <mass value="0.96910635"/>
+      <inertia ixx="0.003041487" ixy="-2.8413688e-06" ixz="9.6851038e-05" iyy="0.0030465319" iyz="-8.8025302e-06" izz="0.0015978729"/>
     </inertial>
     <visual>
       <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
       <geometry>
-        <cylinder length="0.06" radius="0.055"/>
+        <mesh filename="package://cogimon_urdf/meshes/TorsoRollExt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
+      <material name="green"/>
     </visual>
     <collision>
-      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <origin rpy="0.00122924209497 0.00940346844785 5.77961294385e-06" xyz="0.0005145859 -6.7006352e-05 0.06452515"/>
       <geometry>
-        <cylinder length="0.06" radius="0.055"/>
+        <cylinder length="0.10846457741" radius="0.059006"/>
       </geometry>
     </collision>
     <collision>
-      <origin rpy="0.0 0.0 0.0" xyz="0.000000 0.000000 -0.030000"/>
+      <origin rpy="0.00122924209497 0.00940346844785 5.77961294385e-06" xyz="0.000005 -0.000000 0.010295"/>
       <geometry>
-        <sphere radius="0.055"/>
+        <sphere radius="0.059006"/>
       </geometry>
     </collision>
     <collision>
-      <origin rpy="0.0 0.0 0.0" xyz="0.000000 0.000000 0.030000"/>
+      <origin rpy="0.00122924209497 0.00940346844785 5.77961294385e-06" xyz="0.001025 -0.000134 0.118755"/>
       <geometry>
-        <sphere radius="0.055"/>
+        <sphere radius="0.059006"/>
       </geometry>
     </collision>
   </link>
-  <link name="pennacchio">
+  <link name="DWYTorso">
     <inertial>
-      <origin rpy="0.0 0.0 0.0" xyz="-3.4081174e-06 -3.4081174e-06 0.17247336"/>
-      <mass value="2.1651618"/>
-      <inertia ixx="0.045713534" ixy="1.9747985e-08" ixz="5.9794097e-07" iyy="0.045712755" iyz="-2.6722676e-07" izz="0.00060311791"/>
+      <origin rpy="0.0 0.0 0.0" xyz="-0.059646212 0.0014305062 0.042741527"/>
+      <mass value="12.512295"/>
+      <inertia ixx="0.21021617" ixy="-0.00015527214" ixz="-0.050216602" iyy="0.19982996" iyz="-0.00029204792" izz="0.14025094"/>
     </inertial>
     <visual>
       <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="package://cogimon_urdf/meshes/Pennacchio.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://cogimon_urdf/meshes/Chest.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="dark_grey"/>
     </visual>
     <collision>
-      <origin rpy="6.44304458641e-05 0.000241841076017 7.79096422325e-09" xyz="4.940327e-05 -1.3088909e-05 0.199037465"/>
+      <origin rpy="-1.56990183621 -0.00385969868751 0.00385624777512" xyz="-0.0417117 4.9e-05 0.04395835"/>
       <geometry>
-        <cylinder length="0.396095082405" radius="0.0576073"/>
+        <cylinder length="0.0589166624181" radius="0.227763"/>
       </geometry>
     </collision>
     <collision>
-      <origin rpy="6.44304458641e-05 0.000241841076017 7.79096422325e-09" xyz="0.000002 -0.000000 0.000990"/>
+      <origin rpy="-1.56990183621 -0.00385969868751 0.00385624777512" xyz="-0.041598 -0.029409 0.043932"/>
       <geometry>
-        <sphere radius="0.0576073"/>
+        <sphere radius="0.227763"/>
       </geometry>
     </collision>
     <collision>
-      <origin rpy="6.44304458641e-05 0.000241841076017 7.79096422325e-09" xyz="0.000097 -0.000026 0.397085"/>
+      <origin rpy="-1.56990183621 -0.00385969868751 0.00385624777512" xyz="-0.041825 0.029507 0.043985"/>
       <geometry>
-        <sphere radius="0.0576073"/>
+        <sphere radius="0.227763"/>
       </geometry>
     </collision>
   </link>
@@ -621,15 +622,18 @@
     <limit effort="150.0" lower="-0.523598775598" upper="0.523598775598" velocity="7.4"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
-  <joint name="pennacchio_frame" type="fixed">
-    <origin rpy="0.0 0.0 0.0" xyz="-0.0540957 0.0 0.0665"/>
+  <joint name="WaistFixed" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="-0.0540957 0.0 0.0635"/>
     <parent link="DWL"/>
-    <child link="pennacchio"/>
+    <child link="DWLExt"/>
   </joint>
-  <joint name="weight_frame" type="fixed">
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.2"/>
-    <parent link="pennacchio"/>
-    <child link="weight"/>
+  <joint name="WaistYaw" type="revolute">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.16815"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <parent link="DWLExt"/>
+    <child link="DWYTorso"/>
+    <limit effort="120.0" lower="-1.74532925199" upper="1.74532925199" velocity="6.283"/>
+    <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <link name="l_ankle"/>
   <link name="l_sole"/>

@@ -49,9 +49,15 @@
 <rtt-gazebo reference="torso">
        <controller type="JointPositionCtrl">
               <gains D="12.0" I="2." P="7500." reference="WaistLat"/>
+	      <xacro:unless value="${COGIMON_PENNACCHIO}">
+			<gains D="10.0" I="2." P="5000." reference="WaistYaw"/>
+	      </xacro:unless>
        </controller>
        <controller type="JointImpedanceCtrl">
               <gains reference="WaistLat" stiffness="300." damping="30."/>
+              <xacro:unless value="${COGIMON_PENNACCHIO}">
+			<gains reference="WaistYaw" stiffness="300." damping="30."/>
+	      </xacro:unless>
        </controller>
        <controller type="JointTorqueCtrl"/>
 </rtt-gazebo>

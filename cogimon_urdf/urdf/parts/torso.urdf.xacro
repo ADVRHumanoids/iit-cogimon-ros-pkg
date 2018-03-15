@@ -32,7 +32,6 @@
 </link>
 
 <xacro:if value="${COGIMON_PENNACCHIO}" >
-
 <link name ="weight">
      <inertial>
       <origin xyz="0 0 0 " rpy="0 0 0"/>
@@ -73,8 +72,53 @@
       </geometry>             
     </collision>
 </link>
-
 </xacro:if>
+
+<xacro:unless value="${COGIMON_PENNACCHIO}">
+
+<link name ="DWLExt">
+    <inertial>
+      <origin xyz="${1.5386429e-03*mmTom} ${5.1668430e-02*mmTom} ${9.5210134e+01 *mmTom} " rpy="0 0 0"/>
+      <mass value="9.6910635e-01"/>
+      <inertia ixx="${3.0414870e+03*mm2Tom2}"  ixy="${-2.8413688*mm2Tom2}"  ixz="${9.6851038e+01*mm2Tom2}" iyy="${3.0465319e+03*mm2Tom2}" iyz="${-8.8025302*mm2Tom2}" izz="${1.5978729e+03*mm2Tom2}" />
+    </inertial>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+      <geometry name="DWLExt_visual">
+        <mesh filename="package://cogimon_urdf/meshes/TorsoRollExt.stl" scale="${mmTom} ${mmTom} ${mmTom}" />
+      </geometry>
+      <material name="green"/>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+      <geometry name="DWLExt_collision">
+        <mesh filename="package://cogimon_urdf/meshes/simple/TorsoRollExt.stl" scale="${mmTom} ${mmTom} ${mmTom}" />
+      </geometry>             
+    </collision>
+</link>
+
+<link name ="DWYTorso">
+    <inertial>
+        <origin xyz="${-5.9646212e+01*mmTom} ${1.4305062*mmTom} ${4.2741527e+01*mmTom}" rpy="0 0 0"/>
+        <mass value="1.2512295e+01"/>
+      <inertia ixx="${2.1021617e+05*mm2Tom2}"  ixy="${-1.5527214e+02*mm2Tom2}"  ixz="${-5.0216602e+04*mm2Tom2}" iyy="${1.9982996e+05*mm2Tom2}" iyz="${-2.9204792e+02*mm2Tom2}" izz="${1.4025094e+05*mm2Tom2}" />
+    </inertial>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+      <geometry name="DWYTorso_visual">
+        <mesh filename="package://cogimon_urdf/meshes/Chest.stl" scale="${mmTom} ${mmTom} ${mmTom}" />
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+      <geometry name="DWYTorso_collision">
+        <mesh filename="package://cogimon_urdf/meshes/simple/Chest.stl" scale="${mmTom} ${mmTom} ${mmTom}" />
+      </geometry>             
+    </collision>
+</link>
+
+</xacro:unless>
 
 <!-- JOINTS -->
 <joint name="WaistLat" type="revolute">
@@ -102,6 +146,24 @@
 
 </xacro:if>
 
+<xacro:unless value="${COGIMON_PENNACCHIO}">
+
+<joint name="WaistFixed" type="fixed">
+    <parent link="DWL"/>
+    <child link="DWLExt"/>
+    <origin xyz="${-54.0957*mmTom} 0.0 ${63.5*mmTom}" rpy="0 0 0" />
+</joint>
+
+<joint name="WaistYaw" type="revolute">
+    <parent link="DWLExt"/>
+    <child link="DWYTorso"/>
+    <origin xyz="0 0 ${168.15*mmTom}" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit velocity="6.283" effort="120" lower="${-100.0*toRad}" upper="${100.0*toRad}" />
+    <dynamics friction="0" damping="3.0"/>
+</joint>
+
+</xacro:unless>
 
 </xacro:if>
 </robot>

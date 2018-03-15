@@ -32,7 +32,12 @@
 </xacro:if>
 <xacro:if value="${COGIMON_TORSO}">
     <group name="torso">
-        <chain base_link="Waist" tip_link="DWL"/>
+	<xacro:if value="${COGIMON_PENNACCHIO}">
+        	<chain base_link="Waist" tip_link="DWL"/>
+	</xacro:if>
+        <xacro:unless value="${COGIMON_PENNACCHIO}">
+        	<chain base_link="Waist" tip_link="DWYTorso"/>
+	</xacro:unless>
     </group>
 </xacro:if>
 

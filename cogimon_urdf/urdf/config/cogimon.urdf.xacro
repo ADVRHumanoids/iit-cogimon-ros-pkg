@@ -19,7 +19,7 @@
      to be false and torso has to be true.
 -->
 <!-- *************************************-->
-<xacro:property name="COGIMON_PENNACCHIO" value="true" />
+<xacro:property name="COGIMON_PENNACCHIO" value="false" />
 
 <!-- ************FLOATING BASE*************-->
 <!-- ******************************************-->
