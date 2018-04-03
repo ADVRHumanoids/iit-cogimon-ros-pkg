@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="COGIMON">
 
-<xacro:property name="model_name" value="IIT COGIMON PENNACCHIO" />
+<xacro:property name="model_name" value="IIT COGIMON" />
 <xacro:property name="model_version" value="0.1" />
 
 <!-- ************SELECT PARTS*************-->
 <!-- *************************************-->
-<xacro:property name="COGIMON_HEAD" value="false" />
+<xacro:property name="COGIMON_HEAD" value="true" />
 <xacro:property name="COGIMON_TORSO" value="true" />
-<xacro:property name="COGIMON_LEFT_ARM" value="false" />
-<xacro:property name="COGIMON_RIGHT_ARM" value="false" />
+<xacro:property name="COGIMON_LEFT_ARM" value="true" />
+<xacro:property name="COGIMON_RIGHT_ARM" value="true" />
 <xacro:property name="COGIMON_LEFT_LEG" value="true" />
 <xacro:property name="COGIMON_RIGHT_LEG" value="true" />
 
@@ -20,7 +20,7 @@
      to be false and torso has to be true.
 -->
 <!-- *************************************-->
-<xacro:property name="COGIMON_PENNACCHIO" value="true" />
+<xacro:property name="COGIMON_PENNACCHIO" value="false" />
 
 <!-- ************FLOATING BASE*************-->
 <!-- ******************************************-->
