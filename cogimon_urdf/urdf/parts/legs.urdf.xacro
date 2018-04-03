@@ -109,6 +109,29 @@
     </collision>
 </link>
 
+<xacro:if value="${COGIMON_FEET_2}" >
+<link name ="LFoot">
+    <inertial>       
+      <origin xyz="${-7.7094563*mmTom} ${-6.5520742e-02*mmTom} ${-4.3453782e+01*mmTom}" rpy="0 0 0"/>
+      <mass value="2.0663292"/>           
+      <inertia ixx="${2.6932116e+03*mm2Tom2}"  ixy="${4.2852647e+00*mm2Tom2}"  ixz="${3.7001167e+02*mm2Tom2}" iyy="${7.1293752e+03*mm2Tom2}" iyz="${-2.5956611*mm2Tom2}" izz="${8.6807822e+03*mm2Tom2}" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry name="LFoot_visual">
+        <mesh filename="package://cogimon_urdf/meshes/Foot2.stl" scale="${mmTom} ${mmTom} ${mmTom}" />
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 -0.046" rpy="0 0 0"/>
+       <geometry>
+        <box size="0.21 0.11 0.015" />
+       </geometry>             
+    </collision>
+</link>
+</xacro:if>
+<xacro:unless value="${COGIMON_FEET_2}" >
 <link name ="LFoot">
     <inertial>       
       <origin xyz="${-8.6960323e+00*mmTom} ${-6.6741928e-02*mmTom} ${-4.1675435e+01*mmTom}" rpy="0 0 0"/>
@@ -129,6 +152,7 @@
        </geometry>             
     </collision>
 </link>
+</xacro:unless>
 
 <!-- JOINTS -->
 <joint name="LHipLat" type="revolute">
@@ -296,6 +320,29 @@
     </collision>
 </link>
 
+<xacro:if value="${COGIMON_FEET_2}" >
+<link name ="RFoot">
+    <inertial>       
+      <origin xyz="${-7.7094563*mmTom} ${-6.5520742e-02*mmTom} ${-4.3453782e+01*mmTom}" rpy="0 0 0"/>
+      <mass value="2.0663292"/>           
+      <inertia ixx="${2.6932116e+03*mm2Tom2}"  ixy="${4.2852647e+00*mm2Tom2}"  ixz="${3.7001167e+02*mm2Tom2}" iyy="${7.1293752e+03*mm2Tom2}" iyz="${-2.5956611*mm2Tom2}" izz="${8.6807822e+03*mm2Tom2}" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry name="LFoot_visual">
+        <mesh filename="package://cogimon_urdf/meshes/Foot2.stl" scale="${mmTom} ${mmTom} ${mmTom}" />
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 -0.046" rpy="0 0 0"/>
+       <geometry>
+        <box size="0.21 0.11 0.015" />
+       </geometry>             
+    </collision>
+</link>
+</xacro:if>
+<xacro:unless value="${COGIMON_FEET_2}" >
 <link name ="RFoot">
     <inertial>       
       <origin xyz="${-8.6960323e+00*mmTom} ${-6.6741928e-02*mmTom} ${-4.1675435e+01*mmTom}" rpy="0 0 0"/>
@@ -316,6 +363,7 @@
        </geometry>             
     </collision>
 </link>
+</xacro:unless>
 
 <!-- JOINTS -->
 <joint name="RHipLat" type="revolute">

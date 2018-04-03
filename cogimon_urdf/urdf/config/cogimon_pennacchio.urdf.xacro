@@ -13,6 +13,10 @@
 <xacro:property name="COGIMON_LEFT_LEG" value="true" />
 <xacro:property name="COGIMON_RIGHT_LEG" value="true" />
 
+<!-- ************NEW FEET*************-->
+<!-- *************************************-->
+<xacro:property name="COGIMON_FEET_2" value="false" />
+
 <!-- ************COGIMON_LASER_FIXED*******-->
 <!--
      This will set the laser joint to 'fixed'. 
