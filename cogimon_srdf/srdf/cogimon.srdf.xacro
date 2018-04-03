@@ -20,6 +20,11 @@
 </xacro:if>
 </group>
 
+<group name="imu_sensors">
+     <link name="imu_link"/>
+</group>
+
+
 <xacro:if value="${COGIMON_LEFT_LEG}">    
     <group name="left_leg">
         <chain base_link="Waist" tip_link="LFoot"/>
