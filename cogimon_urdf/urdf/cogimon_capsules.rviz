@@ -1227,10 +1227,47 @@
       </geometry>
     </collision>
   </link>
+  <link name="HeadHokuyo">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.055322369 0.018472201 -0.018483703"/>
+      <mass value="0.54611797"/>
+      <inertia ixx="0.0019756996" ixy="-0.00011287972" ixz="0.00011284571" iyy="0.0044030675" iyz="0.00049540219" izz="0.0044027914"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://cogimon_urdf/meshes/HeadRoll.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="0.788055207818 -1.29778213339 -0.610947392432" xyz="0.0526213 0.01519695 -0.01521435"/>
+      <geometry>
+        <cylinder length="0.0303991056806" radius="0.0608765"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="0.788055207818 -1.29778213339 -0.610947392432" xyz="0.067258 0.018103 -0.018105"/>
+      <geometry>
+        <sphere radius="0.0608765"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="0.788055207818 -1.29778213339 -0.610947392432" xyz="0.037985 0.012291 -0.012324"/>
+      <geometry>
+        <sphere radius="0.0608765"/>
+      </geometry>
+    </collision>
+  </link>
   <joint name="neck_frame" type="fixed">
     <origin rpy="0.0 0.0 0.0" xyz="0.016 0.0 0.1965"/>
     <parent link="DWYTorso"/>
     <child link="Neck"/>
+  </joint>
+  <joint name="head_roll" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0496 0.0 0.09"/>
+    <parent link="Neck"/>
+    <child link="HeadHokuyo"/>
   </joint>
   <link name="l_ankle"/>
   <link name="l_sole"/>

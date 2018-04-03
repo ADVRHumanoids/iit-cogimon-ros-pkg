@@ -152,13 +152,17 @@
     <implicitSpringDamper>1</implicitSpringDamper>
     <provideFeedback>true</provideFeedback>
   </gazebo>
-   <gazebo reference="RWrj2">
+  <gazebo reference="RWrj2">
     <implicitSpringDamper>1</implicitSpringDamper>
     <provideFeedback>true</provideFeedback>
   </gazebo>
 </xacro:if>
 
 <xacro:if value="${COGIMON_HEAD}">
+  <gazebo reference="head_roll">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <provideFeedback>true</provideFeedback>
+  </gazebo>
 </xacro:if>
 
 </robot>
