@@ -136,7 +136,7 @@
     <child link="LHipMot"/>
     <origin xyz="${15.45*mmTom} ${112.0*mmTom} ${-50.0*mmTom}" rpy="0 0 0" />
     <axis xyz="1 0 0" />
-    <limit velocity="7.4" effort="235" lower="${-30.*toRad}" upper="${95.*toRad}" />
+    <limit velocity="7.4" effort="200" lower="${-30.*toRad}" upper="${95.*toRad}" />
     <dynamics friction="0" damping="3.0"/>
 </joint>
 
@@ -145,7 +145,7 @@
     <child link="LThighUpLeg"/>
     <origin xyz="${-59.*mmTom} ${78.65*mmTom} ${-118.5*mmTom}" rpy="0 0 0" />
     <axis xyz="0 1 0" />
-    <limit velocity="7.4" effort="235" lower="${-110.*toRad}" upper="${89.*toRad}" />
+    <limit velocity="7.4" effort="200" lower="${-110.*toRad}" upper="${89.*toRad}" />
     <dynamics friction="0" damping="3.0"/>
 </joint>
 
@@ -154,7 +154,7 @@
     <child link="LThighLowLeg"/>
     <origin xyz="${0.*mmTom} ${-90.*mmTom} ${-256.45*mmTom}" rpy="0 0 0" />
     <axis xyz="0 0 1" />
-    <limit velocity="4.6" effort="153" lower="${-32.*toRad}" upper="${90.*toRad}" />
+    <limit velocity="4.6" effort="120" lower="${-32.*toRad}" upper="${90.*toRad}" />
     <dynamics friction="0" damping="3.0"/>
 </joint>
 
@@ -163,7 +163,7 @@
     <child link="LLowLeg"/>
     <origin xyz="${-39.*mmTom} ${64.1*mmTom} ${-60.7*mmTom}" rpy="0 0 0" />
     <axis xyz="0 1 0" />
-    <limit velocity="5.5" effort="313" lower="${0.*toRad}" upper="${140.*toRad}" />
+    <limit velocity="5.5" effort="200" lower="${0.*toRad}" upper="${140.*toRad}" />
     <dynamics friction="0" damping="3.0"/>
 </joint>
 
@@ -173,7 +173,7 @@
     <child link="LFootmot"/>
     <origin xyz="${39.*mmTom} ${-61.6*mmTom} ${-425.294*mmTom}" rpy="0 0 0" />
     <axis xyz="0 1 0" />
-    <limit velocity="4.9" effort="179" lower="${-50.*toRad}" upper="${40.*toRad}" />
+    <limit velocity="4.9" effort="200" lower="${-50.*toRad}" upper="${40.*toRad}" />
     <dynamics friction="0" damping="0.1"/>
 </joint>
  
@@ -182,7 +182,7 @@
     <child link="LFoot"/>
     <origin xyz="0 0 0" rpy="0 0 0" />
     <axis xyz="1 0 0" />
-    <limit velocity="3.2" effort="230" lower="${-15.*toRad}" upper="${15.*toRad}" />
+    <limit velocity="3.2" effort="60" lower="${-15.*toRad}" upper="${15.*toRad}" />
     <dynamics friction="0" damping="3.0"/>
 </joint> 
 </xacro:if>
@@ -323,7 +323,7 @@
     <child link="RHipMot"/>
     <origin xyz="${15.45*mmTom} ${-112.0*mmTom} ${-50.0*mmTom}" rpy="0 0 0" />
     <axis xyz="1 0 0" />
-    <limit velocity="7.4" effort="235" lower="${-95.*toRad}" upper="${30.*toRad}" />
+    <limit velocity="7.4" effort="200" lower="${-95.*toRad}" upper="${30.*toRad}" />
     <dynamics friction="0" damping="3.0"/>
 </joint>
 
@@ -332,7 +332,7 @@
     <child link="RThighUpLeg"/>
     <origin xyz="${-59.*mmTom} ${-78.65*mmTom} ${-118.5*mmTom}" rpy="0 0 0" />
     <axis xyz="0 1 0" />
-    <limit velocity="7.4" effort="235" lower="${-110.*toRad}" upper="${89.*toRad}" />
+    <limit velocity="7.4" effort="200" lower="${-110.*toRad}" upper="${89.*toRad}" />
     <dynamics friction="0" damping="3.0"/>
 </joint>
 
@@ -341,7 +341,7 @@
     <child link="RThighLowLeg"/>
     <origin xyz="${0.*mmTom} ${90.*mmTom} ${-256.45*mmTom}" rpy="0 0 0" />
     <axis xyz="0 0 1" />
-    <limit velocity="4.9" effort="153" lower="${-90.*toRad}" upper="${32.*toRad}" />
+    <limit velocity="4.9" effort="120" lower="${-90.*toRad}" upper="${32.*toRad}" />
     <dynamics friction="0" damping="3.0"/>
 </joint>
 
@@ -350,7 +350,7 @@
     <child link="RLowLeg"/>
     <origin xyz="${-39.*mmTom} ${-64.1*mmTom} ${-60.7*mmTom}" rpy="0 0 0" />
     <axis xyz="0 1 0" />
-    <limit velocity="5.5" effort="313" lower="${0.*toRad}" upper="${140.*toRad}" />
+    <limit velocity="5.5" effort="200" lower="${0.*toRad}" upper="${140.*toRad}" />
     <dynamics friction="0" damping="3.0"/>
 </joint>
 
@@ -360,7 +360,7 @@
     <child link="RFootmot"/>
     <origin xyz="${39.*mmTom} ${61.6*mmTom} ${-425.294*mmTom}" rpy="0 0 0" />
     <axis xyz="0 1 0" />
-    <limit velocity="4.9" effort="179" lower="${-50.*toRad}" upper="${40.*toRad}" />
+    <limit velocity="4.9" effort="200" lower="${-50.*toRad}" upper="${40.*toRad}" />
     <dynamics friction="0" damping="0.1"/>
 </joint> 
 
@@ -369,7 +369,7 @@
     <child link="RFoot"/>
     <origin xyz="0 0 0" rpy="0 0 0" />
     <axis xyz="1 0 0" />
-    <limit velocity="3.2" effort="230" lower="${-15.*toRad}" upper="${15.*toRad}" />
+    <limit velocity="3.2" effort="60" lower="${-15.*toRad}" upper="${15.*toRad}" />
     <dynamics friction="0" damping="3.0"/>
 </joint> 
 </xacro:if>

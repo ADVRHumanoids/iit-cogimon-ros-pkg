@@ -126,7 +126,7 @@
     <child link="DWL"/>
     <origin xyz="${12.00*mmTom} 0.0 0.0" rpy="0 0 0" />
     <axis xyz="1 0 0" />
-    <limit velocity="7.4" effort="150" lower="${-30.*toRad}" upper="${30.*toRad}" />
+    <limit velocity="7.4" effort="140" lower="${-30.*toRad}" upper="${30.*toRad}" />
     <dynamics friction="0" damping="3.0"/>
 </joint>
 

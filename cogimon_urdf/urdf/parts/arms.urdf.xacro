@@ -161,7 +161,7 @@
     <child link="RShp"/>
     <origin xyz="${45.7475*mmTom} ${-169.137*mmTom} ${155.126*mmTom}" rpy="-0.174533 0 0.5235988" />
     <axis xyz="0 1 0" />
-    <limit velocity="6.283" effort="147" lower="-3.359" upper="1.606" />
+    <limit velocity="6.283" effort="140" lower="-3.359" upper="1.606" />
     <dynamics friction="0" damping="3.0"/>
 </joint>
 
@@ -170,7 +170,7 @@
     <child link="RShr"/>
     <origin xyz="${-90.15*mmTom} ${-62*mmTom} 0" rpy="0.1745327 0 0" />
     <axis xyz="1 0 0" />
-    <limit velocity="6.283" effort="120" lower="-3.43" upper="-0.004" />
+    <limit velocity="6.283" effort="140" lower="-3.43" upper="0.0" />
     <dynamics friction="0" damping="3.0"/>
 </joint>
 
@@ -179,7 +179,7 @@
     <child link="RShy"/>
     <origin xyz="${90.15*mmTom} 0 ${-218.15*mmTom}" rpy="0 0 0" />
     <axis xyz="0 0 1" />
-    <limit velocity="6.283" effort="147" lower="-2.55" upper="2.55" />
+    <limit velocity="6.283" effort="120" lower="-2.55" upper="2.55" />
     <dynamics friction="0" damping="3.0"/>
 </joint>
 
@@ -188,7 +188,7 @@
     <child link="RElb"/>
     <origin xyz="${45.*mmTom} ${-55.15*mmTom} ${-74.*mmTom}" rpy="0 0 0" />
     <axis xyz="0 1 0" />
-    <limit velocity="6.283" effort="147" lower="-2.488" upper="0.292" />
+    <limit velocity="6.283" effort="120" lower="-2.488" upper="0.292" />
     <dynamics friction="0" damping="3.0"/>
 </joint>
 
@@ -197,7 +197,7 @@
     <child link="RForearm"/>
     <origin xyz="${-15.*mmTom} ${55.15*mmTom} ${-95.*mmTom}" rpy="0 0 0"/>
     <axis xyz="0 0 1" />
-    <limit velocity="6.283" effort="55" lower="-2.55" upper="2.55" />
+    <limit velocity="6.283" effort="35" lower="-2.55" upper="2.55" />
     <dynamics friction="0" damping="0.03"/>
 </joint>
 
@@ -206,7 +206,7 @@
     <child link="RWrMot2"/>
     <origin xyz="0 ${-49*mmTom} ${-156.*mmTom}" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
-    <limit velocity="6.283" effort="55" lower="-1.542" upper="1.508" />
+    <limit velocity="6.283" effort="35" lower="-1.542" upper="1.508" />
     <dynamics friction="0" damping="0.03"/>
 </joint>
 
@@ -215,7 +215,7 @@
        <child link="RWrMot3"/>
        <origin xyz="0 ${49*mmTom} ${-174.*mmTom}" rpy="0 0 0"/>
        <axis xyz="0 0 1"/>
-       <limit velocity="6.283" effort="27" lower="-2.55" upper="2.55" />
+       <limit velocity="6.283" effort="20" lower="-2.55" upper="2.55" />
        <dynamics friction="0" damping="0.03"/>
 </joint>
 
@@ -375,7 +375,7 @@
     <child link="LShp"/>
     <origin xyz="${45.7475*mmTom} ${169.137*mmTom} ${155.126*mmTom}" rpy="0.174533 0 -0.5235988" />
     <axis xyz="0 1 0" />
-    <limit velocity="6.283" effort="147" lower="-3.352" upper="1.603" />
+    <limit velocity="6.283" effort="140" lower="-3.352" upper="1.603" />
     <dynamics friction="0" damping="3.0"/>
 </joint>
 
@@ -384,7 +384,7 @@
     <child link="LShr"/>
     <origin xyz="${-90.15*mmTom} ${62*mmTom} 0" rpy="-0.1745327 0 0" />
     <axis xyz="1 0 0" />
-    <limit velocity="6.283" effort="120" lower="0.037" upper="3.517" />
+    <limit velocity="6.283" effort="140" lower="0.0" upper="3.517" />
     <dynamics friction="0" damping="3.0"/>
 </joint>
 
@@ -393,7 +393,7 @@
     <child link="LShy"/>
     <origin xyz="${90.15*mmTom} 0 ${-218.15*mmTom}" rpy="0 0 0" />
     <axis xyz="0 0 1" />
-    <limit velocity="6.283" effort="147" lower="-2.55" upper="2.55" />
+    <limit velocity="6.283" effort="120" lower="-2.55" upper="2.55" />
     <dynamics friction="0" damping="3.0"/>
 </joint>
 
@@ -402,7 +402,7 @@
     <child link="LElb"/>
     <origin xyz="${45.*mmTom} ${55.15*mmTom} ${-74.*mmTom}" rpy="0 0 0" />
     <axis xyz="0 1 0" />
-    <limit velocity="6.283" effort="147" lower="-2.492" upper="0.298" />
+    <limit velocity="6.283" effort="120" lower="-2.492" upper="0.298" />
     <dynamics friction="0" damping="3.0"/>
 </joint>
 
@@ -411,7 +411,7 @@
     <child link="LForearm"/>
     <origin xyz="${-15.*mmTom} ${-55.15*mmTom} ${-95.*mmTom}" rpy="0 0 0"/>
     <axis xyz="0 0 1" />
-    <limit velocity="6.283" effort="55" lower="-2.55" upper="2.55" />
+    <limit velocity="6.283" effort="35" lower="-2.55" upper="2.55" />
     <dynamics friction="0" damping="0.03"/>
 </joint>
 
@@ -420,7 +420,7 @@
     <child link="LWrMot2"/>
     <origin xyz="0 ${49*mmTom} ${-156.*mmTom}" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
-    <limit velocity="6.283" effort="55" lower="-1.562" upper="1.478" />
+    <limit velocity="6.283" effort="35" lower="-1.562" upper="1.478" />
     <dynamics friction="0" damping="0.03"/>
 </joint>
 
@@ -429,7 +429,7 @@
        <child link="LWrMot3"/>
        <origin xyz="0 ${-49*mmTom} ${-174.*mmTom}" rpy="0 0 0"/>
        <axis xyz="0 0 1"/>
-       <limit velocity="6.283" effort="27" lower="-2.55" upper="2.55" />
+       <limit velocity="6.283" effort="20" lower="-2.55" upper="2.55" />
        <dynamics friction="0" damping="0.03"/>
 </joint>
 
