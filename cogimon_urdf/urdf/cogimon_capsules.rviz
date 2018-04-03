@@ -1195,6 +1195,43 @@
     <limit effort="27.0" lower="-2.55" upper="2.55" velocity="6.283"/>
     <dynamics damping="0.03" friction="0.0"/>
   </joint>
+  <link name="Neck">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.019525578 8.7785097e-05 0.073374976"/>
+      <mass value="0.23794941"/>
+      <inertia ixx="0.00028460315" ixy="-5.4194691e-07" ixz="-7.3250232e-05" iyy="0.0004530875" iyz="-9.4474115e-08" izz="0.00027675534"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://cogimon_urdf/meshes/NeckFixed.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="2.82419486285e-05 0.451106981548 6.48033903981e-06" xyz="0.013918994 -4.54032e-07 0.05985475"/>
+      <geometry>
+        <cylinder length="0.0666338097193" radius="0.0406735"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="2.82419486285e-05 0.451106981548 6.48033903981e-06" xyz="-0.000606 0.000000 0.029871"/>
+      <geometry>
+        <sphere radius="0.0406735"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="2.82419486285e-05 0.451106981548 6.48033903981e-06" xyz="0.028444 -0.000001 0.089839"/>
+      <geometry>
+        <sphere radius="0.0406735"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="neck_frame" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.016 0.0 0.1965"/>
+    <parent link="DWYTorso"/>
+    <child link="Neck"/>
+  </joint>
   <link name="l_ankle"/>
   <link name="l_sole"/>
   <link name="l_toe"/>

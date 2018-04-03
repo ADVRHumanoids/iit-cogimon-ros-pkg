@@ -6,12 +6,21 @@
 
 <!-- ************SELECT PARTS*************-->
 <!-- *************************************-->
-<xacro:property name="COGIMON_HEAD" value="false" />
+<xacro:property name="COGIMON_HEAD" value="true" />
 <xacro:property name="COGIMON_TORSO" value="true" />
 <xacro:property name="COGIMON_LEFT_ARM" value="true" />
 <xacro:property name="COGIMON_RIGHT_ARM" value="true" />
 <xacro:property name="COGIMON_LEFT_LEG" value="true" />
 <xacro:property name="COGIMON_RIGHT_LEG" value="true" />
+
+<!-- ************COGIMON_LASER_FIXED*******-->
+<!--
+     This will set the laser joint to 'fixed'. 
+     Should be used to true for the urdf and srdf which are
+     used in the hardware and visualization, not for IK and ID.
+-->
+<!-- *************************************-->
+<xacro:property name="COGIMON_LASER_FIXED" value="true" />
 
 <!-- ************COGIMON_PENNACCHIO*******-->
 <!--

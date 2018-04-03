@@ -96,7 +96,7 @@
 </xacro:if>
 
 <xacro:if value="${COGIMON_LEFT_ARM}"> 
-<gazebo reference="LShSag">
+   <gazebo reference="LShSag">
     <implicitSpringDamper>1</implicitSpringDamper>
     <provideFeedback>true</provideFeedback>
    </gazebo>
@@ -128,7 +128,7 @@
 
 
 <xacro:if value="${COGIMON_RIGHT_ARM}"> 
-<gazebo reference="RShSag">
+   <gazebo reference="RShSag">
     <implicitSpringDamper>1</implicitSpringDamper>
     <provideFeedback>true</provideFeedback>
    </gazebo>
@@ -156,6 +156,9 @@
     <implicitSpringDamper>1</implicitSpringDamper>
     <provideFeedback>true</provideFeedback>
   </gazebo>
+</xacro:if>
+
+<xacro:if value="${COGIMON_HEAD}">
 </xacro:if>
 
 </robot>
