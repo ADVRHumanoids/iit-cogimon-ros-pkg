@@ -66,7 +66,7 @@
     <child link="HeadHokuyo"/>
     <origin xyz="${49.6*mmTom} 0.0 ${90.*mmTom}" rpy="0 0 0" />
     <axis xyz="1 0 0" />
-    <limit velocity="6.283" effort="120" lower="${-355*toRad}" upper="${355*toRad}" /> <!-- TODO: CHECK THESE VALUES!!! -->
+    <limit velocity="6.283" effort="20" lower="-2.5" upper="2.5" /> <!-- TODO: CHECK THESE VALUES!!! -->
     <dynamics friction="0" damping="3.0"/>
   </joint>
 </xacro:unless>
