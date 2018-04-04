@@ -48,7 +48,7 @@ The coordinate frame called base_link is rigidly attached to the robot root body
 <joint name="imu_joint" type="fixed">
     <parent link="Waist"/>
     <child link="imu_link"/>
-    <origin xyz="0 0 0" rpy="0 0 0" />
+    <origin xyz="${-146.332*mmTom} 0 ${-38.75*mmTom}" rpy="0 0 0" />
 </joint>
 
 <link name="imu_link">

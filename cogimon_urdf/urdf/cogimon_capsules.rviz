@@ -51,7 +51,7 @@
     <child link="Waist"/>
   </joint>
   <joint name="imu_joint" type="fixed">
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    <origin rpy="0.0 0.0 0.0" xyz="-0.146332 0.0 -0.03875"/>
     <parent link="Waist"/>
     <child link="imu_link"/>
   </joint>
