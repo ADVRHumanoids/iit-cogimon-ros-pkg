@@ -32,14 +32,14 @@
       <inertia ixx="${1.9756996e+03*mm2Tom2}"  ixy="${-1.1287972e+02*mm2Tom2}"  ixz="${1.1284571e+02*mm2Tom2}" iyy="${4.4030675e+03*mm2Tom2}" iyz="${4.9540219e+02*mm2Tom2}" izz="${4.4027914e+03*mm2Tom2}" />
     </inertial>
     <visual>
-      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+      <origin xyz="0.0 0.0 0.0" rpy="${-45.0*toRad} 0 0"/>
       <geometry name="Neck_visual">
         <mesh filename="package://cogimon_urdf/meshes/HeadRoll.stl" scale="${mmTom} ${mmTom} ${mmTom}" />
       </geometry>
       <material name="dark_grey"/>
     </visual>
     <collision>
-      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+      <origin xyz="0.0 0.0 0.0" rpy="${-45.0*toRad} 0 0"/>
       <geometry name="Neck_collision">
         <mesh filename="package://cogimon_urdf/meshes/simple/HeadRoll.stl" scale="${mmTom} ${mmTom} ${mmTom}" />
       </geometry>             
