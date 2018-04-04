@@ -11,6 +11,15 @@
         <link name="Waist"/>
     </group>
 
+<group name="hands">
+<xacro:if value="${COGIMON_RIGHT_ARM}">
+      <joint name="r_wrist_joint"/>
+</xacro:if>
+<xacro:if value="${COGIMON_LEFT_ARM}">
+      <joint name="l_wrist_joint"/>
+</xacro:if>
+</group>
+
 <group name="force_torque_sensors">
 <xacro:if value="${COGIMON_LEFT_LEG}">
     <joint name="l_leg_ft_joint"/>
