@@ -1475,6 +1475,18 @@
     <parent link="r_sole"/>
     <child link="r_foot_lower_left_link"/>
   </joint>
+  <link name="r_arm_ft"/>
+  <joint name="r_arm_ft_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.02"/>
+    <parent link="RWrMot3"/>
+    <child link="r_arm_ft"/>
+  </joint>
+  <link name="l_arm_ft"/>
+  <joint name="l_arm_ft_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.02"/>
+    <parent link="LWrMot3"/>
+    <child link="l_arm_ft"/>
+  </joint>
   <link name="world"/>
   <joint name="reference" type="floating">
     <parent link="world"/>
