@@ -113,9 +113,11 @@
 
 <xacro:unless value="${COGIMON_LASER_FIXED}">
   <xacro:if value="${COGIMON_HEAD}">
+<rtt-gazebo reference="neck">
     <controller type="JointPositionCtrl">
       <gains D="5.0" I="0." P="1000." reference="head_roll"/>
     </controller>
+</rtt-gazebo>
   </xacro:if>
 </xacro:unless>
 

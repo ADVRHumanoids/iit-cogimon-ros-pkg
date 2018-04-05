@@ -72,7 +72,7 @@
 </xacro:if>
 <xacro:unless value="${COGIMON_LASER_FIXED}">
     <xacro:if value="${COGIMON_HEAD}">
-        <group name="head">
+        <group name="neck">
             <chain base_link="Neck" tip_link="HeadHokuyo"/>
         </group>
     </xacro:if>
@@ -97,7 +97,7 @@
 </xacro:if>
 <xacro:unless value="${COGIMON_LASER_FIXED}">
     <xacro:if value="${COGIMON_HEAD}">
-        <group name="head"/>
+        <group name="neck"/>
     </xacro:if>
 </xacro:unless>
 </group>
