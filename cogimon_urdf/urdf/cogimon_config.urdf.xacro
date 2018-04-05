@@ -15,7 +15,7 @@
 
 <!-- ************NEW FEET*************-->
 <!-- *************************************-->
-<xacro:property name="COGIMON_FEET_2" value="false" />
+<xacro:property name="COGIMON_FEET_2" value="true" />
 
 <!-- ************COGIMON_LASER_FIXED*******-->
 <!--

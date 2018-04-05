@@ -38,7 +38,12 @@
 </joint>
 
 <joint name="l_sole_joint" type="fixed">
-       <origin xyz="0 0 ${-54.*mmTom}" rpy="0 0 0" />
+        <xacro:if value="${COGIMON_FEET_2}">
+          <origin xyz="0 0 ${-69.*mmTom}" rpy="0 0 0" />
+        </xacro:if>
+        <xacro:unless value="${COGIMON_FEET_2}">
+          <origin xyz="0 0 ${-54.*mmTom}" rpy="0 0 0" />
+        </xacro:unless>
 	<parent link="l_ankle"/>
 	<child link="l_sole"/>
 </joint>
@@ -78,7 +83,12 @@
 </joint>
 
 <joint name="r_sole_joint" type="fixed">
-       <origin xyz="0 0 ${-54.*mmTom}" rpy="0 0 0" />
+        <xacro:if value="${COGIMON_FEET_2}">
+          <origin xyz="0 0 ${-69.*mmTom}" rpy="0 0 0" />
+        </xacro:if>
+        <xacro:unless value="${COGIMON_FEET_2}">
+          <origin xyz="0 0 ${-54.*mmTom}" rpy="0 0 0" />
+        </xacro:unless>
 	<parent link="r_ankle"/>
 	<child link="r_sole"/>
 </joint>

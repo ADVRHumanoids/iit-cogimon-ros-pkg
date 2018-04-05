@@ -230,14 +230,14 @@
   </link>
   <link name="LFoot">
     <inertial>
-      <origin rpy="0.0 0.0 0.0" xyz="-0.0086960323 -6.6741928e-05 -0.041675435"/>
-      <mass value="1.7819594"/>
-      <inertia ixx="0.0019182691" ixy="5.7926583e-06" ixz="0.00032836542" iyy="0.0053518735" iyz="-3.0518008e-06" izz="0.0064063918"/>
+      <origin rpy="0.0 0.0 0.0" xyz="-0.0077094563 -6.5520742e-05 -0.043453782"/>
+      <mass value="2.0663292"/>
+      <inertia ixx="0.0026932116" ixy="4.2852647e-06" ixz="0.00037001167" iyy="0.0071293752" iyz="-2.5956611e-06" izz="0.0086807822"/>
     </inertial>
     <visual>
       <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="package://cogimon_urdf/meshes/Foot.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://cogimon_urdf/meshes/Foot2.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="dark_grey"/>
     </visual>
@@ -458,14 +458,14 @@
   </link>
   <link name="RFoot">
     <inertial>
-      <origin rpy="0.0 0.0 0.0" xyz="-0.0086960323 -6.6741928e-05 -0.041675435"/>
-      <mass value="1.7819594"/>
-      <inertia ixx="0.0019182691" ixy="5.7926583e-06" ixz="0.00032836542" iyy="0.0053518735" iyz="-3.0518008e-06" izz="0.0064063918"/>
+      <origin rpy="0.0 0.0 0.0" xyz="-0.0077094563 -6.5520742e-05 -0.043453782"/>
+      <mass value="2.0663292"/>
+      <inertia ixx="0.0026932116" ixy="4.2852647e-06" ixz="0.00037001167" iyy="0.0071293752" iyz="-2.5956611e-06" izz="0.0086807822"/>
     </inertial>
     <visual>
       <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="package://cogimon_urdf/meshes/Foot.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://cogimon_urdf/meshes/Foot2.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="dark_grey"/>
     </visual>
@@ -1463,7 +1463,7 @@
     <child link="l_ankle"/>
   </joint>
   <joint name="l_sole_joint" type="fixed">
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.054"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.069"/>
     <parent link="l_ankle"/>
     <child link="l_sole"/>
   </joint>
@@ -1517,7 +1517,7 @@
     <child link="r_ankle"/>
   </joint>
   <joint name="r_sole_joint" type="fixed">
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.054"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.069"/>
     <parent link="r_ankle"/>
     <child link="r_sole"/>
   </joint>
