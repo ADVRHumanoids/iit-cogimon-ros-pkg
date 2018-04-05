@@ -7,7 +7,7 @@ foot_flange + sensor + sole
 
 and we will add a revolute joint between foot_flange and sensor and a fixed joint (where we will measure the wrench) between sensor and sole.
 -->
-<robot xmlns:xacro="http:/ros.org/wiki/xacro">
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
 
 <xacro:if value="${COGIMON_LEFT_ARM}" >
        <gazebo reference="LWrMot3">

@@ -1,11 +1,10 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-<xacro:property name="PI" value="3.14159265359" />
+<!--xacro:property name="PI" value="3.14159265359" />
 <xacro:property name="mmTom" value="0.001" />
-<xacro:property name="mm2Tom2" value="${0.001*0.001}" />
+<xacro:property name="mm2Tom2" value="${0.001*0.001}" /-->
 
-<xacro:property name="DEG2RAD" value="${PI/180.}" />
 
 <xacro:if value="${COGIMON_RIGHT_ARM}">
 <!-- RIGHT ARM -->

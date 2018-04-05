@@ -2,8 +2,8 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="SoftHand">
 
 
-<xacro:property name="PI" value="3.14159265359" />
-<xacro:property name="PI_2" value="1.57079632679" />
+<!--xacro:property name="PI" value="3.14159265359" />
+<xacro:property name="PI_2" value="1.57079632679" /-->
 
 <xacro:if value="${COGIMON_RIGHT_ARM}">
 <!-- LINKS -->

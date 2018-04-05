@@ -253,7 +253,7 @@
     <axis xyz="1.0 0.0 0.0"/>
     <parent link="Waist"/>
     <child link="LHipMot"/>
-    <limit effort="235.0" lower="-0.523598775598" upper="1.65806278939" velocity="7.4"/>
+    <limit effort="200.0" lower="-0.523598775598" upper="1.65806278939" velocity="7.4"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="LHipSag" type="revolute">
@@ -261,7 +261,7 @@
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="LHipMot"/>
     <child link="LThighUpLeg"/>
-    <limit effort="235.0" lower="-1.91986217719" upper="1.55334303428" velocity="7.4"/>
+    <limit effort="200.0" lower="-1.91986217719" upper="1.55334303428" velocity="7.4"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="LHipYaw" type="revolute">
@@ -269,7 +269,7 @@
     <axis xyz="0.0 0.0 1.0"/>
     <parent link="LThighUpLeg"/>
     <child link="LThighLowLeg"/>
-    <limit effort="153.0" lower="-0.558505360638" upper="1.5707963268" velocity="4.6"/>
+    <limit effort="120.0" lower="-0.558505360638" upper="1.5707963268" velocity="4.6"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="LKneePitch" type="revolute">
@@ -277,7 +277,7 @@
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="LThighLowLeg"/>
     <child link="LLowLeg"/>
-    <limit effort="313.0" lower="0.0" upper="2.44346095279" velocity="5.5"/>
+    <limit effort="200.0" lower="0.0" upper="2.44346095279" velocity="5.5"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="LAnklePitch" type="revolute">
@@ -285,7 +285,7 @@
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="LLowLeg"/>
     <child link="LFootmot"/>
-    <limit effort="179.0" lower="-0.872664625997" upper="0.698131700798" velocity="4.9"/>
+    <limit effort="200.0" lower="-0.872664625997" upper="0.698131700798" velocity="4.9"/>
     <dynamics damping="0.1" friction="0.0"/>
   </joint>
   <joint name="LAnkleRoll" type="revolute">
@@ -293,7 +293,7 @@
     <axis xyz="1.0 0.0 0.0"/>
     <parent link="LFootmot"/>
     <child link="LFoot"/>
-    <limit effort="230.0" lower="-0.261799387799" upper="0.261799387799" velocity="3.2"/>
+    <limit effort="60.0" lower="-0.261799387799" upper="0.261799387799" velocity="3.2"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <link name="RHipMot">
@@ -481,7 +481,7 @@
     <axis xyz="1.0 0.0 0.0"/>
     <parent link="Waist"/>
     <child link="RHipMot"/>
-    <limit effort="235.0" lower="-1.65806278939" upper="0.523598775598" velocity="7.4"/>
+    <limit effort="200.0" lower="-1.65806278939" upper="0.523598775598" velocity="7.4"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="RHipSag" type="revolute">
@@ -489,7 +489,7 @@
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="RHipMot"/>
     <child link="RThighUpLeg"/>
-    <limit effort="235.0" lower="-1.91986217719" upper="1.55334303428" velocity="7.4"/>
+    <limit effort="200.0" lower="-1.91986217719" upper="1.55334303428" velocity="7.4"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="RHipYaw" type="revolute">
@@ -497,7 +497,7 @@
     <axis xyz="0.0 0.0 1.0"/>
     <parent link="RThighUpLeg"/>
     <child link="RThighLowLeg"/>
-    <limit effort="153.0" lower="-1.5707963268" upper="0.558505360638" velocity="4.9"/>
+    <limit effort="120.0" lower="-1.5707963268" upper="0.558505360638" velocity="4.9"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="RKneePitch" type="revolute">
@@ -505,7 +505,7 @@
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="RThighLowLeg"/>
     <child link="RLowLeg"/>
-    <limit effort="313.0" lower="0.0" upper="2.44346095279" velocity="5.5"/>
+    <limit effort="200.0" lower="0.0" upper="2.44346095279" velocity="5.5"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="RAnklePitch" type="revolute">
@@ -513,7 +513,7 @@
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="RLowLeg"/>
     <child link="RFootmot"/>
-    <limit effort="179.0" lower="-0.872664625997" upper="0.698131700798" velocity="4.9"/>
+    <limit effort="200.0" lower="-0.872664625997" upper="0.698131700798" velocity="4.9"/>
     <dynamics damping="0.1" friction="0.0"/>
   </joint>
   <joint name="RAnkleRoll" type="revolute">
@@ -521,7 +521,7 @@
     <axis xyz="1.0 0.0 0.0"/>
     <parent link="RFootmot"/>
     <child link="RFoot"/>
-    <limit effort="230.0" lower="-0.261799387799" upper="0.261799387799" velocity="3.2"/>
+    <limit effort="60.0" lower="-0.261799387799" upper="0.261799387799" velocity="3.2"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <link name="DWL">
@@ -625,7 +625,7 @@
     <axis xyz="1.0 0.0 0.0"/>
     <parent link="Waist"/>
     <child link="DWL"/>
-    <limit effort="150.0" lower="-0.523598775598" upper="0.523598775598" velocity="7.4"/>
+    <limit effort="140.0" lower="-0.523598775598" upper="0.523598775598" velocity="7.4"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="WaistFixed" type="fixed">
@@ -865,12 +865,44 @@
       </geometry>
     </collision>
   </link>
+  <link name="r_wrist">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="8.2161929e-05 -0.0026334189 -0.016465877"/>
+      <mass value="0.37827821"/>
+      <inertia ixx="0.00023321716" ixy="-2.3681435e-06" ixz="-1.8039102e-06" iyy="0.00020626291" iyz="-3.158829e-05" izz="0.00027399881"/>
+    </inertial>
+    <visual>
+      <origin rpy="3.14159265359 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://cogimon_urdf/meshes/Wrist.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="2.70790736799 -1.7440880556e-07 3.84233946897e-08" xyz="-5.947637e-09 -0.013199979631 -0.019569765"/>
+      <geometry>
+        <cylinder length="0.0628232385677" radius="0.0468649"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="2.70790736799 -1.7440880556e-07 3.84233946897e-08" xyz="-0.000000 -0.000000 0.008934"/>
+      <geometry>
+        <sphere radius="0.0468649"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="2.70790736799 -1.7440880556e-07 3.84233946897e-08" xyz="-0.000000 -0.026400 -0.048073"/>
+      <geometry>
+        <sphere radius="0.0468649"/>
+      </geometry>
+    </collision>
+  </link>
   <joint name="RShSag" type="revolute">
     <origin rpy="-0.174533 0.0 0.5235988" xyz="0.0457475 -0.169137 0.155126"/>
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="DWYTorso"/>
     <child link="RShp"/>
-    <limit effort="147.0" lower="-3.359" upper="1.606" velocity="6.283"/>
+    <limit effort="140.0" lower="-3.359" upper="1.606" velocity="6.283"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="RShLat" type="revolute">
@@ -878,7 +910,7 @@
     <axis xyz="1.0 0.0 0.0"/>
     <parent link="RShp"/>
     <child link="RShr"/>
-    <limit effort="120.0" lower="-3.43" upper="-0.004" velocity="6.283"/>
+    <limit effort="140.0" lower="-3.43" upper="0.0" velocity="6.283"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="RShYaw" type="revolute">
@@ -886,7 +918,7 @@
     <axis xyz="0.0 0.0 1.0"/>
     <parent link="RShr"/>
     <child link="RShy"/>
-    <limit effort="147.0" lower="-2.55" upper="2.55" velocity="6.283"/>
+    <limit effort="120.0" lower="-2.55" upper="2.55" velocity="6.283"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="RElbj" type="revolute">
@@ -894,7 +926,7 @@
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="RShy"/>
     <child link="RElb"/>
-    <limit effort="147.0" lower="-2.488" upper="0.292" velocity="6.283"/>
+    <limit effort="120.0" lower="-2.488" upper="0.292" velocity="6.283"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="RForearmPlate" type="revolute">
@@ -902,7 +934,7 @@
     <axis xyz="0.0 0.0 1.0"/>
     <parent link="RElb"/>
     <child link="RForearm"/>
-    <limit effort="55.0" lower="-2.55" upper="2.55" velocity="6.283"/>
+    <limit effort="35.0" lower="-2.55" upper="2.55" velocity="6.283"/>
     <dynamics damping="0.03" friction="0.0"/>
   </joint>
   <joint name="RWrj1" type="revolute">
@@ -910,7 +942,7 @@
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="RForearm"/>
     <child link="RWrMot2"/>
-    <limit effort="55.0" lower="-1.542" upper="1.508" velocity="6.283"/>
+    <limit effort="35.0" lower="-1.542" upper="1.508" velocity="6.283"/>
     <dynamics damping="0.03" friction="0.0"/>
   </joint>
   <joint name="RWrj2" type="revolute">
@@ -918,8 +950,13 @@
     <axis xyz="0.0 0.0 1.0"/>
     <parent link="RWrMot2"/>
     <child link="RWrMot3"/>
-    <limit effort="27.0" lower="-2.55" upper="2.55" velocity="6.283"/>
+    <limit effort="20.0" lower="-2.55" upper="2.55" velocity="6.283"/>
     <dynamics damping="0.03" friction="0.0"/>
+  </joint>
+  <joint name="r_wrist_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    <parent link="RWrMot3"/>
+    <child link="r_wrist"/>
   </joint>
   <link name="LShp">
     <inertial>
@@ -1145,12 +1182,44 @@
       </geometry>
     </collision>
   </link>
+  <link name="l_wrist">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="8.2161929e-05 0.0026334189 -0.016465877"/>
+      <mass value="0.37827821"/>
+      <inertia ixx="0.00023321716" ixy="2.3681435e-06" ixz="-1.8039102e-06" iyy="0.00020626291" iyz="3.158829e-05" izz="0.00027399881"/>
+    </inertial>
+    <visual>
+      <origin rpy="3.14159265359 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://cogimon_urdf/meshes/Wrist.STL" scale="0.001 -0.001 0.001"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="-2.70790736799 -1.7440880556e-07 -3.84233946898e-08" xyz="-5.947637e-09 0.013199979631 -0.019569765"/>
+      <geometry>
+        <cylinder length="0.0628232385677" radius="0.0468649"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="-2.70790736799 -1.7440880556e-07 -3.84233946898e-08" xyz="-0.000000 0.000000 0.008934"/>
+      <geometry>
+        <sphere radius="0.0468649"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="-2.70790736799 -1.7440880556e-07 -3.84233946898e-08" xyz="-0.000000 0.026400 -0.048073"/>
+      <geometry>
+        <sphere radius="0.0468649"/>
+      </geometry>
+    </collision>
+  </link>
   <joint name="LShSag" type="revolute">
     <origin rpy="0.174533 0.0 -0.5235988" xyz="0.0457475 0.169137 0.155126"/>
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="DWYTorso"/>
     <child link="LShp"/>
-    <limit effort="147.0" lower="-3.352" upper="1.603" velocity="6.283"/>
+    <limit effort="140.0" lower="-3.352" upper="1.603" velocity="6.283"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="LShLat" type="revolute">
@@ -1158,7 +1227,7 @@
     <axis xyz="1.0 0.0 0.0"/>
     <parent link="LShp"/>
     <child link="LShr"/>
-    <limit effort="120.0" lower="0.037" upper="3.517" velocity="6.283"/>
+    <limit effort="140.0" lower="0.0" upper="3.517" velocity="6.283"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="LShYaw" type="revolute">
@@ -1166,7 +1235,7 @@
     <axis xyz="0.0 0.0 1.0"/>
     <parent link="LShr"/>
     <child link="LShy"/>
-    <limit effort="147.0" lower="-2.55" upper="2.55" velocity="6.283"/>
+    <limit effort="120.0" lower="-2.55" upper="2.55" velocity="6.283"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="LElbj" type="revolute">
@@ -1174,7 +1243,7 @@
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="LShy"/>
     <child link="LElb"/>
-    <limit effort="147.0" lower="-2.492" upper="0.298" velocity="6.283"/>
+    <limit effort="120.0" lower="-2.492" upper="0.298" velocity="6.283"/>
     <dynamics damping="3.0" friction="0.0"/>
   </joint>
   <joint name="LForearmPlate" type="revolute">
@@ -1182,7 +1251,7 @@
     <axis xyz="0.0 0.0 1.0"/>
     <parent link="LElb"/>
     <child link="LForearm"/>
-    <limit effort="55.0" lower="-2.55" upper="2.55" velocity="6.283"/>
+    <limit effort="35.0" lower="-2.55" upper="2.55" velocity="6.283"/>
     <dynamics damping="0.03" friction="0.0"/>
   </joint>
   <joint name="LWrj1" type="revolute">
@@ -1190,7 +1259,7 @@
     <axis xyz="0.0 1.0 0.0"/>
     <parent link="LForearm"/>
     <child link="LWrMot2"/>
-    <limit effort="55.0" lower="-1.562" upper="1.478" velocity="6.283"/>
+    <limit effort="35.0" lower="-1.562" upper="1.478" velocity="6.283"/>
     <dynamics damping="0.03" friction="0.0"/>
   </joint>
   <joint name="LWrj2" type="revolute">
@@ -1198,8 +1267,185 @@
     <axis xyz="0.0 0.0 1.0"/>
     <parent link="LWrMot2"/>
     <child link="LWrMot3"/>
-    <limit effort="27.0" lower="-2.55" upper="2.55" velocity="6.283"/>
+    <limit effort="20.0" lower="-2.55" upper="2.55" velocity="6.283"/>
     <dynamics damping="0.03" friction="0.0"/>
+  </joint>
+  <joint name="l_wrist_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    <parent link="LWrMot3"/>
+    <child link="l_wrist"/>
+  </joint>
+  <link name="Neck">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.019525578 8.7785097e-05 0.073374976"/>
+      <mass value="0.23794941"/>
+      <inertia ixx="0.00028460315" ixy="-5.4194691e-07" ixz="-7.3250232e-05" iyy="0.0004530875" iyz="-9.4474115e-08" izz="0.00027675534"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://cogimon_urdf/meshes/NeckFixed.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="2.82419486285e-05 0.451106981548 6.48033903981e-06" xyz="0.013918994 -4.54032e-07 0.05985475"/>
+      <geometry>
+        <cylinder length="0.0666338097193" radius="0.0406735"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="2.82419486285e-05 0.451106981548 6.48033903981e-06" xyz="-0.000606 0.000000 0.029871"/>
+      <geometry>
+        <sphere radius="0.0406735"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="2.82419486285e-05 0.451106981548 6.48033903981e-06" xyz="0.028444 -0.000001 0.089839"/>
+      <geometry>
+        <sphere radius="0.0406735"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="HeadHokuyo">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.055322369 0.018472201 -0.018483703"/>
+      <mass value="0.54611797"/>
+      <inertia ixx="0.0019756996" ixy="-0.00011287972" ixz="0.00011284571" iyy="0.0044030675" iyz="0.00049540219" izz="0.0044027914"/>
+    </inertial>
+    <visual>
+      <origin rpy="-0.785398163398 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://cogimon_urdf/meshes/HeadRoll.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="-1.11514123253 -0.911280125763 1.20204718816" xyz="0.0526213 -1.23036580045e-05 -0.0215040364547"/>
+      <geometry>
+        <cylinder length="0.0303991056806" radius="0.0608765"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="-1.11514123253 -0.911280125763 1.20204718816" xyz="0.067258 -0.000001 -0.025602"/>
+      <geometry>
+        <sphere radius="0.0608765"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="-1.11514123253 -0.911280125763 1.20204718816" xyz="0.037985 -0.000023 -0.017406"/>
+      <geometry>
+        <sphere radius="0.0608765"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="neck_frame" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.016 0.0 0.1965"/>
+    <parent link="DWYTorso"/>
+    <child link="Neck"/>
+  </joint>
+  <joint name="head_roll" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0496 0.0 0.09"/>
+    <parent link="Neck"/>
+    <child link="HeadHokuyo"/>
+  </joint>
+  <link name="RSoftHand"/>
+  <link name="TCP_R"/>
+  <link name="RSoftHandLink">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0020955992 0.0043009755 -0.060792229"/>
+      <mass value="1.4"/>
+      <inertia ixx="0.0046340021" ixy="-5.6301252e-05" ixz="0.00021001241" iyy="0.0052222303" iyz="0.00020916976" izz="0.0013961628"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://cogimon_urdf/meshes/SoftHandOpen2.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="grey"/>
+    </visual>
+    <collision>
+      <origin rpy="-2.89499147964 0.211295821994 -1.4155549417" xyz="0.0068289476 0.0078072758 -0.1256931"/>
+      <geometry>
+        <cylinder length="0.0653101397381" radius="0.105258"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="-2.89499147964 0.211295821994 -1.4155549417" xyz="-0.000020 0.000013 -0.094730"/>
+      <geometry>
+        <sphere radius="0.105258"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="-2.89499147964 0.211295821994 -1.4155549417" xyz="0.013678 0.015601 -0.156656"/>
+      <geometry>
+        <sphere radius="0.105258"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="r_handj" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.0395"/>
+    <parent link="r_wrist"/>
+    <child link="RSoftHandLink"/>
+  </joint>
+  <joint name="r_handj2" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.041 -0.1005"/>
+    <parent link="RSoftHandLink"/>
+    <child link="RSoftHand"/>
+  </joint>
+  <joint name="TCP_Rjoint" type="fixed">
+    <origin rpy="-1.57079632679 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    <parent link="RSoftHand"/>
+    <child link="TCP_R"/>
+  </joint>
+  <link name="LSoftHand"/>
+  <link name="TCP_L"/>
+  <link name="LSoftHandLink">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0020955992 -0.0043009755 -0.060792229"/>
+      <mass value="1.4"/>
+      <inertia ixx="0.0046340021" ixy="5.6301252e-05" ixz="0.00021001241" iyy="0.0052222303" iyz="-0.00020916976" izz="0.0013961628"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://cogimon_urdf/meshes/SoftHandOpen2.STL" scale="0.001 -0.001 0.001"/>
+      </geometry>
+      <material name="grey"/>
+    </visual>
+    <collision>
+      <origin rpy="2.89499147964 0.211295821994 1.4155549417" xyz="0.0068289476 -0.0078072758 -0.1256931"/>
+      <geometry>
+        <cylinder length="0.0653101397381" radius="0.105258"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="2.89499147964 0.211295821994 1.4155549417" xyz="-0.000020 -0.000013 -0.094730"/>
+      <geometry>
+        <sphere radius="0.105258"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="2.89499147964 0.211295821994 1.4155549417" xyz="0.013678 -0.015601 -0.156656"/>
+      <geometry>
+        <sphere radius="0.105258"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="l_handj" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.0395"/>
+    <parent link="l_wrist"/>
+    <child link="LSoftHandLink"/>
+  </joint>
+  <joint name="l_handj2" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 -0.041 -0.1005"/>
+    <parent link="LSoftHandLink"/>
+    <child link="LSoftHand"/>
+  </joint>
+  <joint name="TCP_Ljoint" type="fixed">
+    <origin rpy="1.57079632679 3.14159265359 0.0" xyz="0.0 0.0 0.0"/>
+    <parent link="LSoftHand"/>
+    <child link="TCP_L"/>
   </joint>
   <link name="l_ankle"/>
   <link name="l_sole"/>
@@ -1308,6 +1554,18 @@
     <origin rpy="0.0 0.0 0.0" xyz="-0.1035 0.055 0.0"/>
     <parent link="r_sole"/>
     <child link="r_foot_lower_left_link"/>
+  </joint>
+  <link name="r_arm_ft"/>
+  <joint name="r_arm_ft_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.02"/>
+    <parent link="RWrMot3"/>
+    <child link="r_arm_ft"/>
+  </joint>
+  <link name="l_arm_ft"/>
+  <joint name="l_arm_ft_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.02"/>
+    <parent link="LWrMot3"/>
+    <child link="l_arm_ft"/>
   </joint>
   <link name="world"/>
   <joint name="reference" type="floating">
