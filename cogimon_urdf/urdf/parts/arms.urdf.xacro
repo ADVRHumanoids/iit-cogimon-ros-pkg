@@ -156,6 +156,27 @@
  </collision>
 </link>
 
+<link name="r_wrist">
+    <inertial>
+      <origin xyz="${8.2161929e-02*mmTom} ${-2.6334189*mmTom} ${-1.6465877e+01*mmTom}" rpy="0 0 0"/>
+      <mass value="3.7827821e-01"/>
+      <inertia ixx="${2.3321716e+02*mm2Tom2}"  ixy="${-2.3681435*mm2Tom2}"  ixz="${-1.8039102*mm2Tom2}" iyy="${2.0626291e+02*mm2Tom2}" iyz="${-3.1588290e+01*mm2Tom2}" izz="${2.7399881e+02*mm2Tom2}" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="${PI} 0 0"/>
+      <geometry name="RShp_visual">
+        <mesh filename="package://cogimon_urdf/meshes/Wrist.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="${PI} 0 0"/>
+      <geometry name="RShp_collision">
+        <mesh filename="package://cogimon_urdf/meshes/simple/Wrist.STL" scale="0.001 0.001 0.001" />
+      </geometry>             
+    </collision>
+</link>
+
 <joint name="RShSag" type="revolute">
     <parent link="DWYTorso"/>
     <child link="RShp"/>
@@ -217,6 +238,12 @@
        <axis xyz="0 0 1"/>
        <limit velocity="6.283" effort="20" lower="-2.55" upper="2.55" />
        <dynamics friction="0" damping="0.03"/>
+</joint>
+
+<joint name="r_wrist_joint" type="fixed">
+       <parent link="RWrMot3"/>
+       <child link="r_wrist"/>
+       <origin xyz="0 0 0" rpy="0 0 0" />
 </joint>
 
 </xacro:if>
@@ -370,6 +397,27 @@
  </collision>
 </link>
 
+<link name="l_wrist">
+    <inertial>
+      <origin xyz="${8.2161929e-02*mmTom} ${2.6334189*mmTom} ${-1.6465877e+01*mmTom}" rpy="0 0 0"/>
+      <mass value="3.7827821e-01"/>
+      <inertia ixx="${2.3321716e+02*mm2Tom2}"  ixy="${2.3681435*mm2Tom2}"  ixz="${-1.8039102*mm2Tom2}" iyy="${2.0626291e+02*mm2Tom2}" iyz="${3.1588290e+01*mm2Tom2}" izz="${2.7399881e+02*mm2Tom2}" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="${PI} 0 0"/>
+      <geometry name="LShp_visual">
+        <mesh filename="package://cogimon_urdf/meshes/Wrist.STL" scale="0.001 -0.001 0.001" />
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="${PI} 0 0"/>
+      <geometry name="LShp_collision">
+        <mesh filename="package://cogimon_urdf/meshes/simple/Wrist.STL" scale="0.001 -0.001 0.001" />
+      </geometry>             
+    </collision>
+</link>
+
 <joint name="LShSag" type="revolute">
     <parent link="DWYTorso"/>
     <child link="LShp"/>
@@ -431,6 +479,12 @@
        <axis xyz="0 0 1"/>
        <limit velocity="6.283" effort="20" lower="-2.55" upper="2.55" />
        <dynamics friction="0" damping="0.03"/>
+</joint>
+
+<joint name="l_wrist_joint" type="fixed">
+       <parent link="LWrMot3"/>
+       <child link="l_wrist"/>
+       <origin xyz="0 0 0" rpy="0 0 0" />
 </joint>
 
 </xacro:if>
