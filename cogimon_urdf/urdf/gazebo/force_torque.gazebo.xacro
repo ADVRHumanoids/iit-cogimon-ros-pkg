@@ -10,7 +10,7 @@ and we will add a revolute joint between foot_flange and sensor and a fixed join
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
 <xacro:if value="${COGIMON_LEFT_ARM}" >
-       <gazebo reference="LWrMot3">
+       <gazebo reference="LWrj2">
               <sensor type="force_torque" name="l_arm_ft">
                      <force_torque>
                        <frame>sensor</frame>
@@ -25,7 +25,7 @@ and we will add a revolute joint between foot_flange and sensor and a fixed join
 </xacro:if>
 
 <xacro:if value="${COGIMON_RIGHT_ARM}" >
-       <gazebo reference="RWrMot3">
+       <gazebo reference="RWrj2">
 	       <sensor type="force_torque" name="r_arm_ft">
                      <force_torque>
                        <frame>sensor</frame>
