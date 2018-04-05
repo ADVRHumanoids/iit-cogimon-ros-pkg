@@ -26,7 +26,6 @@
 <!-- *************************************-->
 <xacro:property name="COGIMON_LASER_FIXED" value="false" />
 
-
 <!-- ************COGIMON_PENNACCHIO*******-->
 <!--
      This will add a fake torso link after the first
