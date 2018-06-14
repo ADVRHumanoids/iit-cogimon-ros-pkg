@@ -124,7 +124,7 @@
         <joint name="RAnkleRoll" value="0.0"/>
         
         <joint name="WaistLat" value="0.0"/>
-	<joint name="Waistyaw" value="0.0"/>
+	<joint name="WaistYaw" value="0.0"/>
 
         <joint name="RShSag" value="0.0"/>
         <joint name="RShLat" value="0.0"/>
