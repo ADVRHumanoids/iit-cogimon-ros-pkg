@@ -109,38 +109,34 @@
 <xacro:if value="${COGIMON_XBOT_GAZEBO}">
 <group_state name="home" group="chains">
 
-        <joint name="LHipLat" value="0.0"/>
-        <joint name="LHipSag" value="0.0"/>
-        <joint name="LHipYaw" value="0.0"/>
-        <joint name="LKneePitch" value="0.0"/>
-        <joint name="LAnklePitch" value="0.0"/>
-        <joint name="LAnkleRoll" value="0.0"/>
-        
-        <joint name="RHipLat" value="0.0"/>
-        <joint name="RHipSag" value="0.0"/>
-        <joint name="RHipYaw" value="0.0"/>
-        <joint name="RKneePitch" value="0.0"/>
-        <joint name="RAnklePitch" value="0.0"/>
-        <joint name="RAnkleRoll" value="0.0"/>
-        
-        <joint name="WaistLat" value="0.0"/>
-	<joint name="WaistYaw" value="0.0"/>
-
-        <joint name="RShSag" value="0.0"/>
-        <joint name="RShLat" value="0.0"/>
-        <joint name="RShYaw" value="0.0"/>
-        <joint name="RElbj" value="0.0"/>
-        <joint name="RForearmPlate" value="0.0"/>
-        <joint name="RWrj1" value="0.0"/>
-        <joint name="RWrj2" value="0.0"/>
-
-        <joint name="LShSag" value="0.0"/>
-        <joint name="LShLat" value="0.0"/>
-        <joint name="LShYaw" value="0.0"/>
-        <joint name="LElbj" value="0.0"/>
-        <joint name="LForearmPlate" value="0.0"/>
-        <joint name="LWrj1" value="0.0"/>
-        <joint name="LWrj2" value="0.0"/>
+        <joint name="WaistYaw" value="0.0"/>
+    <joint name="WaistLat" value="0.0"/>
+    <joint name="RShSag" value="0.959931"/>
+    <joint name="RShLat" value="-0.007266"/>
+    <joint name="RShYaw" value="-0.0"/>
+    <joint name="RElbj" value="-1.919862"/>
+    <joint name="RForearmPlate" value="0.0"/>
+    <joint name="RWrj1" value="-0.523599"/>
+    <joint name="RWrj2" value="-0.0"/>
+    <joint name="LShSag" value="0.959931"/>
+    <joint name="LShLat" value="0.007266"/>
+    <joint name="LShYaw" value="-0.0"/>
+    <joint name="LElbj" value="-1.919862"/>
+    <joint name="LForearmPlate" value="0.0"/>
+    <joint name="LWrj1" value="-0.523599"/>
+    <joint name="LWrj2" value="-0.0"/>
+    <joint name="RHipLat" value="0.0"/>
+    <joint name="RHipSag" value="-0.363826"/>
+    <joint name="RHipYaw" value="0.0"/>
+    <joint name="RKneePitch" value="0.731245"/>
+    <joint name="RAnklePitch" value="-0.307420"/>
+    <joint name="RAnkleRoll" value="-0.0"/>
+    <joint name="LHipLat" value="-0.0"/>
+    <joint name="LHipSag" value="-0.363826"/>
+    <joint name="LHipYaw" value="0.0"/>
+    <joint name="LKneePitch" value="0.731245"/>
+    <joint name="LAnklePitch" value="-0.307420"/>
+    <joint name="LAnkleRoll" value="0.0"/>
 	<xacro:unless value="${COGIMON_LASER_FIXED}">
     	<xacro:if value="${COGIMON_HEAD}">
         	<joint name="head_roll" value="0.0"/>
