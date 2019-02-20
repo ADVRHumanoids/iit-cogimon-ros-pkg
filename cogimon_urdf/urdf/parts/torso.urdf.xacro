@@ -75,7 +75,6 @@
 </xacro:if>
 
 <xacro:unless value="${COGIMON_PENNACCHIO}">
-
 <link name ="DWLExt">
     <inertial>
       <origin xyz="${1.5386429e-03*mmTom} ${5.1668430e-02*mmTom} ${9.5210134e+01 *mmTom} " rpy="0 0 0"/>
@@ -117,6 +116,8 @@
       </geometry>             
     </collision>
 </link>
+
+<link name="torso"/>
 
 </xacro:unless>
 
@@ -161,6 +162,12 @@
     <axis xyz="0 0 1" />
     <limit velocity="6.283" effort="120" lower="${-100.0*toRad}" upper="${100.0*toRad}" />
     <dynamics friction="0" damping="3.0"/>
+</joint>
+
+<joint name="torso_joint" type="fixed">
+    <parent link="DWYTorso"/>
+    <child link="torso"/>
+    <origin xyz="0.0 0.0 ${155.126*mmTom}" rpy="0 0 0" />
 </joint>
 
 </xacro:unless>
