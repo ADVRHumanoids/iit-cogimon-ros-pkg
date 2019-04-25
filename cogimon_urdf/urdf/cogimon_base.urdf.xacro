@@ -45,6 +45,20 @@ The coordinate frame called base_link is rigidly attached to the robot root body
     <origin xyz="0 0 0" rpy="0 0 0" />
 </joint>
 
+<joint name="imu_joint" type="fixed">
+    <parent link="Waist"/>
+    <child link="imu_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+</joint>
+
+<link name="imu_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+      <mass value="0"/>
+      <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+</link>
+
 
 
 <xacro:include filename="$(find cogimon_urdf)/urdf/parts/legs.urdf.xacro" />
