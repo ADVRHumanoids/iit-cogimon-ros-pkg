@@ -620,6 +620,7 @@
       </geometry>
     </collision>
   </link>
+  <link name="torso"/>
   <joint name="WaistLat" type="revolute">
     <origin rpy="0.0 0.0 0.0" xyz="0.012 0.0 0.0"/>
     <axis xyz="1.0 0.0 0.0"/>
@@ -640,6 +641,11 @@
     <child link="DWYTorso"/>
     <limit effort="120.0" lower="-1.74532925199" upper="1.74532925199" velocity="6.283"/>
     <dynamics damping="3.0" friction="0.0"/>
+  </joint>
+  <joint name="torso_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.155126"/>
+    <parent link="DWYTorso"/>
+    <child link="torso"/>
   </joint>
   <link name="RShp">
     <inertial>
