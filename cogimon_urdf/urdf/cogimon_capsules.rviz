@@ -871,38 +871,6 @@
       </geometry>
     </collision>
   </link>
-  <link name="r_wrist">
-    <inertial>
-      <origin rpy="0.0 0.0 0.0" xyz="8.2161929e-05 -0.0026334189 -0.016465877"/>
-      <mass value="0.37827821"/>
-      <inertia ixx="0.00023321716" ixy="-2.3681435e-06" ixz="-1.8039102e-06" iyy="0.00020626291" iyz="-3.158829e-05" izz="0.00027399881"/>
-    </inertial>
-    <visual>
-      <origin rpy="3.14159265359 0.0 0.0" xyz="0.0 0.0 0.0"/>
-      <geometry>
-        <mesh filename="package://cogimon_urdf/meshes/Wrist.STL" scale="0.001 0.001 0.001"/>
-      </geometry>
-      <material name="dark_grey"/>
-    </visual>
-    <collision>
-      <origin rpy="2.70790736799 -1.7440880556e-07 3.84233946897e-08" xyz="-5.947637e-09 -0.013199979631 -0.019569765"/>
-      <geometry>
-        <cylinder length="0.0628232385677" radius="0.0468649"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin rpy="2.70790736799 -1.7440880556e-07 3.84233946897e-08" xyz="-0.000000 -0.000000 0.008934"/>
-      <geometry>
-        <sphere radius="0.0468649"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin rpy="2.70790736799 -1.7440880556e-07 3.84233946897e-08" xyz="-0.000000 -0.026400 -0.048073"/>
-      <geometry>
-        <sphere radius="0.0468649"/>
-      </geometry>
-    </collision>
-  </link>
   <joint name="RShSag" type="revolute">
     <origin rpy="-0.174533 0.0 0.5235988" xyz="0.0457475 -0.169137 0.155126"/>
     <axis xyz="0.0 1.0 0.0"/>
@@ -958,11 +926,6 @@
     <child link="RWrMot3"/>
     <limit effort="20.0" lower="-2.55" upper="2.55" velocity="6.283"/>
     <dynamics damping="0.03" friction="0.0"/>
-  </joint>
-  <joint name="r_wrist_joint" type="fixed">
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-    <parent link="RWrMot3"/>
-    <child link="r_wrist"/>
   </joint>
   <link name="LShp">
     <inertial>
@@ -1188,38 +1151,6 @@
       </geometry>
     </collision>
   </link>
-  <link name="l_wrist">
-    <inertial>
-      <origin rpy="0.0 0.0 0.0" xyz="8.2161929e-05 0.0026334189 -0.016465877"/>
-      <mass value="0.37827821"/>
-      <inertia ixx="0.00023321716" ixy="2.3681435e-06" ixz="-1.8039102e-06" iyy="0.00020626291" iyz="3.158829e-05" izz="0.00027399881"/>
-    </inertial>
-    <visual>
-      <origin rpy="3.14159265359 0.0 0.0" xyz="0.0 0.0 0.0"/>
-      <geometry>
-        <mesh filename="package://cogimon_urdf/meshes/Wrist.STL" scale="0.001 -0.001 0.001"/>
-      </geometry>
-      <material name="dark_grey"/>
-    </visual>
-    <collision>
-      <origin rpy="-2.70790736799 -1.7440880556e-07 -3.84233946898e-08" xyz="-5.947637e-09 0.013199979631 -0.019569765"/>
-      <geometry>
-        <cylinder length="0.0628232385677" radius="0.0468649"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin rpy="-2.70790736799 -1.7440880556e-07 -3.84233946898e-08" xyz="-0.000000 0.000000 0.008934"/>
-      <geometry>
-        <sphere radius="0.0468649"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin rpy="-2.70790736799 -1.7440880556e-07 -3.84233946898e-08" xyz="-0.000000 0.026400 -0.048073"/>
-      <geometry>
-        <sphere radius="0.0468649"/>
-      </geometry>
-    </collision>
-  </link>
   <joint name="LShSag" type="revolute">
     <origin rpy="0.174533 0.0 -0.5235988" xyz="0.0457475 0.169137 0.155126"/>
     <axis xyz="0.0 1.0 0.0"/>
@@ -1276,11 +1207,6 @@
     <limit effort="20.0" lower="-2.55" upper="2.55" velocity="6.283"/>
     <dynamics damping="0.03" friction="0.0"/>
   </joint>
-  <joint name="l_wrist_joint" type="fixed">
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-    <parent link="LWrMot3"/>
-    <child link="l_wrist"/>
-  </joint>
   <link name="Head">
     <inertial>
       <origin rpy="0.0 0.0 0.0" xyz="0.057448518 1.6262687e-05 0.13030019"/>
@@ -1336,103 +1262,91 @@
     <parent link="HeadHokuyo"/>
     <child link="HokuyoLaser"/>
   </joint>
-  <link name="RSoftHand"/>
-  <link name="TCP_R"/>
-  <link name="RSoftHandLink">
+  <link name="RBall">
     <inertial>
-      <origin rpy="0.0 0.0 0.0" xyz="0.0020955992 0.0043009755 -0.060792229"/>
-      <mass value="1.4"/>
-      <inertia ixx="0.0046340021" ixy="-5.6301252e-05" ixz="0.00021001241" iyy="0.0052222303" iyz="0.00020916976" izz="0.0013961628"/>
+      <origin rpy="0.0 0.0 0.0" xyz="-1.0072498e-05 3.7590658e-05 0.019772332"/>
+      <mass value="1.27"/>
+      <inertia ixx="0.0023061092" ixy="2.9181758e-07" ixz="-2.1246684e-07" iyy="0.0023053155" iyz="7.9290978e-07" izz="0.0030675616"/>
     </inertial>
     <visual>
       <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="package://cogimon_urdf/meshes/SoftHandOpen2.STL" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://cogimon_urdf/meshes/BallHand.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="grey"/>
     </visual>
     <collision>
-      <origin rpy="-2.89499147964 0.211295821994 -1.4155549417" xyz="0.0068289476 0.0078072758 -0.1256931"/>
+      <origin rpy="-1.56543904386 -1.18577783239 1.18081773652" xyz="-2.6825e-07 1.2015e-06 -0.0105021"/>
       <geometry>
-        <cylinder length="0.0653101397381" radius="0.105258"/>
+        <cylinder length="9.94006756802e-05" radius="0.0709883"/>
       </geometry>
     </collision>
     <collision>
-      <origin rpy="-2.89499147964 0.211295821994 -1.4155549417" xyz="-0.000020 0.000013 -0.094730"/>
+      <origin rpy="-1.56543904386 -1.18577783239 1.18081773652" xyz="0.000046 -0.000017 -0.010502"/>
       <geometry>
-        <sphere radius="0.105258"/>
+        <sphere radius="0.0709883"/>
       </geometry>
     </collision>
     <collision>
-      <origin rpy="-2.89499147964 0.211295821994 -1.4155549417" xyz="0.013678 0.015601 -0.156656"/>
+      <origin rpy="-1.56543904386 -1.18577783239 1.18081773652" xyz="-0.000046 0.000020 -0.010502"/>
       <geometry>
-        <sphere radius="0.105258"/>
+        <sphere radius="0.0709883"/>
       </geometry>
     </collision>
   </link>
+  <link name="r_wrist"/>
+  <joint name="r_wrist_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    <parent link="RWrMot3"/>
+    <child link="r_wrist"/>
+  </joint>
   <joint name="r_handj" type="fixed">
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.0395"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
     <parent link="r_wrist"/>
-    <child link="RSoftHandLink"/>
+    <child link="RBall"/>
   </joint>
-  <joint name="r_handj2" type="fixed">
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.041 -0.1005"/>
-    <parent link="RSoftHandLink"/>
-    <child link="RSoftHand"/>
-  </joint>
-  <joint name="TCP_Rjoint" type="fixed">
-    <origin rpy="-1.57079632679 0.0 0.0" xyz="0.0 0.0 0.0"/>
-    <parent link="RSoftHand"/>
-    <child link="TCP_R"/>
-  </joint>
-  <link name="LSoftHand"/>
-  <link name="TCP_L"/>
-  <link name="LSoftHandLink">
+  <link name="LBall">
     <inertial>
-      <origin rpy="0.0 0.0 0.0" xyz="0.0020955992 -0.0043009755 -0.060792229"/>
-      <mass value="1.4"/>
-      <inertia ixx="0.0046340021" ixy="5.6301252e-05" ixz="0.00021001241" iyy="0.0052222303" iyz="-0.00020916976" izz="0.0013961628"/>
+      <origin rpy="0.0 0.0 0.0" xyz="-1.0072498e-05 3.7590658e-05 0.019772332"/>
+      <mass value="1.27"/>
+      <inertia ixx="0.0023061092" ixy="2.9181758e-07" ixz="-2.1246684e-07" iyy="0.0023053155" iyz="7.9290978e-07" izz="0.0030675616"/>
     </inertial>
     <visual>
       <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="package://cogimon_urdf/meshes/SoftHandOpen2.STL" scale="0.001 -0.001 0.001"/>
+        <mesh filename="package://cogimon_urdf/meshes/BallHand.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="grey"/>
     </visual>
     <collision>
-      <origin rpy="2.89499147964 0.211295821994 1.4155549417" xyz="0.0068289476 -0.0078072758 -0.1256931"/>
+      <origin rpy="-1.56543904386 -1.18577783239 1.18081773652" xyz="-2.6825e-07 1.2015e-06 -0.0105021"/>
       <geometry>
-        <cylinder length="0.0653101397381" radius="0.105258"/>
+        <cylinder length="9.94006756802e-05" radius="0.0709883"/>
       </geometry>
     </collision>
     <collision>
-      <origin rpy="2.89499147964 0.211295821994 1.4155549417" xyz="-0.000020 -0.000013 -0.094730"/>
+      <origin rpy="-1.56543904386 -1.18577783239 1.18081773652" xyz="0.000046 -0.000017 -0.010502"/>
       <geometry>
-        <sphere radius="0.105258"/>
+        <sphere radius="0.0709883"/>
       </geometry>
     </collision>
     <collision>
-      <origin rpy="2.89499147964 0.211295821994 1.4155549417" xyz="0.013678 -0.015601 -0.156656"/>
+      <origin rpy="-1.56543904386 -1.18577783239 1.18081773652" xyz="-0.000046 0.000020 -0.010502"/>
       <geometry>
-        <sphere radius="0.105258"/>
+        <sphere radius="0.0709883"/>
       </geometry>
     </collision>
   </link>
+  <link name="l_wrist"/>
+  <joint name="l_wrist_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    <parent link="LWrMot3"/>
+    <child link="l_wrist"/>
+  </joint>
   <joint name="l_handj" type="fixed">
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.0395"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
     <parent link="l_wrist"/>
-    <child link="LSoftHandLink"/>
-  </joint>
-  <joint name="l_handj2" type="fixed">
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 -0.041 -0.1005"/>
-    <parent link="LSoftHandLink"/>
-    <child link="LSoftHand"/>
-  </joint>
-  <joint name="TCP_Ljoint" type="fixed">
-    <origin rpy="1.57079632679 3.14159265359 0.0" xyz="0.0 0.0 0.0"/>
-    <parent link="LSoftHand"/>
-    <child link="TCP_L"/>
+    <child link="LBall"/>
   </joint>
   <link name="l_ankle"/>
   <link name="l_sole"/>
