@@ -1295,6 +1295,7 @@
     </collision>
   </link>
   <link name="r_wrist"/>
+  <link name="r_ball_tip"/>
   <joint name="r_wrist_joint" type="fixed">
     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
     <parent link="RWrMot3"/>
@@ -1304,6 +1305,11 @@
     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
     <parent link="r_wrist"/>
     <child link="RBall"/>
+  </joint>
+  <joint name="r_ball_tipj" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.07"/>
+    <parent link="RBall"/>
+    <child link="r_ball_tip"/>
   </joint>
   <link name="LBall">
     <inertial>
@@ -1338,6 +1344,7 @@
     </collision>
   </link>
   <link name="l_wrist"/>
+  <link name="l_ball_tip"/>
   <joint name="l_wrist_joint" type="fixed">
     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
     <parent link="LWrMot3"/>
@@ -1347,6 +1354,11 @@
     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
     <parent link="l_wrist"/>
     <child link="LBall"/>
+  </joint>
+  <joint name="l_ball_tipj" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.07"/>
+    <parent link="LBall"/>
+    <child link="l_ball_tip"/>
   </joint>
   <link name="l_ankle"/>
   <link name="l_sole"/>
