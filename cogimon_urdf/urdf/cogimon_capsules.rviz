@@ -1311,6 +1311,12 @@
     <parent link="RBall"/>
     <child link="r_ball_tip"/>
   </joint>
+  <link name="TCP_R"/>
+  <joint name="TCP_R_joint" type="fixed">
+    <origin rpy="0.0 3.14159265359 0.0" xyz="0.0 0.0 0.0"/>
+    <parent link="r_ball_tip"/>
+    <child link="TCP_R"/>
+  </joint>
   <link name="LBall">
     <inertial>
       <origin rpy="0.0 0.0 0.0" xyz="-1.0072498e-05 3.7590658e-05 0.019772332"/>
@@ -1349,6 +1355,12 @@
     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
     <parent link="LWrMot3"/>
     <child link="l_wrist"/>
+  </joint>
+  <link name="TCP_L"/>
+  <joint name="TCP_L_joint" type="fixed">
+    <origin rpy="0.0 3.14159265359 0.0" xyz="0.0 0.0 0.0"/>
+    <parent link="l_ball_tip"/>
+    <child link="TCP_L"/>
   </joint>
   <joint name="l_handj" type="fixed">
     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>

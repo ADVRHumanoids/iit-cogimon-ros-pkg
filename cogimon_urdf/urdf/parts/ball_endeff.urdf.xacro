@@ -46,6 +46,14 @@
 <child link="r_ball_tip"/>
 <origin xyz="0 0 -0.07" rpy="0 0 0"/>
 </joint>
+
+<link name="TCP_R"/>
+
+<joint name="TCP_R_joint" type="fixed">
+       <parent link="r_ball_tip"/>
+       <child link="TCP_R"/>
+       <origin xyz="0 0 0" rpy="0 ${PI} 0" />
+</joint>
   
 
 </xacro:if>
@@ -80,6 +88,14 @@
        <parent link="LWrMot3"/>
        <child link="l_wrist"/>
        <origin xyz="0 0 0" rpy="0 0 0" />
+</joint>
+
+<link name="TCP_L"/>
+
+<joint name="TCP_L_joint" type="fixed">
+       <parent link="l_ball_tip"/>
+       <child link="TCP_L"/>
+       <origin xyz="0 0 0" rpy="0 ${PI} 0" />
 </joint>
 <!-- JOINTS -->
   
