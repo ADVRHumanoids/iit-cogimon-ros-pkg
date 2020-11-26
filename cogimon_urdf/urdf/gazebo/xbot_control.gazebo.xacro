@@ -3,6 +3,12 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
 <gazebo>
+
+    <plugin name="xbot2_link_state_sensor" filename="libxbot2_gz_link_state_sensor.so">
+        <links>
+            <link name="base_link"/>
+        </links>
+    </plugin>
     
     <plugin name="xbot2_gz_ft_server" filename="libxbot2_gz_ft_server.so"/>
     
