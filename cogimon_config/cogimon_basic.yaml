@@ -22,7 +22,11 @@ xbotcore_devices:
         
     imu_gz:
         names: []
-        thread: rt_main    
+        thread: rt_main   
+        
+    ft_gz:
+        names: []
+        thread: rt_main     
 
     link_state_sensor:
         names: []
