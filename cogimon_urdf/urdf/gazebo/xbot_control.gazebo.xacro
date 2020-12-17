@@ -38,16 +38,16 @@
             <pid name="RShLat" profile="med_mot"/>
             <pid name="RShYaw" profile="med_mot"/>
             <pid name="RElbj" profile="med_mot"/>
-            <pid name="RForearmPlate" profile="small_motor"/>
-            <pid name="RWrj1" profile="small_motor"/>
-            <pid name="RWrj2" profile="small_motor"/>
+            <pid name="RForearmPlate" profile="small_mot"/>
+            <pid name="RWrj1" profile="small_mot"/>
+            <pid name="RWrj2" profile="small_mot"/>
             <pid name="LShSag" profile="med_mot"/>
             <pid name="LShLat" profile="med_mot"/>
             <pid name="LShYaw" profile="med_mot"/>
             <pid name="LElbj" profile="med_mot"/>
-            <pid name="LForearmPlate" profile="small_motor"/>
-            <pid name="LWrj1" profile="small_motor"/>
-            <pid name="LWrj2" profile="small_motor"/>
+            <pid name="LForearmPlate" profile="small_mot"/>
+            <pid name="LWrj1" profile="small_mot"/>
+            <pid name="LWrj2" profile="small_mot"/>
         </pid>
     </plugin>
 
