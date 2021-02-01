@@ -17,7 +17,7 @@
     <plugin name="xbot2_gz_joint_server" filename="libxbot2_gz_joint_server.so">
         <pid>
             <gain name="small_mot"  p="100"  d="5"/>
-            <gain name="med_mot"  p="500"  d="10"/>
+            <gain name="med_mot"  p="1000"  d="10"/>
             <gain name="bigl_mot"  p="3000"  d="20"/>
             
             <pid name="LHipLat" profile="bigl_mot"/>
