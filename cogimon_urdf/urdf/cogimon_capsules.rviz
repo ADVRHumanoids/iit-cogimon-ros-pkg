@@ -1311,6 +1311,30 @@
     <parent link="RBall"/>
     <child link="r_ball_tip"/>
   </joint>
+  <link name="r_ball_tip_u"/>
+  <joint name="r_ball_tipj_u" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.07 0.0 0.0"/>
+    <parent link="RBall"/>
+    <child link="r_ball_tip_u"/>
+  </joint>
+  <link name="r_ball_tip_d"/>
+  <joint name="r_ball_tipj_d" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="-0.07 0.0 0.0"/>
+    <parent link="RBall"/>
+    <child link="r_ball_tip_d"/>
+  </joint>
+  <link name="r_ball_tip_l"/>
+  <joint name="r_ball_tipj_l" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.07 0.0"/>
+    <parent link="RBall"/>
+    <child link="r_ball_tip_l"/>
+  </joint>
+  <link name="r_ball_tip_r"/>
+  <joint name="r_ball_tipj_r" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 -0.07 0.0"/>
+    <parent link="RBall"/>
+    <child link="r_ball_tip_r"/>
+  </joint>
   <link name="TCP_R"/>
   <joint name="TCP_R_joint" type="fixed">
     <origin rpy="0.0 3.14159265359 0.0" xyz="0.0 0.0 0.0"/>
@@ -1355,6 +1379,30 @@
     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
     <parent link="LWrMot3"/>
     <child link="l_wrist"/>
+  </joint>
+  <link name="l_ball_tip_u"/>
+  <joint name="l_ball_tipj_u" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.07 0.0 0.0"/>
+    <parent link="LBall"/>
+    <child link="l_ball_tip_u"/>
+  </joint>
+  <link name="l_ball_tip_d"/>
+  <joint name="l_ball_tipj_d" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="-0.07 0.0 0.0"/>
+    <parent link="LBall"/>
+    <child link="l_ball_tip_d"/>
+  </joint>
+  <link name="l_ball_tip_l"/>
+  <joint name="l_ball_tipj_l" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.07 0.0"/>
+    <parent link="LBall"/>
+    <child link="l_ball_tip_l"/>
+  </joint>
+  <link name="l_ball_tip_r"/>
+  <joint name="l_ball_tipj_r" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 -0.07 0.0"/>
+    <parent link="LBall"/>
+    <child link="l_ball_tip_r"/>
   </joint>
   <link name="TCP_L"/>
   <joint name="TCP_L_joint" type="fixed">
