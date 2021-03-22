@@ -146,21 +146,9 @@
       <material name="green"/>
     </visual>
     <collision>
-      <origin rpy="2.67220248899 -0.09478204323 -0.391623341871" xyz="-0.004103405 -0.01108644 -0.034134805"/>
+      <origin rpy="0 1.57 0" xyz="-0.01 -0.015 -0.055"/>
       <geometry>
-        <cylinder length="0.0560156299915" radius="0.0944457"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin rpy="2.67220248899 -0.09478204323 -0.391623341871" xyz="-0.001453 0.001526 -0.009268"/>
-      <geometry>
-        <sphere radius="0.0944457"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin rpy="2.67220248899 -0.09478204323 -0.391623341871" xyz="-0.006754 -0.023699 -0.059001"/>
-      <geometry>
-        <sphere radius="0.0944457"/>
+        <cylinder length="0.17" radius="0.070"/>
       </geometry>
     </collision>
   </link>
@@ -374,21 +362,9 @@
       <material name="green"/>
     </visual>
     <collision>
-      <origin rpy="-2.67220248899 -0.09478204323 0.391623341871" xyz="-0.004103405 0.01108644 -0.034134805"/>
+      <origin rpy="0 1.57 0" xyz="-0.01 0.015 -0.055"/>
       <geometry>
-        <cylinder length="0.0560156299915" radius="0.0944457"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin rpy="-2.67220248899 -0.09478204323 0.391623341871" xyz="-0.001453 -0.001526 -0.009268"/>
-      <geometry>
-        <sphere radius="0.0944457"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin rpy="-2.67220248899 -0.09478204323 0.391623341871" xyz="-0.006754 0.023699 -0.059001"/>
-      <geometry>
-        <sphere radius="0.0944457"/>
+        <cylinder length="0.17" radius="0.070"/>
       </geometry>
     </collision>
   </link>
@@ -602,21 +578,9 @@
       <material name="dark_grey"/>
     </visual>
     <collision>
-      <origin rpy="-1.56990183621 -0.00385969868751 0.00385624777512" xyz="-0.0417117 4.9e-05 0.04395835"/>
+      <origin rpy="0 0 0" xyz="-0.02 0 0"/>
       <geometry>
-        <cylinder length="0.0589166624181" radius="0.227763"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin rpy="-1.56990183621 -0.00385969868751 0.00385624777512" xyz="-0.041598 -0.029409 0.043932"/>
-      <geometry>
-        <sphere radius="0.227763"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin rpy="-1.56990183621 -0.00385969868751 0.00385624777512" xyz="-0.041825 0.029507 0.043985"/>
-      <geometry>
-        <sphere radius="0.227763"/>
+        <box size="0.22 0.30 0.40"/>
       </geometry>
     </collision>
   </link>
