@@ -37,7 +37,7 @@
 
   <!-- Load the URDF/SRDF into the ROS Parameter Server -->
   <param name="robot_description"
-         command="$(find xacro)/xacro --inorder '$(find cogimon_urdf)/urdf/cogimon_robot.urdf.xacro'"/>
+         command="$(find xacro)/xacro --inorder add_base_joint:=false '$(find cogimon_urdf)/urdf/cogimon_robot.urdf.xacro'"/>
 
   <param name="robot_semantic_description" textfile="$(find cogimon_srdf)/srdf/cogimon.srdf"/>
 
