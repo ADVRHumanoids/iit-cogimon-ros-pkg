@@ -102,6 +102,26 @@
 </xacro:unless>
 </group>
 
+
+<group name="arms">
+    <xacro:if value="${COGIMON_LEFT_ARM}">
+        <group name="left_arm"/>
+    </xacro:if>
+    <xacro:if value="${COGIMON_RIGHT_ARM}">
+        <group name="right_arm"/>
+    </xacro:if>
+</group>
+<group name="legs">
+    <xacro:if value="${COGIMON_LEFT_LEG}">
+        <group name="left_leg"/>
+    </xacro:if>
+    <xacro:if value="${COGIMON_RIGHT_LEG}">
+        <group name="right_leg"/>
+    </xacro:if>
+</group>
+
+
+
 <xacro:if value="${COGIMON_OROCOS_GAZEBO}">
    <xacro:include filename="$(find cogimon_urdf)/urdf/gazebo/rtt_gazebo.gazebo.xacro" /> 
 </xacro:if> 
@@ -144,4 +164,233 @@
 	</xacro:unless>
 </group_state>
 </xacro:if>
+
+<disable_collisions link1="LThighUpLeg" link2="Waist" reason="Adjacent"/>
+<disable_collisions link1="RThighUpLeg" link2="Waist" reason="Adjacent"/>
+<disable_collisions link1="DWL" link2="DWLExt" reason="Adjacent"/>
+<disable_collisions link1="DWL" link2="DWYTorso" reason="Never"/>
+<disable_collisions link1="DWL" link2="Head" reason="Never"/>
+<disable_collisions link1="DWL" link2="LElb" reason="Never"/>
+<disable_collisions link1="DWL" link2="LFootmot" reason="Never"/>
+<disable_collisions link1="DWL" link2="LShp" reason="Never"/>
+<disable_collisions link1="DWL" link2="LShr" reason="Never"/>
+<disable_collisions link1="DWL" link2="LShy" reason="Never"/>
+<disable_collisions link1="DWL" link2="LThighLowLeg" reason="Never"/>
+<disable_collisions link1="DWL" link2="LThighUpLeg" reason="Never"/>
+<disable_collisions link1="DWL" link2="RElb" reason="Never"/>
+<disable_collisions link1="DWL" link2="RFootmot" reason="Never"/>
+<disable_collisions link1="DWL" link2="RShp" reason="Never"/>
+<disable_collisions link1="DWL" link2="RShr" reason="Never"/>
+<disable_collisions link1="DWL" link2="RShy" reason="Never"/>
+<disable_collisions link1="DWL" link2="RThighLowLeg" reason="Never"/>
+<disable_collisions link1="DWL" link2="RThighUpLeg" reason="Never"/>
+<disable_collisions link1="DWL" link2="Waist" reason="Adjacent"/>
+<disable_collisions link1="DWL" link2="imu_link" reason="Never"/>
+<disable_collisions link1="DWLExt" link2="DWYTorso" reason="Adjacent"/>
+<disable_collisions link1="DWLExt" link2="Head" reason="Never"/>
+<disable_collisions link1="DWLExt" link2="LElb" reason="Never"/>
+<disable_collisions link1="DWLExt" link2="LHipMot" reason="Never"/>
+<disable_collisions link1="DWLExt" link2="LShp" reason="Never"/>
+<disable_collisions link1="DWLExt" link2="LShr" reason="Never"/>
+<disable_collisions link1="DWLExt" link2="LShy" reason="Never"/>
+<disable_collisions link1="DWLExt" link2="LThighLowLeg" reason="Never"/>
+<disable_collisions link1="DWLExt" link2="LThighUpLeg" reason="Never"/>
+<disable_collisions link1="DWLExt" link2="RElb" reason="Never"/>
+<disable_collisions link1="DWLExt" link2="RHipMot" reason="Never"/>
+<disable_collisions link1="DWLExt" link2="RShp" reason="Never"/>
+<disable_collisions link1="DWLExt" link2="RShr" reason="Never"/>
+<disable_collisions link1="DWLExt" link2="RShy" reason="Never"/>
+<disable_collisions link1="DWLExt" link2="RThighLowLeg" reason="Never"/>
+<disable_collisions link1="DWLExt" link2="RThighUpLeg" reason="Never"/>
+<disable_collisions link1="DWLExt" link2="Waist" reason="Never"/>
+<disable_collisions link1="DWLExt" link2="imu_link" reason="Never"/>
+<disable_collisions link1="DWYTorso" link2="Head" reason="Adjacent"/>
+<disable_collisions link1="DWYTorso" link2="LShp" reason="Adjacent"/>
+<disable_collisions link1="DWYTorso" link2="LShr" reason="Default"/>
+<disable_collisions link1="DWYTorso" link2="LShy" reason="Never"/>
+<disable_collisions link1="DWYTorso" link2="LThighLowLeg" reason="Never"/>
+<disable_collisions link1="DWYTorso" link2="RElb" reason="Never"/>
+<disable_collisions link1="DWYTorso" link2="RShp" reason="Adjacent"/>
+<disable_collisions link1="DWYTorso" link2="RShr" reason="Default"/>
+<disable_collisions link1="DWYTorso" link2="RShy" reason="Never"/>
+<disable_collisions link1="DWYTorso" link2="RThighLowLeg" reason="Never"/>
+<disable_collisions link1="DWYTorso" link2="Waist" reason="Never"/>
+<disable_collisions link1="DWYTorso" link2="imu_link" reason="Never"/>
+<disable_collisions link1="Head" link2="LFoot" reason="Never"/>
+<disable_collisions link1="Head" link2="LFootmot" reason="Never"/>
+<disable_collisions link1="Head" link2="LHipMot" reason="Never"/>
+<disable_collisions link1="Head" link2="LLowLeg" reason="Never"/>
+<disable_collisions link1="Head" link2="LShp" reason="Never"/>
+<disable_collisions link1="Head" link2="LShr" reason="Never"/>
+<disable_collisions link1="Head" link2="LThighLowLeg" reason="Never"/>
+<disable_collisions link1="Head" link2="LThighUpLeg" reason="Never"/>
+<disable_collisions link1="Head" link2="RFoot" reason="Never"/>
+<disable_collisions link1="Head" link2="RFootmot" reason="Never"/>
+<disable_collisions link1="Head" link2="RHipMot" reason="Never"/>
+<disable_collisions link1="Head" link2="RLowLeg" reason="Never"/>
+<disable_collisions link1="Head" link2="RShp" reason="Never"/>
+<disable_collisions link1="Head" link2="RShr" reason="Never"/>
+<disable_collisions link1="Head" link2="RThighLowLeg" reason="Never"/>
+<disable_collisions link1="Head" link2="RThighUpLeg" reason="Never"/>
+<disable_collisions link1="Head" link2="Waist" reason="Never"/>
+<disable_collisions link1="Head" link2="imu_link" reason="Never"/>
+<disable_collisions link1="LBall" link2="LElb" reason="Never"/>
+<disable_collisions link1="LBall" link2="LForearm" reason="Never"/>
+<disable_collisions link1="LBall" link2="LShy" reason="Never"/>
+<disable_collisions link1="LBall" link2="LWrMot2" reason="Default"/>
+<disable_collisions link1="LBall" link2="LWrMot3" reason="Adjacent"/>
+<disable_collisions link1="LElb" link2="LForearm" reason="Adjacent"/>
+<disable_collisions link1="LElb" link2="LShp" reason="Never"/>
+<disable_collisions link1="LElb" link2="LShr" reason="Never"/>
+<disable_collisions link1="LElb" link2="LShy" reason="Adjacent"/>
+<disable_collisions link1="LElb" link2="LWrMot2" reason="Never"/>
+<disable_collisions link1="LElb" link2="LWrMot3" reason="Never"/>
+<disable_collisions link1="LElb" link2="RHipMot" reason="Never"/>
+<disable_collisions link1="LElb" link2="RShp" reason="Never"/>
+<disable_collisions link1="LElb" link2="RShr" reason="Never"/>
+<disable_collisions link1="LElb" link2="imu_link" reason="Never"/>
+<disable_collisions link1="LFoot" link2="LFootmot" reason="Adjacent"/>
+<disable_collisions link1="LFoot" link2="LHipMot" reason="Never"/>
+<disable_collisions link1="LFoot" link2="LLowLeg" reason="Never"/>
+<disable_collisions link1="LFoot" link2="LThighLowLeg" reason="Never"/>
+<disable_collisions link1="LFoot" link2="LThighUpLeg" reason="Never"/>
+<disable_collisions link1="LFootmot" link2="LHipMot" reason="Never"/>
+<disable_collisions link1="LFootmot" link2="LLowLeg" reason="Adjacent"/>
+<disable_collisions link1="LFootmot" link2="LShp" reason="Never"/>
+<disable_collisions link1="LFootmot" link2="LThighLowLeg" reason="Never"/>
+<disable_collisions link1="LFootmot" link2="LThighUpLeg" reason="Never"/>
+<disable_collisions link1="LFootmot" link2="RShp" reason="Never"/>
+<disable_collisions link1="LFootmot" link2="RShr" reason="Never"/>
+<disable_collisions link1="LFootmot" link2="imu_link" reason="Never"/>
+<disable_collisions link1="LForearm" link2="LHipMot" reason="Default"/>
+<disable_collisions link1="LForearm" link2="LShp" reason="Never"/>
+<disable_collisions link1="LForearm" link2="LWrMot2" reason="Adjacent"/>
+<disable_collisions link1="LForearm" link2="LWrMot3" reason="Never"/>
+<disable_collisions link1="LHipMot" link2="LLowLeg" reason="Never"/>
+<disable_collisions link1="LHipMot" link2="LShp" reason="Never"/>
+<disable_collisions link1="LHipMot" link2="LShr" reason="Never"/>
+<disable_collisions link1="LHipMot" link2="LThighLowLeg" reason="Never"/>
+<disable_collisions link1="LHipMot" link2="LThighUpLeg" reason="Adjacent"/>
+<disable_collisions link1="LHipMot" link2="RShp" reason="Never"/>
+<disable_collisions link1="LHipMot" link2="RShr" reason="Never"/>
+<disable_collisions link1="LHipMot" link2="RShy" reason="Never"/>
+<disable_collisions link1="LHipMot" link2="RThighLowLeg" reason="Never"/>
+<disable_collisions link1="LHipMot" link2="Waist" reason="Adjacent"/>
+<disable_collisions link1="LHipMot" link2="imu_link" reason="Never"/>
+<disable_collisions link1="LLowLeg" link2="LShp" reason="Never"/>
+<disable_collisions link1="LLowLeg" link2="LThighLowLeg" reason="Adjacent"/>
+<disable_collisions link1="LLowLeg" link2="LThighUpLeg" reason="Never"/>
+<disable_collisions link1="LLowLeg" link2="RShp" reason="Never"/>
+<disable_collisions link1="LLowLeg" link2="RShr" reason="Never"/>
+<disable_collisions link1="LShp" link2="LShr" reason="Adjacent"/>
+<disable_collisions link1="LShp" link2="LShy" reason="Never"/>
+<disable_collisions link1="LShp" link2="LThighLowLeg" reason="Never"/>
+<disable_collisions link1="LShp" link2="LThighUpLeg" reason="Never"/>
+<disable_collisions link1="LShp" link2="RElb" reason="Never"/>
+<disable_collisions link1="LShp" link2="RFootmot" reason="Never"/>
+<disable_collisions link1="LShp" link2="RHipMot" reason="Never"/>
+<disable_collisions link1="LShp" link2="RLowLeg" reason="Never"/>
+<disable_collisions link1="LShp" link2="RShp" reason="Never"/>
+<disable_collisions link1="LShp" link2="RShr" reason="Never"/>
+<disable_collisions link1="LShp" link2="RShy" reason="Never"/>
+<disable_collisions link1="LShp" link2="RThighLowLeg" reason="Never"/>
+<disable_collisions link1="LShp" link2="RThighUpLeg" reason="Never"/>
+<disable_collisions link1="LShp" link2="Waist" reason="Never"/>
+<disable_collisions link1="LShp" link2="imu_link" reason="Never"/>
+<disable_collisions link1="LShr" link2="LShy" reason="Adjacent"/>
+<disable_collisions link1="LShr" link2="LThighLowLeg" reason="Never"/>
+<disable_collisions link1="LShr" link2="LThighUpLeg" reason="Never"/>
+<disable_collisions link1="LShr" link2="RElb" reason="Never"/>
+<disable_collisions link1="LShr" link2="RHipMot" reason="Never"/>
+<disable_collisions link1="LShr" link2="RLowLeg" reason="Never"/>
+<disable_collisions link1="LShr" link2="RShp" reason="Never"/>
+<disable_collisions link1="LShr" link2="RShr" reason="Never"/>
+<disable_collisions link1="LShr" link2="RShy" reason="Never"/>
+<disable_collisions link1="LShr" link2="RThighLowLeg" reason="Never"/>
+<disable_collisions link1="LShr" link2="RThighUpLeg" reason="Never"/>
+<disable_collisions link1="LShr" link2="Waist" reason="Never"/>
+<disable_collisions link1="LShr" link2="imu_link" reason="Never"/>
+<disable_collisions link1="LShy" link2="LWrMot2" reason="Never"/>
+<disable_collisions link1="LShy" link2="LWrMot3" reason="Never"/>
+<disable_collisions link1="LShy" link2="RHipMot" reason="Never"/>
+<disable_collisions link1="LShy" link2="RShp" reason="Never"/>
+<disable_collisions link1="LShy" link2="RShr" reason="Never"/>
+<disable_collisions link1="LShy" link2="RThighLowLeg" reason="Never"/>
+<disable_collisions link1="LShy" link2="Waist" reason="Never"/>
+<disable_collisions link1="LShy" link2="imu_link" reason="Never"/>
+<disable_collisions link1="LThighLowLeg" link2="LThighUpLeg" reason="Adjacent"/>
+<disable_collisions link1="LThighLowLeg" link2="RHipMot" reason="Never"/>
+<disable_collisions link1="LThighLowLeg" link2="RShp" reason="Never"/>
+<disable_collisions link1="LThighLowLeg" link2="RShr" reason="Never"/>
+<disable_collisions link1="LThighLowLeg" link2="RShy" reason="Never"/>
+<disable_collisions link1="LThighLowLeg" link2="Waist" reason="Never"/>
+<disable_collisions link1="LThighLowLeg" link2="imu_link" reason="Never"/>
+<disable_collisions link1="LThighUpLeg" link2="RShp" reason="Never"/>
+<disable_collisions link1="LThighUpLeg" link2="RShr" reason="Never"/>
+<disable_collisions link1="LThighUpLeg" link2="RShy" reason="Never"/>
+<disable_collisions link1="LThighUpLeg" link2="imu_link" reason="Never"/>
+<disable_collisions link1="LWrMot2" link2="LWrMot3" reason="Adjacent"/>
+<disable_collisions link1="LWrMot3" link2="RWrMot3" reason="Never"/>
+<disable_collisions link1="RBall" link2="RElb" reason="Never"/>
+<disable_collisions link1="RBall" link2="RForearm" reason="Never"/>
+<disable_collisions link1="RBall" link2="RShy" reason="Never"/>
+<disable_collisions link1="RBall" link2="RWrMot2" reason="Default"/>
+<disable_collisions link1="RBall" link2="RWrMot3" reason="Adjacent"/>
+<disable_collisions link1="RElb" link2="RForearm" reason="Adjacent"/>
+<disable_collisions link1="RElb" link2="RShp" reason="Never"/>
+<disable_collisions link1="RElb" link2="RShr" reason="Never"/>
+<disable_collisions link1="RElb" link2="RShy" reason="Adjacent"/>
+<disable_collisions link1="RElb" link2="RWrMot2" reason="Never"/>
+<disable_collisions link1="RElb" link2="RWrMot3" reason="Never"/>
+<disable_collisions link1="RElb" link2="imu_link" reason="Never"/>
+<disable_collisions link1="RFoot" link2="RFootmot" reason="Adjacent"/>
+<disable_collisions link1="RFoot" link2="RHipMot" reason="Never"/>
+<disable_collisions link1="RFoot" link2="RLowLeg" reason="Never"/>
+<disable_collisions link1="RFoot" link2="RThighLowLeg" reason="Never"/>
+<disable_collisions link1="RFoot" link2="RThighUpLeg" reason="Never"/>
+<disable_collisions link1="RFoot" link2="imu_link" reason="Never"/>
+<disable_collisions link1="RFootmot" link2="RHipMot" reason="Never"/>
+<disable_collisions link1="RFootmot" link2="RLowLeg" reason="Adjacent"/>
+<disable_collisions link1="RFootmot" link2="RShp" reason="Never"/>
+<disable_collisions link1="RFootmot" link2="RThighLowLeg" reason="Never"/>
+<disable_collisions link1="RFootmot" link2="RThighUpLeg" reason="Never"/>
+<disable_collisions link1="RFootmot" link2="imu_link" reason="Never"/>
+<disable_collisions link1="RForearm" link2="RHipMot" reason="Default"/>
+<disable_collisions link1="RForearm" link2="RShp" reason="Never"/>
+<disable_collisions link1="RForearm" link2="RWrMot2" reason="Adjacent"/>
+<disable_collisions link1="RForearm" link2="RWrMot3" reason="Never"/>
+<disable_collisions link1="RHipMot" link2="RLowLeg" reason="Never"/>
+<disable_collisions link1="RHipMot" link2="RShp" reason="Never"/>
+<disable_collisions link1="RHipMot" link2="RShr" reason="Never"/>
+<disable_collisions link1="RHipMot" link2="RThighLowLeg" reason="Never"/>
+<disable_collisions link1="RHipMot" link2="RThighUpLeg" reason="Adjacent"/>
+<disable_collisions link1="RHipMot" link2="Waist" reason="Adjacent"/>
+<disable_collisions link1="RHipMot" link2="imu_link" reason="Never"/>
+<disable_collisions link1="RLowLeg" link2="RShr" reason="Never"/>
+<disable_collisions link1="RLowLeg" link2="RThighLowLeg" reason="Adjacent"/>
+<disable_collisions link1="RLowLeg" link2="RThighUpLeg" reason="Never"/>
+<disable_collisions link1="RShp" link2="RShr" reason="Adjacent"/>
+<disable_collisions link1="RShp" link2="RShy" reason="Never"/>
+<disable_collisions link1="RShp" link2="RThighLowLeg" reason="Never"/>
+<disable_collisions link1="RShp" link2="RThighUpLeg" reason="Never"/>
+<disable_collisions link1="RShp" link2="Waist" reason="Never"/>
+<disable_collisions link1="RShp" link2="imu_link" reason="Never"/>
+<disable_collisions link1="RShr" link2="RShy" reason="Adjacent"/>
+<disable_collisions link1="RShr" link2="RThighLowLeg" reason="Never"/>
+<disable_collisions link1="RShr" link2="RThighUpLeg" reason="Never"/>
+<disable_collisions link1="RShr" link2="Waist" reason="Never"/>
+<disable_collisions link1="RShr" link2="imu_link" reason="Never"/>
+<disable_collisions link1="RShy" link2="RWrMot2" reason="Never"/>
+<disable_collisions link1="RShy" link2="RWrMot3" reason="Never"/>
+<disable_collisions link1="RShy" link2="Waist" reason="Never"/>
+<disable_collisions link1="RShy" link2="imu_link" reason="Never"/>
+<disable_collisions link1="RThighLowLeg" link2="RThighUpLeg" reason="Adjacent"/>
+<disable_collisions link1="RThighLowLeg" link2="Waist" reason="Never"/>
+<disable_collisions link1="RThighLowLeg" link2="imu_link" reason="Never"/>
+<disable_collisions link1="RThighUpLeg" link2="imu_link" reason="Never"/>
+<disable_collisions link1="RWrMot2" link2="RWrMot3" reason="Adjacent"/>
+<disable_collisions link1="Waist" link2="imu_link" reason="Adjacent"/>
+<disable_collisions link1="DWL" link2="LHipMot" reason="Adjacent"/>
+<disable_collisions link1="DWL" link2="RHipMot" reason="Adjacent"/>
+
 </robot>
