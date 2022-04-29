@@ -1,24 +1,15 @@
-cmake_minimum_required(VERSION 2.8)
-PROJECT(iit-cogimon-ros-pkg)
+cmake_minimum_required(VERSION 3.0)
 
-add_custom_target(  acm
-                    COMMAND ${CMAKE_SOURCE_DIR}/cogimon_urdf/script/create_acm.sh cogimon)
+set(ROBOT_NAME cogimon)
+project(iit-${ROBOT_NAME}-ros-pkg VERSION 1.0.0)
 
-add_custom_target(	remove_old_cogimon_urdf_gazebo ALL
-    				COMMAND ${CMAKE_COMMAND} -E remove_directory 
-        			"~/.gazebo/models/cogimon_urdf/")
+include(GenerateXrdf.cmake)
 
-add_custom_target(  remove_old_cogimon_gazebo ALL
-                    COMMAND ${CMAKE_COMMAND} -E remove_directory 
-                    "~/.gazebo/models/cogimon/")
+## add sub-packages
+add_subdirectory(cogimon_urdf)
+add_subdirectory(cogimon_srdf)
+add_subdirectory(cogimon_gazebo)
 
-add_custom_target(  compile_urdf_sdf ALL
-                    COMMAND ${CMAKE_SOURCE_DIR}/cogimon_urdf/script/create_urdf_srdf_sdf.sh cogimon)
+enable_testing()
 
-if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
-    add_custom_target(	copy_cogimon_gazebo ALL
-        				COMMAND ${CMAKE_COMMAND} -E copy_directory 
-            			"${PROJECT_SOURCE_DIR}/cogimon_gazebo/sdf/" 
-            			"~/.gazebo/models/cogimon/"
-            			DEPENDS remove_old_cogimon_gazebo)
-endif()
+include(GenerateDeb.cmake)
