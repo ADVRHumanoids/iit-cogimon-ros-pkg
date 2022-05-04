@@ -1,10 +1,10 @@
 <launch>
 
-     <!-- send the cogimon robot XML to param server -->
-     <param name="robot_description" command="$(find xacro)/xacro.py '$(find cogimon_urdf)/urdf/cogimon.urdf.xacro'" />
+    <!-- send the cogimon robot description to param server -->
+    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find cogimon_urdf)/urdf/cogimon.urdf.xacro'" />
      
-     <!-- send the cogimon robot XML to param server -->
-    <param name="robot_description_semantic" textfile="$(find cogimon_srdf)/srdf/cogimon.srdf" />   
+    <!-- send the cogimon robot description semantic to param server -->
+    <param name="robot_description_semantic" command="$(find xacro)/xacro --inorder '$(find cogimon_srdf)/srdf/cogimon.srdf.xacro'" />
 
     <!-- start robot state publisher -->
     <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen" >
