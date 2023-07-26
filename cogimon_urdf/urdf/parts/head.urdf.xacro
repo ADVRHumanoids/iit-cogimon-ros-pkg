@@ -57,10 +57,37 @@
     <parent link="Head"/>
     <child link="HeadHokuyo"/>
     <origin xyz="0.0853 0.0 0.1506" rpy="0 0.3491 0" />
-    <axis xyz="1 0 0" />
-    <limit velocity="6.283" effort="20" lower="-100." upper="100." /> 
+    <axis xyz="0 1 0" />
+    <limit velocity="6.283" effort="20" lower="-3.14" upper="3.14" /> 
     <dynamics friction="0" damping="3.0"/>
   </joint>
+  
+  <xacro:include filename="$(find realsense_gazebo_description)/urdf/_d435i.urdf.xacro" />
+  
+  <xacro:property name="d435_head_origin">
+    <origin xyz="0.13015 0 -0.0125" rpy="0 0 0"/>
+  </xacro:property>
+  
+  <xacro:sensor_d435i parent="HeadHokuyo" 
+    name="head_camera" 
+    topics_ns="head_camera" 
+    enable_pointCloud="true" 
+    align_depth="true" 
+    unite_imu_method="false" 
+    visualize="true" 
+    accel_fps="300" 
+    gyro_fps="300" 
+    depth_width="1280" 
+    depth_height="720" 
+    depth_fps="90" 
+    infra_width="1280" 
+    infra_height="720" 
+    infra_fps="90" 
+    color_width="1280" 
+    color_height="720" 
+    color_fps="30">
+    <xacro:insert_block name="d435_head_origin" />
+  </xacro:sensor_d435i>
 
 </xacro:unless>
 
@@ -70,7 +97,7 @@
     <parent link="HeadHokuyo"/>
     <child link="HokuyoLaser"/>
     <origin xyz="${65.2577*mmTom} 0.0 0.0" rpy="0 0 0" />
-  </joint>
+</joint>
 
 
 </xacro:if>

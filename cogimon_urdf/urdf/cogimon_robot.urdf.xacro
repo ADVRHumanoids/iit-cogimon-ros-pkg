@@ -8,6 +8,7 @@
   This file groups files to use COGIMON in GAZEBO
   
   -->
+  
   <xacro:include filename="$(find cogimon_urdf)/urdf/cogimon.urdf.xacro" />
 
   <xacro:include filename="$(find cogimon_urdf)/urdf/gazebo/cogimon.gazebo.xacro" />

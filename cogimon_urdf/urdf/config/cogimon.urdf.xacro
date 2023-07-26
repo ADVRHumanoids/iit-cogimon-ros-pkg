@@ -24,7 +24,7 @@
      used in the hardware and visualization, not for IK and ID.
 -->
 <!-- *************************************-->
-<xacro:property name="COGIMON_LASER_FIXED" value="true" />
+<xacro:property name="COGIMON_LASER_FIXED" value="false" />
 
 <!-- ************COGIMON_PENNACCHIO*******-->
 <!--

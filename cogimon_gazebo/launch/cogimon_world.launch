@@ -17,6 +17,7 @@
   <!-- cogimon configuration parameters -->
   <arg name="arms" default="true"/>
   <arg name="legs" default="true"/>
+  <arg name="laser_fixed" default="true"/>
 
 
   <!-- Internal arguments, rewrite human-readable gazebo arguments to it's internal arguments -->
@@ -36,10 +37,10 @@
 
 
   <!-- Load the URDF/SRDF into the ROS Parameter Server -->
-  <param name="robot_description"
-         command="$(find xacro)/xacro --inorder add_base_joint:=false '$(find cogimon_urdf)/urdf/cogimon_robot.urdf.xacro'"/>
+  <param name="robot_description_gz"
+         command="$(find xacro)/xacro --inorder add_base_joint:=false laser_fixed:=$(arg laser_fixed) '$(find cogimon_urdf)/urdf/cogimon_robot.urdf.xacro'"/>
 
-  <param name="robot_semantic_description" textfile="$(find cogimon_srdf)/srdf/cogimon.srdf"/>
+  <param name="robot_semantic_description_gz" textfile="$(find cogimon_srdf)/srdf/cogimon.srdf"/>
 
   
   <!-- run gazebo -->
@@ -54,7 +55,7 @@
 
   	<!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
 	<node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-		args="-urdf -model cogimon -param robot_description"/>
+		args="-urdf -model cogimon -param robot_description_gz"/>
 
   </group>
 

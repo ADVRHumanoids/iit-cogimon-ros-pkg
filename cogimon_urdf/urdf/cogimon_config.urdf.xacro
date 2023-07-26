@@ -4,12 +4,14 @@
 <xacro:property name="model_name" value="IIT COGIMON" />
 <xacro:property name="model_version" value="0.1" />
 
+<xacro:arg name="laser_fixed" default="true"/>
+
 <!-- ************SELECT PARTS*************-->
 <!-- *************************************-->
 <xacro:property name="COGIMON_HEAD" value="true" />
 <xacro:property name="COGIMON_TORSO" value="true" />
-<xacro:property name="COGIMON_LEFT_ARM" value="true" />
-<xacro:property name="COGIMON_RIGHT_ARM" value="true" />
+<xacro:property name="COGIMON_LEFT_ARM" value="false" />
+<xacro:property name="COGIMON_RIGHT_ARM" value="false" />
 <xacro:property name="COGIMON_LEFT_LEG" value="true" />
 <xacro:property name="COGIMON_RIGHT_LEG" value="true" />
 
@@ -24,7 +26,7 @@
      used in the hardware and visualization, not for IK and ID.
 -->
 <!-- *************************************-->
-<xacro:property name="COGIMON_LASER_FIXED" value="true" />
+<xacro:property name="COGIMON_LASER_FIXED" value="$(arg laser_fixed)" />
 
 <!-- ************COGIMON_PENNACCHIO*******-->
 <!--
